@@ -31,16 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.hdrgrpTime = new ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnGenerateTimesheet = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnOpenPreferences = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.timer = new System.Windows.Forms.Timer(this.components);
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
-            this.btnClockOut = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.btnClockIn = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblHours = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,14 +39,24 @@
             this.lblHoursCount = new System.Windows.Forms.Label();
             this.lblMinutesCount = new System.Windows.Forms.Label();
             this.lblSecondsCount = new System.Windows.Forms.Label();
+            this.btnClockOut = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.btnClockIn = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnGenerateTimesheet = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnOpenPreferences = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnExit = new System.Windows.Forms.ToolStripMenuItem();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.btnPause = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             ((System.ComponentModel.ISupportInitialize)(this.hdrgrpTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hdrgrpTime.Panel)).BeginInit();
             this.hdrgrpTime.Panel.SuspendLayout();
             this.hdrgrpTime.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).BeginInit();
             this.kryptonPanel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // hdrgrpTime
@@ -70,65 +71,13 @@
             this.hdrgrpTime.Panel.Controls.Add(this.kryptonPanel1);
             this.hdrgrpTime.Size = new System.Drawing.Size(776, 248);
             this.hdrgrpTime.TabIndex = 0;
-            this.hdrgrpTime.ValuesPrimary.Heading = "Time";
+            this.hdrgrpTime.ValuesPrimary.Heading = "Normal Time";
             this.hdrgrpTime.ValuesPrimary.Image = null;
-            this.hdrgrpTime.ValuesSecondary.Heading = "Start and stop the clock here";
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
-            this.menuStrip1.TabIndex = 1;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnGenerateTimesheet,
-            this.btnOpenPreferences,
-            this.toolStripSeparator1,
-            this.btnExit});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
-            this.fileToolStripMenuItem.Text = "File";
-            // 
-            // btnGenerateTimesheet
-            // 
-            this.btnGenerateTimesheet.Image = global::TimeTracker.Properties.Resources.timesheet_32;
-            this.btnGenerateTimesheet.Name = "btnGenerateTimesheet";
-            this.btnGenerateTimesheet.Size = new System.Drawing.Size(178, 22);
-            this.btnGenerateTimesheet.Text = "Generate Timesheet";
-            // 
-            // btnOpenPreferences
-            // 
-            this.btnOpenPreferences.Image = global::TimeTracker.Properties.Resources.settings_32;
-            this.btnOpenPreferences.Name = "btnOpenPreferences";
-            this.btnOpenPreferences.Size = new System.Drawing.Size(178, 22);
-            this.btnOpenPreferences.Text = "Preferences...";
-            this.btnOpenPreferences.Click += new System.EventHandler(this.OpenOptions);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(175, 6);
-            // 
-            // btnExit
-            // 
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(178, 22);
-            this.btnExit.Text = "Exit";
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // timer
-            // 
-            this.timer.Interval = 1000;
+            this.hdrgrpTime.ValuesSecondary.Heading = "Keep track of normal, working time.";
             // 
             // kryptonPanel1
             // 
+            this.kryptonPanel1.Controls.Add(this.btnPause);
             this.kryptonPanel1.Controls.Add(this.tableLayoutPanel1);
             this.kryptonPanel1.Controls.Add(this.btnClockOut);
             this.kryptonPanel1.Controls.Add(this.btnClockIn);
@@ -137,28 +86,6 @@
             this.kryptonPanel1.Name = "kryptonPanel1";
             this.kryptonPanel1.Size = new System.Drawing.Size(774, 195);
             this.kryptonPanel1.TabIndex = 4;
-            // 
-            // btnClockOut
-            // 
-            this.btnClockOut.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClockOut.Location = new System.Drawing.Point(3, 146);
-            this.btnClockOut.Name = "btnClockOut";
-            this.btnClockOut.Size = new System.Drawing.Size(768, 46);
-            this.btnClockOut.TabIndex = 4;
-            this.btnClockOut.Values.Text = "Clock Out";
-            // 
-            // btnClockIn
-            // 
-            this.btnClockIn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnClockIn.Location = new System.Drawing.Point(3, 3);
-            this.btnClockIn.Name = "btnClockIn";
-            this.btnClockIn.Size = new System.Drawing.Size(768, 43);
-            this.btnClockIn.TabIndex = 3;
-            this.btnClockIn.Values.Text = "Clock In";
             // 
             // tableLayoutPanel1
             // 
@@ -228,7 +155,7 @@
             this.lblHoursCount.Name = "lblHoursCount";
             this.lblHoursCount.Size = new System.Drawing.Size(96, 32);
             this.lblHoursCount.TabIndex = 6;
-            this.lblHoursCount.Text = "1";
+            this.lblHoursCount.Text = "0";
             this.lblHoursCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblMinutesCount
@@ -240,7 +167,7 @@
             this.lblMinutesCount.Name = "lblMinutesCount";
             this.lblMinutesCount.Size = new System.Drawing.Size(96, 32);
             this.lblMinutesCount.TabIndex = 7;
-            this.lblMinutesCount.Text = "1";
+            this.lblMinutesCount.Text = "0";
             this.lblMinutesCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblSecondsCount
@@ -252,8 +179,108 @@
             this.lblSecondsCount.Name = "lblSecondsCount";
             this.lblSecondsCount.Size = new System.Drawing.Size(96, 32);
             this.lblSecondsCount.TabIndex = 8;
-            this.lblSecondsCount.Text = "1";
+            this.lblSecondsCount.Text = "0";
             this.lblSecondsCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnClockOut
+            // 
+            this.btnClockOut.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClockOut.Location = new System.Drawing.Point(393, 146);
+            this.btnClockOut.Name = "btnClockOut";
+            this.btnClockOut.Size = new System.Drawing.Size(378, 46);
+            this.btnClockOut.TabIndex = 4;
+            this.btnClockOut.Values.ImageStates.ImageCheckedNormal = null;
+            this.btnClockOut.Values.ImageStates.ImageCheckedPressed = null;
+            this.btnClockOut.Values.ImageStates.ImageCheckedTracking = null;
+            this.btnClockOut.Values.ImageStates.ImageNormal = global::TimeTracker.Properties.Resources.stop_32;
+            this.btnClockOut.Values.Text = "Clock Out";
+            this.btnClockOut.Click += new System.EventHandler(this.btnClockOut_Click);
+            // 
+            // btnClockIn
+            // 
+            this.btnClockIn.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnClockIn.Location = new System.Drawing.Point(3, 3);
+            this.btnClockIn.Name = "btnClockIn";
+            this.btnClockIn.Size = new System.Drawing.Size(768, 43);
+            this.btnClockIn.TabIndex = 3;
+            this.btnClockIn.Values.ImageStates.ImageCheckedNormal = null;
+            this.btnClockIn.Values.ImageStates.ImageCheckedPressed = null;
+            this.btnClockIn.Values.ImageStates.ImageCheckedTracking = null;
+            this.btnClockIn.Values.ImageStates.ImageNormal = global::TimeTracker.Properties.Resources.start_32;
+            this.btnClockIn.Values.Text = "Clock In";
+            this.btnClockIn.Click += new System.EventHandler(this.btnClockIn_Click);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnGenerateTimesheet,
+            this.btnOpenPreferences,
+            this.toolStripSeparator1,
+            this.btnExit});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // btnGenerateTimesheet
+            // 
+            this.btnGenerateTimesheet.Image = global::TimeTracker.Properties.Resources.timesheet_32;
+            this.btnGenerateTimesheet.Name = "btnGenerateTimesheet";
+            this.btnGenerateTimesheet.Size = new System.Drawing.Size(178, 22);
+            this.btnGenerateTimesheet.Text = "Generate Timesheet";
+            // 
+            // btnOpenPreferences
+            // 
+            this.btnOpenPreferences.Image = global::TimeTracker.Properties.Resources.settings_32;
+            this.btnOpenPreferences.Name = "btnOpenPreferences";
+            this.btnOpenPreferences.Size = new System.Drawing.Size(178, 22);
+            this.btnOpenPreferences.Text = "Preferences...";
+            this.btnOpenPreferences.Click += new System.EventHandler(this.OpenOptions);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(175, 6);
+            // 
+            // btnExit
+            // 
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(178, 22);
+            this.btnExit.Text = "Exit";
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // timer
+            // 
+            this.timer.Interval = 1000;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // btnPause
+            // 
+            this.btnPause.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnPause.Location = new System.Drawing.Point(3, 146);
+            this.btnPause.Name = "btnPause";
+            this.btnPause.Size = new System.Drawing.Size(379, 46);
+            this.btnPause.TabIndex = 6;
+            this.btnPause.Values.ImageStates.ImageCheckedNormal = null;
+            this.btnPause.Values.ImageStates.ImageCheckedPressed = null;
+            this.btnPause.Values.ImageStates.ImageCheckedTracking = null;
+            this.btnPause.Values.ImageStates.ImageNormal = global::TimeTracker.Properties.Resources.pause_32;
+            this.btnPause.Values.Text = "Pause Time";
+            this.btnPause.Click += new System.EventHandler(this.btnPause_Click);
             // 
             // MainForm
             // 
@@ -271,12 +298,12 @@
             this.hdrgrpTime.Panel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.hdrgrpTime)).EndInit();
             this.hdrgrpTime.ResumeLayout(false);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.kryptonPanel1)).EndInit();
             this.kryptonPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -302,6 +329,7 @@
         private System.Windows.Forms.Label lblHoursCount;
         private System.Windows.Forms.Label lblMinutesCount;
         private System.Windows.Forms.Label lblSecondsCount;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnPause;
     }
 }
 
