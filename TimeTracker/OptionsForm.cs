@@ -73,16 +73,21 @@ namespace TimeTracker
             }
         }
 
+        private void SaveSettings()
+        {
+            Settings.Default.UsersName = name;
+            Settings.Default.HourlyRate = hourlyRate;
+            Settings.Default.OvertimeRate = overtimeRate;
+            Settings.Default.BillableRate = billableRate;
+            Settings.Default.SavePath = savePath;
+            Settings.Default.Save();
+        }
+
         private void btnSave_Click(object sender, EventArgs e)
         {
             if (ValidateFields())
             {
-                Settings.Default.UsersName = name;
-                Settings.Default.HourlyRate = hourlyRate;
-                Settings.Default.OvertimeRate = overtimeRate;
-                Settings.Default.BillableRate = billableRate;
-                Settings.Default.SavePath = savePath;
-                Settings.Default.Save();
+                SaveSettings();
             }
         }
 
@@ -103,6 +108,8 @@ namespace TimeTracker
                 overtimeRate = 0.0M;
                 billableRate = 0.0M;
                 savePath = "";
+
+                SaveSettings();
             }
         }
 
