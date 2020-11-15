@@ -25,6 +25,7 @@ namespace TimeTracker.backend
         private TimeSheet()
         {
             Days = new Dictionary<string, DayTime>();
+            GenerateUniqueID();
         }
 
         public TimeSheet Instance
@@ -48,7 +49,6 @@ namespace TimeTracker.backend
         public void New()
         {
             instance = new TimeSheet();
-            GenerateUniqueID();
         }
 
         /// <summary>
