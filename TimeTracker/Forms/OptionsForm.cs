@@ -8,17 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TimeTracker.Documents;
 using TimeTracker.Properties;
 
 namespace TimeTracker
 {
     public partial class OptionsForm : Form
     {
-        private string name;
-        private decimal hourlyRate;
-        private decimal overtimeRate;
-        private decimal billableRate;
-
+        private Employee employee;
         private string savePath;
 
         public OptionsForm()
@@ -33,27 +30,37 @@ namespace TimeTracker
             {
                 savePath = saveFolderBrowser.SelectedPath;
                 lblLocation.Values.ExtraText = savePath;
+                EmployeeInformation.Instance.SetDataLocation(savePath);
+                TimeSheetInformation.Instance.SetDataLocation(savePath);
             }
         }
 
         private void OptionsForm_Load(object sender, EventArgs e)
         {
-            name = Settings.Default.UsersName;
-            hourlyRate = Settings.Default.HourlyRate;
-            overtimeRate = Settings.Default.OvertimeRate;
-            billableRate = Settings.Default.BillableRate;
+            employee = EmployeeInformation.Instance.GetEmployee(Settings.Default.LastGUID);
             savePath = Settings.Default.SavePath;
 
-            txtFullName.Text = name;
-            txtHourlyRate.Text = hourlyRate.ToString();
-            txtOvertimeRate.Text = overtimeRate.ToString();
-            txtBillableRate.Text = billableRate.ToString();
-            lblLocation.Values.ExtraText = savePath;
-
-            if (overtimeRate == (hourlyRate + (hourlyRate / 2.0M)))
+            if (employee != null)
             {
-                chkDefaultOvertime.Checked = true;
+                txtFullName.Text = employee.Name;
+                txtHourlyRate.Text = employee.HourlyRate.ToString();
+                txtOvertimeRate.Text = employee.OvertimeRate.ToString();
+                txtBillableRate.Text = employee.BillableRate.ToString();
+
+                if (employee.OvertimeRate == (employee.HourlyRate + (employee.HourlyRate / 2.0M)))
+                {
+                    chkDefaultOvertime.Checked = true;
+                }
+
+                txtEmail.Text = employee.Email;
+                txtPhoneNumber.Text = employee.PhoneNumber;
+                txtStreet.Text = employee.EmpAddress.Street;
+                txtCity.Text = employee.EmpAddress.City;
+                txtState.Text = employee.EmpAddress.State;
+                txtZipCode.Text = employee.EmpAddress.ZipCode;
             }
+
+            lblLocation.Values.ExtraText = savePath;
         }
 
         private void chkDefaultOvertime_CheckedChanged(object sender, EventArgs e)
@@ -73,12 +80,38 @@ namespace TimeTracker
             }
         }
 
+        private void txtHourlyRate_TextChanged(object sender, EventArgs e)
+        {
+            if (chkDefaultOvertime.Checked)
+            {
+                bool success = decimal.TryParse(txtHourlyRate.Text, out decimal hourly);
+                if (success)
+                {
+                    decimal overtime = hourly + (hourly / 2.0M);
+                    txtOvertimeRate.Text = overtime.ToString();
+                }
+            }
+        }
+
         private void SaveSettings()
         {
-            Settings.Default.UsersName = name;
-            Settings.Default.HourlyRate = hourlyRate;
-            Settings.Default.OvertimeRate = overtimeRate;
-            Settings.Default.BillableRate = billableRate;
+            employee = new Employee
+            {
+                Name = txtFullName.Text,
+                HourlyRate = decimal.Parse(txtHourlyRate.Text),
+                OvertimeRate = decimal.Parse(txtOvertimeRate.Text),
+                BillableRate = decimal.Parse(txtBillableRate.Text),
+                Email = txtEmail.Text,
+                PhoneNumber = txtPhoneNumber.Text,
+                EmpAddress = new Address(txtStreet.Text, txtCity.Text, txtState.Text, txtZipCode.Text)
+            };
+
+            employee.GenerateUniqueID();
+
+            EmployeeInformation.Instance.AddEmployee(employee.UniqueID, employee);
+            EmployeeInformation.Instance.Save();
+
+            Settings.Default.LastGUID = employee.UniqueID;
             Settings.Default.SavePath = savePath;
             Settings.Default.Save();
         }
@@ -88,6 +121,7 @@ namespace TimeTracker
             if (ValidateFields())
             {
                 SaveSettings();
+                Close();
             }
         }
 
@@ -103,13 +137,14 @@ namespace TimeTracker
                 chkDefaultOvertime.Checked = false;
                 lblLocation.Values.ExtraText = "";
 
-                name = "";
-                hourlyRate = 0.0M;
-                overtimeRate = 0.0M;
-                billableRate = 0.0M;
-                savePath = "";
+                txtEmail.Text = "";
+                txtPhoneNumber.Text = "";
+                txtStreet.Text = "";
+                txtCity.Text = "";
+                txtState.Text = "";
+                txtZipCode.Text = "";
 
-                SaveSettings();
+                savePath = "";
             }
         }
 
@@ -129,7 +164,6 @@ namespace TimeTracker
 
             if (decimal.TryParse(txtHourlyRate.Text, out decimal h))
             {
-                hourlyRate = h;
                 valid = true;
             }
             else
@@ -141,7 +175,6 @@ namespace TimeTracker
 
             if (decimal.TryParse(txtOvertimeRate.Text, out decimal o))
             {
-                overtimeRate = o;
                 valid = true;
             }
             else
@@ -153,7 +186,6 @@ namespace TimeTracker
 
             if (decimal.TryParse(txtBillableRate.Text, out decimal b))
             {
-                billableRate = b;
                 valid = true;
             }
             else
@@ -174,12 +206,73 @@ namespace TimeTracker
                 return valid;
             }
 
-            return valid;
-        }
+            if (txtEmail.Text.Length > 0 && txtEmail.Text.Contains("@"))
+            {
+                valid = true;
+            }
+            else
+            {
+                CMessageBox.Show("Email entered was not valid.", "Invalid email", MessageBoxButtons.OK, Resources.warning_32);
+                valid = false;
+                return valid;
+            }
 
-        private void txtFullName_TextChanged(object sender, EventArgs e)
-        {
-            name = txtFullName.Text;
+            if (txtPhoneNumber.Text.Length == 10 || (txtPhoneNumber.Text.Length == 12 && txtPhoneNumber.Text.Contains("-")))
+            {
+                valid = true;
+            }
+            else
+            {
+                CMessageBox.Show("Phone number entered was not valid.", "Invalid phone number", MessageBoxButtons.OK, Resources.warning_32);
+                valid = false;
+                return valid;
+            }
+
+            if (txtStreet.Text.Length > 0)
+            {
+                valid = true;
+            }
+            else
+            {
+                CMessageBox.Show("Street cannot be empty.", "Invalid address", MessageBoxButtons.OK, Resources.warning_32);
+                valid = false;
+                return valid;
+            }
+
+            if (txtCity.Text.Length > 0)
+            {
+                valid = true;
+            }
+            else
+            {
+                CMessageBox.Show("City cannot be empty.", "Invalid address", MessageBoxButtons.OK, Resources.warning_32);
+                valid = false;
+                return valid;
+            }
+
+            if (txtState.Text.Length > 0)
+            {
+                valid = true;
+            }
+            else
+            {
+                CMessageBox.Show("State cannot be empty.", "Invalid address", MessageBoxButtons.OK, Resources.warning_32);
+                valid = false;
+                return valid;
+            }
+
+            if (txtZipCode.Text.Length == 5 || (txtZipCode.Text.Length == 10 && txtZipCode.Text.Contains("-")))
+            {
+                valid = true;
+            }
+            else
+            {
+                CMessageBox.Show("Zip code entered was invalid.", "Invalid address", MessageBoxButtons.OK, Resources.warning_32);
+                valid = false;
+                return valid;
+            }
+
+            return valid;
         }
     }
 }

@@ -25,49 +25,13 @@ namespace TimeTracker.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public decimal HourlyRate {
-            get {
-                return ((decimal)(this["HourlyRate"]));
-            }
-            set {
-                this["HourlyRate"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public decimal OvertimeRate {
-            get {
-                return ((decimal)(this["OvertimeRate"]));
-            }
-            set {
-                this["OvertimeRate"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public decimal BillableRate {
-            get {
-                return ((decimal)(this["BillableRate"]));
-            }
-            set {
-                this["BillableRate"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string UsersName {
+        public string LastGUID {
             get {
-                return ((string)(this["UsersName"]));
+                return ((string)(this["LastGUID"]));
             }
             set {
-                this["UsersName"] = value;
+                this["LastGUID"] = value;
             }
         }
         
@@ -80,6 +44,18 @@ namespace TimeTracker.Properties {
             }
             set {
                 this["SavePath"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string WeekGUID {
+            get {
+                return ((string)(this["WeekGUID"]));
+            }
+            set {
+                this["WeekGUID"] = value;
             }
         }
     }

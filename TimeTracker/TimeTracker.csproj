@@ -53,12 +53,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Documents\Address.cs" />
-    <Compile Include="Documents\DayTime.cs" />
-    <Compile Include="Documents\Employee.cs" />
-    <Compile Include="Documents\EmployeeInformation.cs" />
-    <Compile Include="Documents\TimeSheet.cs" />
-    <Compile Include="Documents\TimeSheetInformation.cs" />
+    <Compile Include="backend\Address.cs" />
+    <Compile Include="backend\DayTime.cs" />
+    <Compile Include="backend\Employee.cs" />
+    <Compile Include="backend\EmployeeInformation.cs" />
+    <Compile Include="backend\TimeSheet.cs" />
+    <Compile Include="backend\TimeSheetInformation.cs" />
     <Compile Include="Forms\CMessageBox.cs" />
     <Compile Include="Forms\MainForm.cs">
       <SubType>Form</SubType>

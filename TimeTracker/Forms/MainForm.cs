@@ -53,7 +53,7 @@ namespace TimeTracker
 
         private void UpdateSeconds()
         {
-            if (seconds > 59)
+            if (seconds >= 59)
             {
                 minutes += 1;
                 seconds = 0;
@@ -66,7 +66,7 @@ namespace TimeTracker
 
         private void UpdateMinutes()
         {
-            if (minutes > 59)
+            if (minutes >= 59)
             {
                 hours += 1;
                 minutes = 0;

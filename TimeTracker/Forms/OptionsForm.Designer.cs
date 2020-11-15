@@ -30,49 +30,91 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OptionsForm));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblName = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.txtFullName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblHourlyRate = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.txtHourlyRate = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.flowLayoutPanel4 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblOvertime = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.txtOvertimeRate = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.chkDefaultOvertime = new ComponentFactory.Krypton.Toolkit.KryptonCheckBox();
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblBillable = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
-            this.btnClear = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.txtBillableRate = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
-            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.lblDataLocation = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.btnSetSaveLocation = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblLocation = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.txtHourlyRate = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.txtOvertimeRate = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.txtBillableRate = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.saveFolderBrowser = new System.Windows.Forms.FolderBrowserDialog();
+            this.flowLayoutPanel10 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel11 = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblEmail = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.txtEmail = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.flowLayoutPanel12 = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblPhone = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.txtPhoneNumber = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.kryptonGroupBox1 = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.flowLayoutPanel14 = new System.Windows.Forms.FlowLayoutPanel();
+            this.flowLayoutPanel13 = new System.Windows.Forms.FlowLayoutPanel();
+            this.kryptonLabel2 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.txtStreet = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.flowLayoutPanel15 = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblCity = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.txtCity = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.flowLayoutPanel16 = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblState = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.txtState = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.flowLayoutPanel17 = new System.Windows.Forms.FlowLayoutPanel();
+            this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.txtZipCode = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnClear = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnSave = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.saveFolderBrowser = new System.Windows.Forms.FolderBrowserDialog();
             this.flowLayoutPanel1.SuspendLayout();
+            this.flowLayoutPanel9.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
             this.flowLayoutPanel3.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
             this.flowLayoutPanel5.SuspendLayout();
-            this.flowLayoutPanel6.SuspendLayout();
             this.flowLayoutPanel7.SuspendLayout();
             this.flowLayoutPanel8.SuspendLayout();
+            this.flowLayoutPanel10.SuspendLayout();
+            this.flowLayoutPanel11.SuspendLayout();
+            this.flowLayoutPanel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).BeginInit();
+            this.kryptonGroupBox1.Panel.SuspendLayout();
+            this.kryptonGroupBox1.SuspendLayout();
+            this.flowLayoutPanel14.SuspendLayout();
+            this.flowLayoutPanel13.SuspendLayout();
+            this.flowLayoutPanel15.SuspendLayout();
+            this.flowLayoutPanel16.SuspendLayout();
+            this.flowLayoutPanel17.SuspendLayout();
+            this.flowLayoutPanel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel2);
-            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel3);
-            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel4);
-            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel5);
-            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel7);
-            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel8);
+            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel9);
+            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel10);
             this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel6);
             resources.ApplyResources(this.flowLayoutPanel1, "flowLayoutPanel1");
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            // 
+            // flowLayoutPanel9
+            // 
+            this.flowLayoutPanel9.Controls.Add(this.flowLayoutPanel2);
+            this.flowLayoutPanel9.Controls.Add(this.flowLayoutPanel3);
+            this.flowLayoutPanel9.Controls.Add(this.flowLayoutPanel4);
+            this.flowLayoutPanel9.Controls.Add(this.flowLayoutPanel5);
+            this.flowLayoutPanel9.Controls.Add(this.flowLayoutPanel7);
+            this.flowLayoutPanel9.Controls.Add(this.flowLayoutPanel8);
+            resources.ApplyResources(this.flowLayoutPanel9, "flowLayoutPanel9");
+            this.flowLayoutPanel9.Name = "flowLayoutPanel9";
             // 
             // flowLayoutPanel2
             // 
@@ -85,13 +127,12 @@
             // 
             resources.ApplyResources(this.lblName, "lblName");
             this.lblName.Name = "lblName";
-            this.lblName.Values.Text = resources.GetString("kryptonLabel1.Values.Text");
+            this.lblName.Values.Text = resources.GetString("lblName.Values.Text");
             // 
             // txtFullName
             // 
             resources.ApplyResources(this.txtFullName, "txtFullName");
             this.txtFullName.Name = "txtFullName";
-            this.txtFullName.TextChanged += new System.EventHandler(this.txtFullName_TextChanged);
             // 
             // flowLayoutPanel3
             // 
@@ -104,7 +145,13 @@
             // 
             resources.ApplyResources(this.lblHourlyRate, "lblHourlyRate");
             this.lblHourlyRate.Name = "lblHourlyRate";
-            this.lblHourlyRate.Values.Text = resources.GetString("kryptonLabel1.Values.Text1");
+            this.lblHourlyRate.Values.Text = resources.GetString("lblHourlyRate.Values.Text");
+            // 
+            // txtHourlyRate
+            // 
+            resources.ApplyResources(this.txtHourlyRate, "txtHourlyRate");
+            this.txtHourlyRate.Name = "txtHourlyRate";
+            this.txtHourlyRate.TextChanged += new System.EventHandler(this.txtHourlyRate_TextChanged);
             // 
             // flowLayoutPanel4
             // 
@@ -118,13 +165,18 @@
             // 
             resources.ApplyResources(this.lblOvertime, "lblOvertime");
             this.lblOvertime.Name = "lblOvertime";
-            this.lblOvertime.Values.Text = resources.GetString("kryptonLabel1.Values.Text2");
+            this.lblOvertime.Values.Text = resources.GetString("lblOvertime.Values.Text");
+            // 
+            // txtOvertimeRate
+            // 
+            resources.ApplyResources(this.txtOvertimeRate, "txtOvertimeRate");
+            this.txtOvertimeRate.Name = "txtOvertimeRate";
             // 
             // chkDefaultOvertime
             // 
             resources.ApplyResources(this.chkDefaultOvertime, "chkDefaultOvertime");
             this.chkDefaultOvertime.Name = "chkDefaultOvertime";
-            this.chkDefaultOvertime.Values.Text = resources.GetString("kryptonCheckBox1.Values.Text");
+            this.chkDefaultOvertime.Values.Text = resources.GetString("chkDefaultOvertime.Values.Text");
             this.chkDefaultOvertime.CheckedChanged += new System.EventHandler(this.chkDefaultOvertime_CheckedChanged);
             // 
             // flowLayoutPanel5
@@ -138,40 +190,31 @@
             // 
             resources.ApplyResources(this.lblBillable, "lblBillable");
             this.lblBillable.Name = "lblBillable";
-            this.lblBillable.Values.Text = resources.GetString("kryptonLabel1.Values.Text3");
+            this.lblBillable.Values.Text = resources.GetString("lblBillable.Values.Text");
             // 
-            // flowLayoutPanel6
+            // txtBillableRate
             // 
-            this.flowLayoutPanel6.Controls.Add(this.btnSave);
-            this.flowLayoutPanel6.Controls.Add(this.btnClear);
-            resources.ApplyResources(this.flowLayoutPanel6, "flowLayoutPanel6");
-            this.flowLayoutPanel6.Name = "flowLayoutPanel6";
-            // 
-            // btnClear
-            // 
-            resources.ApplyResources(this.btnClear, "btnClear");
-            this.btnClear.Name = "btnClear";
-            this.btnClear.Values.Text = resources.GetString("kryptonButton2.Values.Text");
-            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            resources.ApplyResources(this.txtBillableRate, "txtBillableRate");
+            this.txtBillableRate.Name = "txtBillableRate";
             // 
             // flowLayoutPanel7
             // 
-            this.flowLayoutPanel7.Controls.Add(this.kryptonLabel1);
+            this.flowLayoutPanel7.Controls.Add(this.lblDataLocation);
             this.flowLayoutPanel7.Controls.Add(this.btnSetSaveLocation);
             resources.ApplyResources(this.flowLayoutPanel7, "flowLayoutPanel7");
             this.flowLayoutPanel7.Name = "flowLayoutPanel7";
             // 
-            // kryptonLabel1
+            // lblDataLocation
             // 
-            resources.ApplyResources(this.kryptonLabel1, "kryptonLabel1");
-            this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Values.Text = resources.GetString("kryptonLabel1.Values.Text4");
+            resources.ApplyResources(this.lblDataLocation, "lblDataLocation");
+            this.lblDataLocation.Name = "lblDataLocation";
+            this.lblDataLocation.Values.Text = resources.GetString("lblDataLocation.Values.Text");
             // 
             // btnSetSaveLocation
             // 
             resources.ApplyResources(this.btnSetSaveLocation, "btnSetSaveLocation");
             this.btnSetSaveLocation.Name = "btnSetSaveLocation";
-            this.btnSetSaveLocation.Values.Text = resources.GetString("kryptonButton1.Values.Text");
+            this.btnSetSaveLocation.Values.Text = resources.GetString("btnSetSaveLocation.Values.Text");
             this.btnSetSaveLocation.Click += new System.EventHandler(this.btnSetSaveLocation_Click);
             // 
             // flowLayoutPanel8
@@ -184,22 +227,159 @@
             // 
             resources.ApplyResources(this.lblLocation, "lblLocation");
             this.lblLocation.Name = "lblLocation";
-            this.lblLocation.Values.Text = resources.GetString("kryptonLabel2.Values.Text");
+            this.lblLocation.Values.Text = resources.GetString("lblLocation.Values.Text");
             // 
-            // txtHourlyRate
+            // flowLayoutPanel10
             // 
-            resources.ApplyResources(this.txtHourlyRate, "txtHourlyRate");
-            this.txtHourlyRate.Name = "txtHourlyRate";
+            this.flowLayoutPanel10.Controls.Add(this.flowLayoutPanel11);
+            this.flowLayoutPanel10.Controls.Add(this.flowLayoutPanel12);
+            this.flowLayoutPanel10.Controls.Add(this.kryptonGroupBox1);
+            resources.ApplyResources(this.flowLayoutPanel10, "flowLayoutPanel10");
+            this.flowLayoutPanel10.Name = "flowLayoutPanel10";
             // 
-            // txtOvertimeRate
+            // flowLayoutPanel11
             // 
-            resources.ApplyResources(this.txtOvertimeRate, "txtOvertimeRate");
-            this.txtOvertimeRate.Name = "txtOvertimeRate";
+            this.flowLayoutPanel11.Controls.Add(this.lblEmail);
+            this.flowLayoutPanel11.Controls.Add(this.txtEmail);
+            resources.ApplyResources(this.flowLayoutPanel11, "flowLayoutPanel11");
+            this.flowLayoutPanel11.Name = "flowLayoutPanel11";
             // 
-            // txtBillableRate
+            // lblEmail
             // 
-            resources.ApplyResources(this.txtBillableRate, "txtBillableRate");
-            this.txtBillableRate.Name = "txtBillableRate";
+            resources.ApplyResources(this.lblEmail, "lblEmail");
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Values.Text = resources.GetString("lblEmail.Values.Text");
+            // 
+            // txtEmail
+            // 
+            resources.ApplyResources(this.txtEmail, "txtEmail");
+            this.txtEmail.Name = "txtEmail";
+            // 
+            // flowLayoutPanel12
+            // 
+            this.flowLayoutPanel12.Controls.Add(this.lblPhone);
+            this.flowLayoutPanel12.Controls.Add(this.txtPhoneNumber);
+            resources.ApplyResources(this.flowLayoutPanel12, "flowLayoutPanel12");
+            this.flowLayoutPanel12.Name = "flowLayoutPanel12";
+            // 
+            // lblPhone
+            // 
+            resources.ApplyResources(this.lblPhone, "lblPhone");
+            this.lblPhone.Name = "lblPhone";
+            this.lblPhone.Values.Text = resources.GetString("lblPhone.Values.Text");
+            // 
+            // txtPhoneNumber
+            // 
+            resources.ApplyResources(this.txtPhoneNumber, "txtPhoneNumber");
+            this.txtPhoneNumber.Name = "txtPhoneNumber";
+            // 
+            // kryptonGroupBox1
+            // 
+            this.kryptonGroupBox1.CaptionStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.GroupBoxCaption;
+            this.kryptonGroupBox1.GroupBackStyle = ComponentFactory.Krypton.Toolkit.PaletteBackStyle.ControlGroupBox;
+            this.kryptonGroupBox1.GroupBorderStyle = ComponentFactory.Krypton.Toolkit.PaletteBorderStyle.ControlGroupBox;
+            resources.ApplyResources(this.kryptonGroupBox1, "kryptonGroupBox1");
+            this.kryptonGroupBox1.Name = "kryptonGroupBox1";
+            // 
+            // kryptonGroupBox1.Panel
+            // 
+            this.kryptonGroupBox1.Panel.Controls.Add(this.flowLayoutPanel14);
+            this.kryptonGroupBox1.Values.Heading = resources.GetString("kryptonGroupBox1.Values.Heading");
+            // 
+            // flowLayoutPanel14
+            // 
+            this.flowLayoutPanel14.Controls.Add(this.flowLayoutPanel13);
+            this.flowLayoutPanel14.Controls.Add(this.flowLayoutPanel15);
+            this.flowLayoutPanel14.Controls.Add(this.flowLayoutPanel16);
+            this.flowLayoutPanel14.Controls.Add(this.flowLayoutPanel17);
+            resources.ApplyResources(this.flowLayoutPanel14, "flowLayoutPanel14");
+            this.flowLayoutPanel14.Name = "flowLayoutPanel14";
+            // 
+            // flowLayoutPanel13
+            // 
+            this.flowLayoutPanel13.Controls.Add(this.kryptonLabel2);
+            this.flowLayoutPanel13.Controls.Add(this.txtStreet);
+            resources.ApplyResources(this.flowLayoutPanel13, "flowLayoutPanel13");
+            this.flowLayoutPanel13.Name = "flowLayoutPanel13";
+            // 
+            // kryptonLabel2
+            // 
+            resources.ApplyResources(this.kryptonLabel2, "kryptonLabel2");
+            this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Values.Text = resources.GetString("kryptonLabel2.Values.Text");
+            // 
+            // txtStreet
+            // 
+            resources.ApplyResources(this.txtStreet, "txtStreet");
+            this.txtStreet.Name = "txtStreet";
+            // 
+            // flowLayoutPanel15
+            // 
+            this.flowLayoutPanel15.Controls.Add(this.lblCity);
+            this.flowLayoutPanel15.Controls.Add(this.txtCity);
+            resources.ApplyResources(this.flowLayoutPanel15, "flowLayoutPanel15");
+            this.flowLayoutPanel15.Name = "flowLayoutPanel15";
+            // 
+            // lblCity
+            // 
+            resources.ApplyResources(this.lblCity, "lblCity");
+            this.lblCity.Name = "lblCity";
+            this.lblCity.Values.Text = resources.GetString("lblCity.Values.Text");
+            // 
+            // txtCity
+            // 
+            resources.ApplyResources(this.txtCity, "txtCity");
+            this.txtCity.Name = "txtCity";
+            // 
+            // flowLayoutPanel16
+            // 
+            this.flowLayoutPanel16.Controls.Add(this.lblState);
+            this.flowLayoutPanel16.Controls.Add(this.txtState);
+            resources.ApplyResources(this.flowLayoutPanel16, "flowLayoutPanel16");
+            this.flowLayoutPanel16.Name = "flowLayoutPanel16";
+            // 
+            // lblState
+            // 
+            resources.ApplyResources(this.lblState, "lblState");
+            this.lblState.Name = "lblState";
+            this.lblState.Values.Text = resources.GetString("lblState.Values.Text");
+            // 
+            // txtState
+            // 
+            resources.ApplyResources(this.txtState, "txtState");
+            this.txtState.Name = "txtState";
+            // 
+            // flowLayoutPanel17
+            // 
+            this.flowLayoutPanel17.Controls.Add(this.kryptonLabel4);
+            this.flowLayoutPanel17.Controls.Add(this.txtZipCode);
+            resources.ApplyResources(this.flowLayoutPanel17, "flowLayoutPanel17");
+            this.flowLayoutPanel17.Name = "flowLayoutPanel17";
+            // 
+            // kryptonLabel4
+            // 
+            resources.ApplyResources(this.kryptonLabel4, "kryptonLabel4");
+            this.kryptonLabel4.Name = "kryptonLabel4";
+            this.kryptonLabel4.Values.Text = resources.GetString("kryptonLabel4.Values.Text");
+            // 
+            // txtZipCode
+            // 
+            resources.ApplyResources(this.txtZipCode, "txtZipCode");
+            this.txtZipCode.Name = "txtZipCode";
+            // 
+            // flowLayoutPanel6
+            // 
+            this.flowLayoutPanel6.Controls.Add(this.btnClear);
+            this.flowLayoutPanel6.Controls.Add(this.btnSave);
+            resources.ApplyResources(this.flowLayoutPanel6, "flowLayoutPanel6");
+            this.flowLayoutPanel6.Name = "flowLayoutPanel6";
+            // 
+            // btnClear
+            // 
+            resources.ApplyResources(this.btnClear, "btnClear");
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Values.Text = resources.GetString("btnClear.Values.Text");
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnSave
             // 
@@ -222,6 +402,7 @@
             this.TopMost = true;
             this.Load += new System.EventHandler(this.OptionsForm_Load);
             this.flowLayoutPanel1.ResumeLayout(false);
+            this.flowLayoutPanel9.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
             this.flowLayoutPanel3.ResumeLayout(false);
@@ -230,11 +411,29 @@
             this.flowLayoutPanel4.PerformLayout();
             this.flowLayoutPanel5.ResumeLayout(false);
             this.flowLayoutPanel5.PerformLayout();
-            this.flowLayoutPanel6.ResumeLayout(false);
             this.flowLayoutPanel7.ResumeLayout(false);
             this.flowLayoutPanel7.PerformLayout();
             this.flowLayoutPanel8.ResumeLayout(false);
             this.flowLayoutPanel8.PerformLayout();
+            this.flowLayoutPanel10.ResumeLayout(false);
+            this.flowLayoutPanel11.ResumeLayout(false);
+            this.flowLayoutPanel11.PerformLayout();
+            this.flowLayoutPanel12.ResumeLayout(false);
+            this.flowLayoutPanel12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1.Panel)).EndInit();
+            this.kryptonGroupBox1.Panel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kryptonGroupBox1)).EndInit();
+            this.kryptonGroupBox1.ResumeLayout(false);
+            this.flowLayoutPanel14.ResumeLayout(false);
+            this.flowLayoutPanel13.ResumeLayout(false);
+            this.flowLayoutPanel13.PerformLayout();
+            this.flowLayoutPanel15.ResumeLayout(false);
+            this.flowLayoutPanel15.PerformLayout();
+            this.flowLayoutPanel16.ResumeLayout(false);
+            this.flowLayoutPanel16.PerformLayout();
+            this.flowLayoutPanel17.ResumeLayout(false);
+            this.flowLayoutPanel17.PerformLayout();
+            this.flowLayoutPanel6.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -242,27 +441,49 @@
         #endregion
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        protected System.Windows.Forms.FolderBrowserDialog saveFolderBrowser;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel9;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel2;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblName;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtFullName;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblHourlyRate;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtHourlyRate;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel4;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblOvertime;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtOvertimeRate;
         private ComponentFactory.Krypton.Toolkit.KryptonCheckBox chkDefaultOvertime;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblBillable;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtBillableRate;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblDataLocation;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnSetSaveLocation;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel8;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblLocation;
-        private ComponentFactory.Krypton.Toolkit.KryptonButton btnClear;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtHourlyRate;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtOvertimeRate;
-        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtBillableRate;
-        protected System.Windows.Forms.FolderBrowserDialog saveFolderBrowser;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel10;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel11;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblEmail;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtEmail;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel12;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblPhone;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtPhoneNumber;
+        private ComponentFactory.Krypton.Toolkit.KryptonGroupBox kryptonGroupBox1;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel14;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel13;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel2;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtStreet;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel15;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblCity;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtCity;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel16;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblState;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtState;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel17;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel4;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtZipCode;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnSave;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnClear;
     }
 }
