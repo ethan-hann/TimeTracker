@@ -121,6 +121,9 @@
   <data name="lblName.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
+  <metadata name="optionsPallete.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>170, 17</value>
+  </metadata>
   <data name="lblName.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 20</value>
   </data>
@@ -1634,6 +1637,12 @@
   <data name="$this.Text" xml:space="preserve">
     <value>Application Options</value>
   </data>
+  <data name="&gt;&gt;optionsPallete.Name" xml:space="preserve">
+    <value>optionsPallete</value>
+  </data>
+  <data name="&gt;&gt;optionsPallete.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonPalette, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
   <data name="&gt;&gt;saveFolderBrowser.Name" xml:space="preserve">
     <value>saveFolderBrowser</value>
   </data>
@@ -1644,6 +1653,6 @@
     <value>OptionsForm</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    <value>ComponentFactory.Krypton.Toolkit.KryptonForm, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
   </data>
 </root>

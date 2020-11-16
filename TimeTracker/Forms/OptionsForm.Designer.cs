@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OptionsForm));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel9 = new System.Windows.Forms.FlowLayoutPanel();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblName = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.optionsPallete = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.txtFullName = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblHourlyRate = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
@@ -52,6 +54,8 @@
             this.flowLayoutPanel18 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblWeekStart = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.cmbDaysOfWeek = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.txtWorkWeekLength = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.flowLayoutPanel19 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblLunchLength = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.txtLunchLength = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
@@ -80,8 +84,6 @@
             this.btnClear = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnSave = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.saveFolderBrowser = new System.Windows.Forms.FolderBrowserDialog();
-            this.kryptonLabel1 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.txtWorkWeekLength = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel9.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -140,12 +142,20 @@
             // 
             resources.ApplyResources(this.lblName, "lblName");
             this.lblName.Name = "lblName";
+            this.lblName.Palette = this.optionsPallete;
+            this.lblName.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.lblName.Values.Text = resources.GetString("lblName.Values.Text");
+            // 
+            // optionsPallete
+            // 
+            this.optionsPallete.BasePaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Black;
             // 
             // txtFullName
             // 
             resources.ApplyResources(this.txtFullName, "txtFullName");
             this.txtFullName.Name = "txtFullName";
+            this.txtFullName.Palette = this.optionsPallete;
+            this.txtFullName.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             // 
             // flowLayoutPanel3
             // 
@@ -158,12 +168,16 @@
             // 
             resources.ApplyResources(this.lblHourlyRate, "lblHourlyRate");
             this.lblHourlyRate.Name = "lblHourlyRate";
+            this.lblHourlyRate.Palette = this.optionsPallete;
+            this.lblHourlyRate.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.lblHourlyRate.Values.Text = resources.GetString("lblHourlyRate.Values.Text");
             // 
             // txtHourlyRate
             // 
             resources.ApplyResources(this.txtHourlyRate, "txtHourlyRate");
             this.txtHourlyRate.Name = "txtHourlyRate";
+            this.txtHourlyRate.Palette = this.optionsPallete;
+            this.txtHourlyRate.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.txtHourlyRate.TextChanged += new System.EventHandler(this.txtHourlyRate_TextChanged);
             // 
             // flowLayoutPanel4
@@ -178,17 +192,23 @@
             // 
             resources.ApplyResources(this.lblOvertime, "lblOvertime");
             this.lblOvertime.Name = "lblOvertime";
+            this.lblOvertime.Palette = this.optionsPallete;
+            this.lblOvertime.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.lblOvertime.Values.Text = resources.GetString("lblOvertime.Values.Text");
             // 
             // txtOvertimeRate
             // 
             resources.ApplyResources(this.txtOvertimeRate, "txtOvertimeRate");
             this.txtOvertimeRate.Name = "txtOvertimeRate";
+            this.txtOvertimeRate.Palette = this.optionsPallete;
+            this.txtOvertimeRate.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             // 
             // chkDefaultOvertime
             // 
             resources.ApplyResources(this.chkDefaultOvertime, "chkDefaultOvertime");
             this.chkDefaultOvertime.Name = "chkDefaultOvertime";
+            this.chkDefaultOvertime.Palette = this.optionsPallete;
+            this.chkDefaultOvertime.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.chkDefaultOvertime.Values.Text = resources.GetString("chkDefaultOvertime.Values.Text");
             this.chkDefaultOvertime.CheckedChanged += new System.EventHandler(this.chkDefaultOvertime_CheckedChanged);
             // 
@@ -203,12 +223,16 @@
             // 
             resources.ApplyResources(this.lblBillable, "lblBillable");
             this.lblBillable.Name = "lblBillable";
+            this.lblBillable.Palette = this.optionsPallete;
+            this.lblBillable.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.lblBillable.Values.Text = resources.GetString("lblBillable.Values.Text");
             // 
             // txtBillableRate
             // 
             resources.ApplyResources(this.txtBillableRate, "txtBillableRate");
             this.txtBillableRate.Name = "txtBillableRate";
+            this.txtBillableRate.Palette = this.optionsPallete;
+            this.txtBillableRate.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             // 
             // flowLayoutPanel7
             // 
@@ -221,12 +245,16 @@
             // 
             resources.ApplyResources(this.lblDataLocation, "lblDataLocation");
             this.lblDataLocation.Name = "lblDataLocation";
+            this.lblDataLocation.Palette = this.optionsPallete;
+            this.lblDataLocation.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.lblDataLocation.Values.Text = resources.GetString("lblDataLocation.Values.Text");
             // 
             // btnSetSaveLocation
             // 
             resources.ApplyResources(this.btnSetSaveLocation, "btnSetSaveLocation");
             this.btnSetSaveLocation.Name = "btnSetSaveLocation";
+            this.btnSetSaveLocation.Palette = this.optionsPallete;
+            this.btnSetSaveLocation.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.btnSetSaveLocation.Values.Text = resources.GetString("btnSetSaveLocation.Values.Text");
             this.btnSetSaveLocation.Click += new System.EventHandler(this.btnSetSaveLocation_Click);
             // 
@@ -240,6 +268,8 @@
             // 
             resources.ApplyResources(this.lblLocation, "lblLocation");
             this.lblLocation.Name = "lblLocation";
+            this.lblLocation.Palette = this.optionsPallete;
+            this.lblLocation.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.lblLocation.Values.Text = resources.GetString("lblLocation.Values.Text");
             // 
             // flowLayoutPanel18
@@ -255,6 +285,8 @@
             // 
             resources.ApplyResources(this.lblWeekStart, "lblWeekStart");
             this.lblWeekStart.Name = "lblWeekStart";
+            this.lblWeekStart.Palette = this.optionsPallete;
+            this.lblWeekStart.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.lblWeekStart.Values.Text = resources.GetString("lblWeekStart.Values.Text");
             // 
             // cmbDaysOfWeek
@@ -271,6 +303,23 @@
             resources.GetString("cmbDaysOfWeek.Items6")});
             resources.ApplyResources(this.cmbDaysOfWeek, "cmbDaysOfWeek");
             this.cmbDaysOfWeek.Name = "cmbDaysOfWeek";
+            this.cmbDaysOfWeek.Palette = this.optionsPallete;
+            this.cmbDaysOfWeek.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            // 
+            // kryptonLabel1
+            // 
+            resources.ApplyResources(this.kryptonLabel1, "kryptonLabel1");
+            this.kryptonLabel1.Name = "kryptonLabel1";
+            this.kryptonLabel1.Palette = this.optionsPallete;
+            this.kryptonLabel1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.kryptonLabel1.Values.Text = resources.GetString("kryptonLabel1.Values.Text");
+            // 
+            // txtWorkWeekLength
+            // 
+            resources.ApplyResources(this.txtWorkWeekLength, "txtWorkWeekLength");
+            this.txtWorkWeekLength.Name = "txtWorkWeekLength";
+            this.txtWorkWeekLength.Palette = this.optionsPallete;
+            this.txtWorkWeekLength.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             // 
             // flowLayoutPanel19
             // 
@@ -283,6 +332,8 @@
             // 
             resources.ApplyResources(this.lblLunchLength, "lblLunchLength");
             this.lblLunchLength.Name = "lblLunchLength";
+            this.lblLunchLength.Palette = this.optionsPallete;
+            this.lblLunchLength.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.lblLunchLength.Values.ExtraText = resources.GetString("lblLunchLength.Values.ExtraText");
             this.lblLunchLength.Values.Text = resources.GetString("lblLunchLength.Values.Text");
             // 
@@ -290,6 +341,8 @@
             // 
             resources.ApplyResources(this.txtLunchLength, "txtLunchLength");
             this.txtLunchLength.Name = "txtLunchLength";
+            this.txtLunchLength.Palette = this.optionsPallete;
+            this.txtLunchLength.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             // 
             // flowLayoutPanel10
             // 
@@ -310,12 +363,16 @@
             // 
             resources.ApplyResources(this.lblEmail, "lblEmail");
             this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Palette = this.optionsPallete;
+            this.lblEmail.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.lblEmail.Values.Text = resources.GetString("lblEmail.Values.Text");
             // 
             // txtEmail
             // 
             resources.ApplyResources(this.txtEmail, "txtEmail");
             this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Palette = this.optionsPallete;
+            this.txtEmail.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             // 
             // flowLayoutPanel12
             // 
@@ -328,17 +385,24 @@
             // 
             resources.ApplyResources(this.lblPhone, "lblPhone");
             this.lblPhone.Name = "lblPhone";
+            this.lblPhone.Palette = this.optionsPallete;
+            this.lblPhone.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.lblPhone.Values.Text = resources.GetString("lblPhone.Values.Text");
             // 
             // txtPhoneNumber
             // 
             resources.ApplyResources(this.txtPhoneNumber, "txtPhoneNumber");
             this.txtPhoneNumber.Name = "txtPhoneNumber";
+            this.txtPhoneNumber.Palette = this.optionsPallete;
+            this.txtPhoneNumber.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             // 
             // kryptonGroupBox1
             // 
+            this.kryptonGroupBox1.CaptionOverlap = 0D;
             resources.ApplyResources(this.kryptonGroupBox1, "kryptonGroupBox1");
             this.kryptonGroupBox1.Name = "kryptonGroupBox1";
+            this.kryptonGroupBox1.Palette = this.optionsPallete;
+            this.kryptonGroupBox1.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             // 
             // kryptonGroupBox1.Panel
             // 
@@ -365,12 +429,16 @@
             // 
             resources.ApplyResources(this.kryptonLabel2, "kryptonLabel2");
             this.kryptonLabel2.Name = "kryptonLabel2";
+            this.kryptonLabel2.Palette = this.optionsPallete;
+            this.kryptonLabel2.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.kryptonLabel2.Values.Text = resources.GetString("kryptonLabel2.Values.Text");
             // 
             // txtStreet
             // 
             resources.ApplyResources(this.txtStreet, "txtStreet");
             this.txtStreet.Name = "txtStreet";
+            this.txtStreet.Palette = this.optionsPallete;
+            this.txtStreet.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             // 
             // flowLayoutPanel15
             // 
@@ -383,12 +451,16 @@
             // 
             resources.ApplyResources(this.lblCity, "lblCity");
             this.lblCity.Name = "lblCity";
+            this.lblCity.Palette = this.optionsPallete;
+            this.lblCity.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.lblCity.Values.Text = resources.GetString("lblCity.Values.Text");
             // 
             // txtCity
             // 
             resources.ApplyResources(this.txtCity, "txtCity");
             this.txtCity.Name = "txtCity";
+            this.txtCity.Palette = this.optionsPallete;
+            this.txtCity.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             // 
             // flowLayoutPanel16
             // 
@@ -401,12 +473,16 @@
             // 
             resources.ApplyResources(this.lblState, "lblState");
             this.lblState.Name = "lblState";
+            this.lblState.Palette = this.optionsPallete;
+            this.lblState.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.lblState.Values.Text = resources.GetString("lblState.Values.Text");
             // 
             // txtState
             // 
             resources.ApplyResources(this.txtState, "txtState");
             this.txtState.Name = "txtState";
+            this.txtState.Palette = this.optionsPallete;
+            this.txtState.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             // 
             // flowLayoutPanel17
             // 
@@ -419,12 +495,16 @@
             // 
             resources.ApplyResources(this.kryptonLabel4, "kryptonLabel4");
             this.kryptonLabel4.Name = "kryptonLabel4";
+            this.kryptonLabel4.Palette = this.optionsPallete;
+            this.kryptonLabel4.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.kryptonLabel4.Values.Text = resources.GetString("kryptonLabel4.Values.Text");
             // 
             // txtZipCode
             // 
             resources.ApplyResources(this.txtZipCode, "txtZipCode");
             this.txtZipCode.Name = "txtZipCode";
+            this.txtZipCode.Palette = this.optionsPallete;
+            this.txtZipCode.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             // 
             // flowLayoutPanel6
             // 
@@ -437,6 +517,8 @@
             // 
             resources.ApplyResources(this.btnClear, "btnClear");
             this.btnClear.Name = "btnClear";
+            this.btnClear.Palette = this.optionsPallete;
+            this.btnClear.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.btnClear.Values.Text = resources.GetString("btnClear.Values.Text");
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
@@ -444,19 +526,10 @@
             // 
             resources.ApplyResources(this.btnSave, "btnSave");
             this.btnSave.Name = "btnSave";
+            this.btnSave.Palette = this.optionsPallete;
+            this.btnSave.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.btnSave.Values.Text = resources.GetString("btnSave.Values.Text");
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
-            // kryptonLabel1
-            // 
-            resources.ApplyResources(this.kryptonLabel1, "kryptonLabel1");
-            this.kryptonLabel1.Name = "kryptonLabel1";
-            this.kryptonLabel1.Values.Text = resources.GetString("kryptonLabel1.Values.Text");
-            // 
-            // txtWorkWeekLength
-            // 
-            resources.ApplyResources(this.txtWorkWeekLength, "txtWorkWeekLength");
-            this.txtWorkWeekLength.Name = "txtWorkWeekLength";
             // 
             // OptionsForm
             // 
@@ -467,6 +540,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "OptionsForm";
+            this.Palette = this.optionsPallete;
+            this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.TopMost = true;
@@ -568,5 +643,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtLunchLength;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtWorkWeekLength;
+        public ComponentFactory.Krypton.Toolkit.KryptonPalette optionsPallete;
     }
 }

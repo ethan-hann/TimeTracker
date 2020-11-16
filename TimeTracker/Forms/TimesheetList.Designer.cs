@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.tvTimesheets = new ComponentFactory.Krypton.Toolkit.KryptonTreeView();
             this.btnGenerateSelectedSheet = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnClose = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.listPalette = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,6 +51,8 @@
             // 
             this.tvTimesheets.Location = new System.Drawing.Point(3, 3);
             this.tvTimesheets.Name = "tvTimesheets";
+            this.tvTimesheets.Palette = this.listPalette;
+            this.tvTimesheets.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.tvTimesheets.Size = new System.Drawing.Size(905, 449);
             this.tvTimesheets.TabIndex = 1;
             // 
@@ -56,6 +60,8 @@
             // 
             this.btnGenerateSelectedSheet.Location = new System.Drawing.Point(3, 458);
             this.btnGenerateSelectedSheet.Name = "btnGenerateSelectedSheet";
+            this.btnGenerateSelectedSheet.Palette = this.listPalette;
+            this.btnGenerateSelectedSheet.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.btnGenerateSelectedSheet.Size = new System.Drawing.Size(198, 25);
             this.btnGenerateSelectedSheet.TabIndex = 2;
             this.btnGenerateSelectedSheet.Values.Text = "Generate Selected Sheet...";
@@ -65,10 +71,16 @@
             // 
             this.btnClose.Location = new System.Drawing.Point(207, 458);
             this.btnClose.Name = "btnClose";
+            this.btnClose.Palette = this.listPalette;
+            this.btnClose.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.btnClose.Size = new System.Drawing.Size(126, 25);
             this.btnClose.TabIndex = 3;
             this.btnClose.Values.Text = "Close";
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // listPalette
+            // 
+            this.listPalette.BasePaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Black;
             // 
             // TimesheetList
             // 
@@ -81,6 +93,8 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "TimesheetList";
+            this.Palette = this.listPalette;
+            this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
@@ -98,5 +112,6 @@
         private ComponentFactory.Krypton.Toolkit.KryptonTreeView tvTimesheets;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnGenerateSelectedSheet;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnClose;
+        private ComponentFactory.Krypton.Toolkit.KryptonPalette listPalette;
     }
 }

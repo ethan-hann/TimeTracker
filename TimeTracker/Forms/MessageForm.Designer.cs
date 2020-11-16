@@ -30,12 +30,14 @@ namespace TimeTracker
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.picImage = new System.Windows.Forms.PictureBox();
             this.lblText = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.btnOK = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnCancel = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnNo = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnYes = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.messagePalette = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -51,12 +53,14 @@ namespace TimeTracker
             // 
             // lblText
             // 
-            this.lblText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
-            | System.Windows.Forms.AnchorStyles.Left)
+            this.lblText.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lblText.Location = new System.Drawing.Point(85, 15);
             this.lblText.MaximumSize = new System.Drawing.Size(294, 0);
             this.lblText.Name = "lblText";
+            this.lblText.Palette = this.messagePalette;
+            this.lblText.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.lblText.Size = new System.Drawing.Size(33, 20);
             this.lblText.TabIndex = 0;
             this.lblText.Values.Text = "Text";
@@ -76,6 +80,8 @@ namespace TimeTracker
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.Location = new System.Drawing.Point(301, 88);
             this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Palette = this.messagePalette;
+            this.btnCancel.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.btnCancel.Size = new System.Drawing.Size(75, 25);
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Values.Text = "Cancel";
@@ -86,6 +92,8 @@ namespace TimeTracker
             this.btnNo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNo.Location = new System.Drawing.Point(220, 88);
             this.btnNo.Name = "btnNo";
+            this.btnNo.Palette = this.messagePalette;
+            this.btnNo.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.btnNo.Size = new System.Drawing.Size(75, 25);
             this.btnNo.TabIndex = 3;
             this.btnNo.Values.Text = "No";
@@ -96,10 +104,16 @@ namespace TimeTracker
             this.btnYes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnYes.Location = new System.Drawing.Point(139, 88);
             this.btnYes.Name = "btnYes";
+            this.btnYes.Palette = this.messagePalette;
+            this.btnYes.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.btnYes.Size = new System.Drawing.Size(75, 25);
             this.btnYes.TabIndex = 2;
             this.btnYes.Values.Text = "Yes";
             this.btnYes.Click += new System.EventHandler(this.btnYes_Click);
+            // 
+            // messagePalette
+            // 
+            this.messagePalette.BasePaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Black;
             // 
             // MessageForm
             // 
@@ -117,6 +131,8 @@ namespace TimeTracker
             this.MinimizeBox = false;
             this.Name = "MessageForm";
             this.Padding = new System.Windows.Forms.Padding(15);
+            this.Palette = this.messagePalette;
+            this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Title";
             this.TopMost = true;
@@ -133,5 +149,6 @@ namespace TimeTracker
         internal KryptonButton btnCancel;
         internal KryptonButton btnNo;
         internal KryptonButton btnYes;
+        public KryptonPalette messagePalette;
     }
 }

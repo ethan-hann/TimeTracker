@@ -39,11 +39,13 @@
             this.btnExit = new System.Windows.Forms.ToolStripMenuItem();
             this.timesheetsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnGenerateTimesheet = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnListAllTimesheets = new System.Windows.Forms.ToolStripMenuItem();
             this.normalTimeTracker = new System.Windows.Forms.Timer(this.components);
             this.billableTimeTracker = new System.Windows.Forms.Timer(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.hdgrpNormalTime = new ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup();
             this.btnNormalClockIn = new ComponentFactory.Krypton.Toolkit.ButtonSpecHeaderGroup();
+            this.customPallete = new ComponentFactory.Krypton.Toolkit.KryptonPalette(this.components);
             this.kryptonPanel1 = new ComponentFactory.Krypton.Toolkit.KryptonPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblHours = new System.Windows.Forms.Label();
@@ -69,7 +71,6 @@
             this.lblBillableMoney = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.rtbNotes = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
             this.btnEndDay = new ComponentFactory.Krypton.Toolkit.ButtonSpecAny();
-            this.btnListAllTimesheets = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hdgrpNormalTime)).BeginInit();
@@ -169,6 +170,13 @@
             this.btnGenerateTimesheet.Text = "Generate Timesheet...";
             this.btnGenerateTimesheet.Click += new System.EventHandler(this.btnGenerateTimesheet_Click);
             // 
+            // btnListAllTimesheets
+            // 
+            this.btnListAllTimesheets.Name = "btnListAllTimesheets";
+            this.btnListAllTimesheets.Size = new System.Drawing.Size(192, 22);
+            this.btnListAllTimesheets.Text = "List of all Timesheets...";
+            this.btnListAllTimesheets.Click += new System.EventHandler(this.btnListAllTimesheets_Click);
+            // 
             // normalTimeTracker
             // 
             this.normalTimeTracker.Interval = 1000;
@@ -199,6 +207,8 @@
             this.btnNormalClockIn});
             this.hdgrpNormalTime.Location = new System.Drawing.Point(3, 3);
             this.hdgrpNormalTime.Name = "hdgrpNormalTime";
+            this.hdgrpNormalTime.Palette = this.customPallete;
+            this.hdgrpNormalTime.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             // 
             // hdgrpNormalTime.Panel
             // 
@@ -217,6 +227,10 @@
             this.btnNormalClockIn.ToolTipTitle = "Normal";
             this.btnNormalClockIn.UniqueName = "4956D308D3B54D7108B4D8A20BF50B1E";
             this.btnNormalClockIn.Click += new System.EventHandler(this.btnClockIn_Click);
+            // 
+            // customPallete
+            // 
+            this.customPallete.BasePaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Office2010Black;
             // 
             // kryptonPanel1
             // 
@@ -329,6 +343,8 @@
             this.btnStopBillableTime});
             this.hdgrpBillableTime.Location = new System.Drawing.Point(3, 133);
             this.hdgrpBillableTime.Name = "hdgrpBillableTime";
+            this.hdgrpBillableTime.Palette = this.customPallete;
+            this.hdgrpBillableTime.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             // 
             // hdgrpBillableTime.Panel
             // 
@@ -465,6 +481,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.hdgrpTotalTime.Location = new System.Drawing.Point(3, 263);
             this.hdgrpTotalTime.Name = "hdgrpTotalTime";
+            this.hdgrpTotalTime.Palette = this.customPallete;
+            this.hdgrpTotalTime.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             // 
             // hdgrpTotalTime.Panel
             // 
@@ -509,6 +527,8 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.rtbNotes.Location = new System.Drawing.Point(3, 387);
             this.rtbNotes.Name = "rtbNotes";
+            this.rtbNotes.Palette = this.customPallete;
+            this.rtbNotes.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.rtbNotes.Size = new System.Drawing.Size(772, 137);
             this.rtbNotes.TabIndex = 5;
             this.rtbNotes.Text = "Enter notes for today here...";
@@ -522,13 +542,6 @@
             this.btnEndDay.ToolTipTitle = "Normal";
             this.btnEndDay.UniqueName = "ECF2339D11F44343B4A9206038643D05";
             // 
-            // btnListAllTimesheets
-            // 
-            this.btnListAllTimesheets.Name = "btnListAllTimesheets";
-            this.btnListAllTimesheets.Size = new System.Drawing.Size(192, 22);
-            this.btnListAllTimesheets.Text = "List of all Timesheets...";
-            this.btnListAllTimesheets.Click += new System.EventHandler(this.btnListAllTimesheets_Click);
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -541,6 +554,8 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
+            this.Palette = this.customPallete;
+            this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.Text = "Time Tracker";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
@@ -615,6 +630,7 @@
         private ComponentFactory.Krypton.Toolkit.ButtonSpecAny btnEndDay;
         private ComponentFactory.Krypton.Toolkit.KryptonRichTextBox rtbNotes;
         private System.Windows.Forms.ToolStripMenuItem btnListAllTimesheets;
+        public ComponentFactory.Krypton.Toolkit.KryptonPalette customPallete;
     }
 }
 

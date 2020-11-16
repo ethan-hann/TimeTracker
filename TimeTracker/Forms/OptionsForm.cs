@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ComponentFactory.Krypton.Toolkit;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,7 +14,7 @@ using TimeTracker.Properties;
 
 namespace TimeTracker
 {
-    public partial class OptionsForm : Form
+    public partial class OptionsForm : KryptonForm
     {
         private Employee employee;
         private string savePath;
