@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TimeTracker.backend;
+using TimeTracker.Properties;
 
 namespace TimeTracker.Forms
 {
@@ -33,7 +34,26 @@ namespace TimeTracker.Forms
                     dayNode.Nodes.Add($"Billable Hours: {day.BillableTime.TotalHours:F2}");
                     sheetNode.Nodes.Add(dayNode);
                 }
+                sheetNode.Tag = sheet;
                 tvTimesheets.Nodes.Add(sheetNode);
+            }
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnGenerateSelectedSheet_Click(object sender, EventArgs e)
+        {
+            TimeSheet selectedSheet = (TimeSheet)tvTimesheets.SelectedNode.Tag;
+            if (selectedSheet != null)
+            {
+                GenerateTimesheet.Generate(selectedSheet);
+            }
+            else
+            {
+                CMessageBox.Show("You must select the root node of the\ntimesheet to generate it.", "Wrong node selected", MessageBoxButtons.OK, Resources.error_32);
             }
         }
     }

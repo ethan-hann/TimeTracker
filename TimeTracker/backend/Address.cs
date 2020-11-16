@@ -12,9 +12,24 @@ namespace TimeTracker.backend
     [Serializable]
     public class Address
     {
+        /// <summary>
+        /// The street component of this address.
+        /// </summary>
         public string Street { get; set; }
+
+        /// <summary>
+        /// The city component of this address.
+        /// </summary>
         public string City { get; set; }
+
+        /// <summary>
+        /// The state component of this address.
+        /// </summary>
         public string State { get; set; }
+
+        /// <summary>
+        /// The zipcode component of this address.
+        /// </summary>
         public string ZipCode { get; set; }
 
         /// <summary>

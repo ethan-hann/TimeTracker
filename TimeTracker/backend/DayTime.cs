@@ -13,14 +13,36 @@ namespace TimeTracker.backend
     /// <para>At the end of each day, this object is added to the <see cref="TimeSheet"/> and then saved.</para>
     /// </summary>
     [Serializable]
-    class DayTime
+    public class DayTime
     {
+        /// <summary>
+        /// A unique GUID representing this day.
+        /// </summary>
         public string UniqueID { get; private set; }
+
+        /// <summary>
+        /// A string representing notes that are associated with this day.
+        /// </summary>
         public string Notes { get; private set; }
+
+        /// <summary>
+        /// The amount of normal, non-overtime, non-billable time for this day.
+        /// </summary>
         public TimeSpan NormalTime { get; private set; }
+
+        /// <summary>
+        /// The amount of overtime, if any, this day produced.
+        /// </summary>
         public TimeSpan Overtime { get; private set; }
+
+        /// <summary>
+        /// The amount of billable time for this day.
+        /// </summary>
         public TimeSpan BillableTime { get; private set; }
 
+        /// <summary>
+        /// The date associated with this day.
+        /// </summary>
         public DateTime Date { get; private set; }
 
         /// <summary>
@@ -78,6 +100,10 @@ namespace TimeTracker.backend
             BillableTime = time;
         }
 
+        /// <summary>
+        /// Add a note to this day.
+        /// </summary>
+        /// <param name="note">The note to add.</param>
         public void AddNote(string note)
         {
             Notes = note;
@@ -91,18 +117,46 @@ namespace TimeTracker.backend
             UniqueID = Guid.NewGuid().ToString("B").ToUpper();
         }
 
-        public decimal GetNormalAmount()
+        /// <summary>
+        /// Get the monetary amount of pay for the normal amount of hours worked.
+        /// </summary>
+        /// <returns>A <see cref="decimal"/> value representing the pay for today.</returns>
+        public decimal GetNormalPay()
         {
             double normalTimeHours = NormalTime.TotalHours;
             
             return (decimal) normalTimeHours * EmployeeInformation.Instance.GetEmployee(Settings.Default.LastGUID).HourlyRate;
         }
 
-        public decimal GetBillableAmount()
+        /// <summary>
+        /// Get the monetary amount of pay for the billable time today.
+        /// </summary>
+        /// <returns>A <see cref="decimal"/> value representing the pay for today.</returns>
+        public decimal GetBillablePay()
         {
             double billableTimeHours = BillableTime.TotalHours;
 
             return (decimal)billableTimeHours * EmployeeInformation.Instance.GetEmployee(Settings.Default.LastGUID).BillableRate;
+        }
+
+        /// <summary>
+        /// Get the monetary amount of pay for the overtime today.
+        /// </summary>
+        /// <returns>A <see cref="decimal"/> value representing the pay for today.</returns>
+        public decimal GetOvertimePay()
+        {
+            double overtimeHours = Overtime.TotalHours;
+
+            return (decimal)overtimeHours * EmployeeInformation.Instance.GetEmployee(Settings.Default.LastGUID).OvertimeRate;
+        }
+
+        /// <summary>
+        /// Get the grand monetary total of pay for today.
+        /// </summary>
+        /// <returns>A <see cref="decimal"/> value representing the total pay for today.</returns>
+        public decimal GetTotalPay()
+        {
+            return GetNormalPay() + GetBillablePay() + GetOvertimePay();
         }
     }
 }

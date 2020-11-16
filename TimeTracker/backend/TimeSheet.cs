@@ -10,20 +10,35 @@ namespace TimeTracker.backend
     /// <summary>
     /// Represents a week of time (normal, overtime, and billable). Days are added to this timesheet using the helper methods.
     /// <para>To add time to a specific day, use the <see cref="DayTime"/> class.</para>
-    /// <para>The size of the <see cref="Days"/> dictionary is dependent on the value saved in <see cref="Settings.Default"/>.
-    /// If there is an attempt to add a day to this dictionary that would make the Count go past the WorkWeekLength,
-    /// a new <see cref="TimeSheet"/> instance is created.
-    /// </para>
     /// <para>This class cannot be instantiated. Instead, new timesheets must be created with the <see cref="New()"/> method. This should only be done at the start of a new week.</para>
     /// </summary>
     [Serializable]
-    class TimeSheet
+    public class TimeSheet
     {
         private static TimeSheet instance = null;
         private static readonly object padlock = new object();
 
+        /// <summary>
+        /// The unique GUID associated with this timesheet.
+        /// </summary>
         public string UniqueID { get; private set; }
+
+        /// <summary>
+        /// The <see cref="backend.Employee"/> object associated with this timesheet.
+        /// </summary>
         public Employee Employee { get; set; }
+
+        /// <summary>
+        /// Represents the days that make up this timesheet.
+        /// <para>
+        /// The key is a <see cref="DateTime"/> object, however only the <see cref="DateTime.Date"/> component is used
+        /// so that the time component does not affect the uniqueness of entries.
+        /// </para>
+        /// <para>The size of the <see cref="Days"/> dictionary is dependent on the value saved in <see cref="Settings.Default"/>.
+        /// If there is an attempt to add a day to this dictionary that would make the Count go past the WorkWeekLength,
+        /// a new <see cref="TimeSheet"/> instance is created.
+        /// </para>
+        /// </summary>
         public Dictionary<DateTime, DayTime> Days { get; private set; }
 
         private TimeSheet()
@@ -32,6 +47,9 @@ namespace TimeTracker.backend
             GenerateUniqueID();
         }
 
+        /// <summary>
+        /// Get an instance representing the current timesheet.
+        /// </summary>
         public static TimeSheet Instance
         {
             get
@@ -116,26 +134,38 @@ namespace TimeTracker.backend
             }
         }
 
-        public decimal GetHourlyPay()
+        /// <summary>
+        /// Get the monetary amount of pay for the total amount of normal hours worked this work week.
+        /// </summary>
+        /// <returns>A <see cref="decimal"/> value representing the pay for the week.</returns>
+        public decimal GetNormalPay()
         {
             decimal pay = 0.0M;
             foreach (DayTime day in Days.Values)
             {
-                pay += day.GetNormalAmount();
+                pay += day.GetNormalPay();
             }
             return pay;
         }
 
+        /// <summary>
+        /// Get the monetary amount of pay for the billable time worked this work week.
+        /// </summary>
+        /// <returns>A <see cref="decimal"/> value representing the pay for the week.</returns>
         public decimal GetBillablePay()
         {
             decimal pay = 0.0M;
             foreach (DayTime day in Days.Values)
             {
-                pay += day.GetBillableAmount();
+                pay += day.GetBillablePay();
             }
             return pay;
         }
 
+        /// <summary>
+        /// Get the monetary amount of pay for the total amount of overtime hours, if any, worked this work week.
+        /// </summary>
+        /// <returns>A <see cref="decimal"/> value representing the pay for the week.</returns>
         public decimal GetOvertimePay()
         {
             double hours = 0;
@@ -158,9 +188,13 @@ namespace TimeTracker.backend
             return pay;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns>A <see cref="decimal"/> value representing the grand total of pay for the week.</returns>
         public decimal GetTotalPay()
         {
-            return GetHourlyPay() + GetBillablePay() + GetOvertimePay();
+            return GetNormalPay() + GetBillablePay() + GetOvertimePay();
         }
 
         /// <summary>

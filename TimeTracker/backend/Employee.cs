@@ -13,18 +13,54 @@ namespace TimeTracker.backend
     [Serializable]
     public class Employee
     {
-        //Info
+        /// <summary>
+        /// A unique GUID representing this employee.
+        /// </summary>
         public string UniqueID { get; private set; }
+
+        /// <summary>
+        /// The employee's name.
+        /// </summary>
         public string Name { get; set; }
+
+        /// <summary>
+        /// The <see cref="Address"/> associated with this employee.
+        /// </summary>
         public Address EmpAddress { get; set; }
+
+        /// <summary>
+        /// The email address associated with this employee.
+        /// </summary>
         public string Email { get; set; }
+
+        /// <summary>
+        /// The phone number associated with this employee.
+        /// </summary>
         public string PhoneNumber { get; set; }
+
+        /// <summary>
+        /// The manager <see cref="Employee"/> object associated with this employee.
+        /// </summary>
         public Employee Manager { get; set; }
+
+        /// <summary>
+        /// The length (in hours) of this employee's lunch break.
+        /// </summary>
         public double LunchLength { get; set; }
 
-        //Rates
+        /// <summary>
+        /// The hourly, normal rate for this employee.
+        /// </summary>
         public decimal HourlyRate { get; set; }
+
+        /// <summary>
+        /// The overtime rate for this employee.
+        /// </summary>
         public decimal OvertimeRate { get; set; }
+
+        /// <summary>
+        /// The billable rate for this employee.
+        /// </summary>
         public decimal BillableRate { get; set; }
 
         /// <summary>

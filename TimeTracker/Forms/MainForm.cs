@@ -121,7 +121,7 @@ namespace TimeTracker
 
         private void UpdateNormalLabel()
         {
-            lblNormalMoney.Values.ExtraText = string.Format("{0:C}", Convert.ToDecimal(today.GetNormalAmount()));
+            lblNormalMoney.Values.ExtraText = string.Format("{0:C}", Convert.ToDecimal(today.GetNormalPay()));
         }
 
         /// <summary>
@@ -218,7 +218,7 @@ namespace TimeTracker
 
         private void UpdateBillableLabel()
         {
-            lblBillableMoney.Values.ExtraText = string.Format("{0:C}", Convert.ToDecimal(today.GetBillableAmount()));
+            lblBillableMoney.Values.ExtraText = string.Format("{0:C}", Convert.ToDecimal(today.GetBillablePay()));
         }
 
         private void btnBillableClockIn_Click(object sender, EventArgs e)
