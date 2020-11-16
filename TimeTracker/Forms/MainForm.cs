@@ -14,6 +14,9 @@ using TimeTracker.Properties;
 
 namespace TimeTracker
 {
+    //TODO: Add time employee clocked in and out; i.e. 8:30 AM and 5:00 PM to the timesheet.
+
+
     public partial class MainForm : KryptonForm
     {
         private DateTime date;
