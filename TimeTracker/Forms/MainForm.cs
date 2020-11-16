@@ -59,7 +59,7 @@ namespace TimeTracker
 
             if (employee == null)
             {
-                DialogResult result = CMessageBox.Show("There are no employees defined! Please create one now...", "No Employees", MessageBoxButtons.OK, Resources.info_32);
+                DialogResult result = CMessageBox.Show("There are no employees defined!\nPlease create one now...", "No Employees", MessageBoxButtons.OK, Resources.info_32);
                 if (result == DialogResult.OK)
                 {
                     new OptionsForm().ShowDialog();
@@ -70,7 +70,6 @@ namespace TimeTracker
                 if (sheet == null)
                 {
                     TimeSheet.Instance.New();
-                    TimeSheet.Instance.Employee = employee;
                 }
                 else
                 {
@@ -79,6 +78,7 @@ namespace TimeTracker
 
                 TimeSheet.Instance.Employee = employee;
                 TimeSheetInformation.Instance.AddTimeSheet(TimeSheet.Instance);
+
                 Settings.Default.CurrentTimesheetGUID = TimeSheet.Instance.UniqueID;
                 Settings.Default.Save();
             }

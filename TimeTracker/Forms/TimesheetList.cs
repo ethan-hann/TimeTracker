@@ -46,15 +46,23 @@ namespace TimeTracker.Forms
 
         private void btnGenerateSelectedSheet_Click(object sender, EventArgs e)
         {
-            TimeSheet selectedSheet = (TimeSheet)tvTimesheets.SelectedNode.Tag;
-            if (selectedSheet != null)
+            if (tvTimesheets.Nodes.Count > 0 && tvTimesheets.Nodes[0].Nodes.Count > 0)
             {
-                GenerateTimesheet.Generate(selectedSheet);
+                TimeSheet selectedSheet = (TimeSheet)tvTimesheets.SelectedNode.Tag;
+                if (selectedSheet != null)
+                {
+                    GenerateTimesheet.Generate(selectedSheet);
+                }
+                else
+                {
+                    CMessageBox.Show("You must select the root node of the\ntimesheet to generate it.", "Wrong node selected", MessageBoxButtons.OK, Resources.error_32);
+                }
             }
             else
             {
-                CMessageBox.Show("You must select the root node of the\ntimesheet to generate it.", "Wrong node selected", MessageBoxButtons.OK, Resources.error_32);
+                CMessageBox.Show("No timesheets yet!", "No data", MessageBoxButtons.OK, Resources.error_32);
             }
+
         }
     }
 }

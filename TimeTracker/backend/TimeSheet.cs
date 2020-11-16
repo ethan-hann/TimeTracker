@@ -98,6 +98,10 @@ namespace TimeTracker.backend
                 Instance.New();
                 Days.Add(day.Date.Date, day);
             }
+            else
+            {
+                Days.Add(day.Date.Date, day);
+            }
         }
 
         /// <summary>
