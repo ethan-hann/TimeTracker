@@ -28,7 +28,7 @@ namespace TimeTracker.backend
             GenerateUniqueID();
         }
 
-        public TimeSheet Instance
+        public static TimeSheet Instance
         {
             get
             {
@@ -36,7 +36,7 @@ namespace TimeTracker.backend
                 {
                     if (instance == null)
                     {
-                        New();
+                        instance = new TimeSheet();
                     }
                 }
                 return instance;
@@ -49,6 +49,15 @@ namespace TimeTracker.backend
         public void New()
         {
             instance = new TimeSheet();
+        }
+
+        /// <summary>
+        /// Set this instance to the specified <see cref="TimeSheet"/>.
+        /// </summary>
+        /// <param name="sheet"></param>
+        public void SetTimeSheet(TimeSheet sheet)
+        {
+            instance = sheet;
         }
 
         /// <summary>
@@ -88,7 +97,7 @@ namespace TimeTracker.backend
         /// </summary>
         private void GenerateUniqueID()
         {
-            UniqueID = Guid.NewGuid().ToString();
+            UniqueID = Guid.NewGuid().ToString("B").ToUpper();
         }
     }
 }

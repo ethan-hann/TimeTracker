@@ -63,7 +63,7 @@ namespace TimeTracker.backend
         {
             if (timesheetDictionary.ContainsKey(sheet.UniqueID))
             {
-                Console.WriteLine($"The dictionary already contains a timesheet with this unique name: {sheet.UniqueID}");
+                Console.WriteLine($"The dictionary already contains a timesheet with this unique id: {sheet.UniqueID}");
             }
             else
             {
@@ -72,7 +72,23 @@ namespace TimeTracker.backend
         }
 
         /// <summary>
-        /// Get an <see cref="TimeSheet"/> object associated with the uniqueID.
+        /// Updates, if it exists, the supplied <see cref="TimeSheet"/>.
+        /// </summary>
+        /// <param name="sheet">The <see cref="TimeSheet"/> to update.</param>
+        public void UpdateTimeSheet(TimeSheet sheet)
+        {
+            if (timesheetDictionary.ContainsKey(sheet.UniqueID))
+            {
+                timesheetDictionary[sheet.UniqueID] = sheet;
+            }
+            else
+            {
+                Console.WriteLine($"The dictionary does not contain a timesheet with this unique id: {sheet.UniqueID}");
+            }
+        }
+
+        /// <summary>
+        /// Get a <see cref="TimeSheet"/> object associated with the uniqueID.
         /// </summary>
         /// <param name="uniqueID">The uniqueID to search for.</param>
         /// <returns></returns>

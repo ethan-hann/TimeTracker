@@ -8,7 +8,10 @@
     <Setting Name="SavePath" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="WeekGUID" Type="System.String" Scope="User">
+    <Setting Name="CurrentTimesheetGUID" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="WeekStart" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>

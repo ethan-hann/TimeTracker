@@ -74,6 +74,9 @@
             this.btnClear = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnSave = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.saveFolderBrowser = new System.Windows.Forms.FolderBrowserDialog();
+            this.flowLayoutPanel18 = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblWeekStart = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.cmbDaysOfWeek = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel9.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -95,6 +98,8 @@
             this.flowLayoutPanel16.SuspendLayout();
             this.flowLayoutPanel17.SuspendLayout();
             this.flowLayoutPanel6.SuspendLayout();
+            this.flowLayoutPanel18.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbDaysOfWeek)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -113,6 +118,7 @@
             this.flowLayoutPanel9.Controls.Add(this.flowLayoutPanel5);
             this.flowLayoutPanel9.Controls.Add(this.flowLayoutPanel7);
             this.flowLayoutPanel9.Controls.Add(this.flowLayoutPanel8);
+            this.flowLayoutPanel9.Controls.Add(this.flowLayoutPanel18);
             resources.ApplyResources(this.flowLayoutPanel9, "flowLayoutPanel9");
             this.flowLayoutPanel9.Name = "flowLayoutPanel9";
             // 
@@ -388,6 +394,34 @@
             this.btnSave.Values.Text = resources.GetString("btnSave.Values.Text");
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // flowLayoutPanel18
+            // 
+            this.flowLayoutPanel18.Controls.Add(this.lblWeekStart);
+            this.flowLayoutPanel18.Controls.Add(this.cmbDaysOfWeek);
+            resources.ApplyResources(this.flowLayoutPanel18, "flowLayoutPanel18");
+            this.flowLayoutPanel18.Name = "flowLayoutPanel18";
+            // 
+            // lblWeekStart
+            // 
+            resources.ApplyResources(this.lblWeekStart, "lblWeekStart");
+            this.lblWeekStart.Name = "lblWeekStart";
+            this.lblWeekStart.Values.Text = resources.GetString("kryptonLabel1.Values.Text");
+            // 
+            // cmbDaysOfWeek
+            // 
+            this.cmbDaysOfWeek.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDaysOfWeek.DropDownWidth = 153;
+            this.cmbDaysOfWeek.Items.AddRange(new object[] {
+            resources.GetString("cmbDaysOfWeek.Items"),
+            resources.GetString("cmbDaysOfWeek.Items1"),
+            resources.GetString("cmbDaysOfWeek.Items2"),
+            resources.GetString("cmbDaysOfWeek.Items3"),
+            resources.GetString("cmbDaysOfWeek.Items4"),
+            resources.GetString("cmbDaysOfWeek.Items5"),
+            resources.GetString("cmbDaysOfWeek.Items6")});
+            resources.ApplyResources(this.cmbDaysOfWeek, "cmbDaysOfWeek");
+            this.cmbDaysOfWeek.Name = "cmbDaysOfWeek";
+            // 
             // OptionsForm
             // 
             resources.ApplyResources(this, "$this");
@@ -434,6 +468,9 @@
             this.flowLayoutPanel17.ResumeLayout(false);
             this.flowLayoutPanel17.PerformLayout();
             this.flowLayoutPanel6.ResumeLayout(false);
+            this.flowLayoutPanel18.ResumeLayout(false);
+            this.flowLayoutPanel18.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbDaysOfWeek)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -485,5 +522,8 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel6;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnSave;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnClear;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel18;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblWeekStart;
+        private ComponentFactory.Krypton.Toolkit.KryptonComboBox cmbDaysOfWeek;
     }
 }

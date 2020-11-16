@@ -57,7 +57,7 @@ namespace TimeTracker.backend
         /// </summary>
         private void GenerateUniqueID()
         {
-            UniqueID = Guid.NewGuid().ToString();
+            UniqueID = Guid.NewGuid().ToString("B").ToUpper();
         }
 
         /// <summary>

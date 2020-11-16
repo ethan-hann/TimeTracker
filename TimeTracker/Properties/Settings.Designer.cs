@@ -50,12 +50,24 @@ namespace TimeTracker.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string WeekGUID {
+        public string CurrentTimesheetGUID {
             get {
-                return ((string)(this["WeekGUID"]));
+                return ((string)(this["CurrentTimesheetGUID"]));
             }
             set {
-                this["WeekGUID"] = value;
+                this["CurrentTimesheetGUID"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string WeekStart {
+            get {
+                return ((string)(this["WeekStart"]));
+            }
+            set {
+                this["WeekStart"] = value;
             }
         }
     }

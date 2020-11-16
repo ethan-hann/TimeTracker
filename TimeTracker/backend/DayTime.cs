@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TimeTracker.Properties;
 
 namespace TimeTracker.backend
 
@@ -55,7 +56,7 @@ namespace TimeTracker.backend
         /// <param name="time">The <see cref="TimeSpan"/> representing the normal time to add.</param>
         public void AddNormalTime(TimeSpan time)
         {
-            NormalTime += time;
+            NormalTime = time;
         }
 
         /// <summary>
@@ -64,7 +65,7 @@ namespace TimeTracker.backend
         /// <param name="time">The <see cref="TimeSpan"/> representing the overtime to add.</param>
         public void AddOvertime(TimeSpan time)
         {
-            Overtime += time;
+            Overtime = time;
         }
 
         /// <summary>
@@ -73,7 +74,7 @@ namespace TimeTracker.backend
         /// <param name="time">The <see cref="TimeSpan"/> representing the billable time to add.</param>
         public void AddBillableTime(TimeSpan time)
         {
-            BillableTime += time;
+            BillableTime = time;
         }
 
         /// <summary>
@@ -81,7 +82,12 @@ namespace TimeTracker.backend
         /// </summary>
         private void GenerateUniqueID()
         {
-            UniqueID = Guid.NewGuid().ToString();
+            UniqueID = Guid.NewGuid().ToString("B").ToUpper();
+        }
+
+        public decimal GetNormalAmount()
+        {
+            return NormalTime * EmployeeInformation.Instance.GetEmployee(Settings.Default.LastGUID);
         }
     }
 }

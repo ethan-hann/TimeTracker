@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TimeTracker.backend;
 using TimeTracker.Properties;
 
 namespace TimeTracker
@@ -15,10 +16,22 @@ namespace TimeTracker
     public partial class MainForm : KryptonForm
     {
         private DateTime date;
-        private int hours = 0;
-        private int minutes = 0;
-        private int seconds = 0;
-        private bool paused = false;
+
+        private int normalHours = 0;
+        private int billableHours = 0;
+        private int normalMinutes = 0;
+        private int billableMinutes = 0;
+        private int normalSeconds = 0;
+        private int billableSeconds = 0;
+
+        private bool normalPaused = false;
+        private bool billablePaused = false;
+
+        private TimeSheet sheet;
+        private DayTime today;
+
+        private TimeSpan normalTime = new TimeSpan();
+        private TimeSpan billableTime = new TimeSpan();
 
         public MainForm()
         {
@@ -40,75 +53,148 @@ namespace TimeTracker
         {
             date = DateTime.Now;
             Text = $"Time Tracker - {date:MM/dd/yyyy}";
-        }
 
-        private void timer_Tick(object sender, EventArgs e)
-        {
-            UpdateSeconds();
-            lblSecondsCount.Text = seconds.ToString();
-            UpdateMinutes();
-            lblMinutesCount.Text = minutes.ToString();
-            lblHoursCount.Text = hours.ToString();
-        }
+            sheet = TimeSheetInformation.Instance.GetTimeSheet(Settings.Default.CurrentTimesheetGUID);
 
-        private void UpdateSeconds()
-        {
-            if (seconds >= 59)
+            if (sheet == null)
             {
-                minutes += 1;
-                seconds = 0;
+                TimeSheet.Instance.New();
+                TimeSheetInformation.Instance.AddTimeSheet(TimeSheet.Instance);
             }
             else
             {
-                seconds += 1;
+                TimeSheet.Instance.SetTimeSheet(sheet);
+            }
+
+            today = new DayTime(date);
+        }
+
+        #region Normal Time
+        private void normalTime_Tick(object sender, EventArgs e)
+        {
+            UpdateNormalSeconds();
+            lblSecondsCount.Text = normalSeconds.ToString();
+            UpdateNormalMinutes();
+            lblMinutesCount.Text = normalMinutes.ToString();
+            lblHoursCount.Text = normalHours.ToString();
+        }
+
+        private void UpdateNormalSeconds()
+        {
+            if (normalSeconds >= 59)
+            {
+                normalMinutes += 1;
+                normalSeconds = 0;
+            }
+            else
+            {
+                normalSeconds += 1;
             }
         }
 
-        private void UpdateMinutes()
+        private void UpdateNormalMinutes()
         {
-            if (minutes >= 59)
+            if (normalMinutes >= 59)
             {
-                hours += 1;
-                minutes = 0;
+                normalHours += 1;
+                normalMinutes = 0;
             }
         }
 
         private void btnClockIn_Click(object sender, EventArgs e)
         {
-            timer.Start();
-            timer.Enabled = true;
-            btnClockIn.Visible = false;
+            normalTimeTracker.Start();
+            normalTimeTracker.Enabled = true;
+            btnNormalClockIn.Visible = false;
+            btnBillableClockOut.Visible = false;
+
+            if (billableTimeTracker.Enabled)
+            {
+                billableTimeTracker.Enabled = false;
+                billableTimeTracker.Stop();
+            }
         }
 
         private void btnClockOut_Click(object sender, EventArgs e)
         {
-            timer.Stop();
-            timer.Enabled = false;
-            btnClockIn.Visible = true;
+            normalTimeTracker.Stop();
+            normalTimeTracker.Enabled = false;
+            btnNormalClockIn.Visible = true;
+            btnBillableClockIn.Visible = true;
+            btnBillableClockOut.Visible = true;
 
-            minutes = 0;
-            seconds = 0;
-            hours = 0;
+            today.AddNormalTime(new TimeSpan(normalHours, normalMinutes, normalSeconds));
+            today.AddBillableTime(new TimeSpan(billableHours, billableMinutes, billableSeconds));
+            Console.WriteLine(today.NormalTime.ToString());
+            Console.WriteLine(today.BillableTime.ToString());
 
             //TODO: clock out functionality
         }
 
-        private void btnPause_Click(object sender, EventArgs e)
+        #endregion
+
+        #region Billable Time
+        private void billableTimeTracker_Tick(object sender, EventArgs e)
         {
-            if (paused)
+            UpdateBillableSeconds();
+            lblBillableSecondsCount.Text = billableSeconds.ToString();
+            UpdateBillableMinutes();
+            lblBillableMinutesCount.Text = billableMinutes.ToString();
+            lblBillableHoursCount.Text = billableHours.ToString();
+        }
+
+        private void UpdateBillableSeconds()
+        {
+            if (billableSeconds >= 59)
             {
-                timer.Start();
-                paused = false;
-                btnPause.Values.ImageStates.ImageNormal = Resources.pause_32;
-                btnPause.Text = "Pause Time";
+                normalMinutes += 1;
+                billableSeconds = 0;
             }
             else
             {
-                timer.Stop();
-                paused = true;
-                btnPause.Values.ImageStates.ImageNormal = Resources.start_32;
-                btnPause.Text = "Resume Time";
+                billableSeconds += 1;
             }
         }
+
+        private void UpdateBillableMinutes()
+        {
+            if (billableMinutes >= 59)
+            {
+                billableHours += 1;
+                billableMinutes = 0;
+            }
+        }
+
+        private void btnBillableClockIn_Click(object sender, EventArgs e)
+        {
+            btnBillableClockIn.Visible = false;
+            btnNormalClockIn.Visible = false;
+            btnNormalClockOut.Visible = false;
+            btnBillableClockOut.Visible = true;
+
+            if (normalTimeTracker.Enabled)
+            {
+                normalTimeTracker.Enabled = false;
+                normalTimeTracker.Stop();
+            }
+
+            billableTimeTracker.Enabled = true;
+            billableTimeTracker.Start();
+        }
+
+        private void btnBillableClockOut_Click(object sender, EventArgs e)
+        {
+            billableTimeTracker.Stop();
+            billableTimeTracker.Enabled = false;
+
+            btnNormalClockOut.Visible = true;
+            btnBillableClockIn.Visible = true;
+            btnBillableClockOut.Visible = false;
+
+            normalTimeTracker.Enabled = true;
+            normalTimeTracker.Start();
+        }
+
+        #endregion
     }
 }

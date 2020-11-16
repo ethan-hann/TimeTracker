@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TimeTracker.Documents;
+using TimeTracker.backend;
 using TimeTracker.Properties;
 
 namespace TimeTracker
@@ -106,13 +106,12 @@ namespace TimeTracker
                 EmpAddress = new Address(txtStreet.Text, txtCity.Text, txtState.Text, txtZipCode.Text)
             };
 
-            employee.GenerateUniqueID();
-
-            EmployeeInformation.Instance.AddEmployee(employee.UniqueID, employee);
+            EmployeeInformation.Instance.AddEmployee(employee);
             EmployeeInformation.Instance.Save();
 
             Settings.Default.LastGUID = employee.UniqueID;
             Settings.Default.SavePath = savePath;
+            Settings.Default.WeekStart = cmbDaysOfWeek.SelectedText;
             Settings.Default.Save();
         }
 

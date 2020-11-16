@@ -525,11 +525,98 @@
   <data name="&gt;&gt;flowLayoutPanel8.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
+  <data name="lblWeekStart.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="lblWeekStart.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 20</value>
+  </data>
+  <data name="lblWeekStart.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="kryptonLabel1.Values.Text" xml:space="preserve">
+    <value>Week Start: </value>
+  </data>
+  <data name="&gt;&gt;lblWeekStart.Name" xml:space="preserve">
+    <value>lblWeekStart</value>
+  </data>
+  <data name="&gt;&gt;lblWeekStart.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;lblWeekStart.Parent" xml:space="preserve">
+    <value>flowLayoutPanel18</value>
+  </data>
+  <data name="&gt;&gt;lblWeekStart.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="cmbDaysOfWeek.Items" xml:space="preserve">
+    <value>Sunday</value>
+  </data>
+  <data name="cmbDaysOfWeek.Items1" xml:space="preserve">
+    <value>Monday</value>
+  </data>
+  <data name="cmbDaysOfWeek.Items2" xml:space="preserve">
+    <value>Tuesday</value>
+  </data>
+  <data name="cmbDaysOfWeek.Items3" xml:space="preserve">
+    <value>Wednesday</value>
+  </data>
+  <data name="cmbDaysOfWeek.Items4" xml:space="preserve">
+    <value>Thursday</value>
+  </data>
+  <data name="cmbDaysOfWeek.Items5" xml:space="preserve">
+    <value>Friday</value>
+  </data>
+  <data name="cmbDaysOfWeek.Items6" xml:space="preserve">
+    <value>Saturday</value>
+  </data>
+  <data name="cmbDaysOfWeek.Location" type="System.Drawing.Point, System.Drawing">
+    <value>82, 3</value>
+  </data>
+  <data name="cmbDaysOfWeek.Size" type="System.Drawing.Size, System.Drawing">
+    <value>153, 21</value>
+  </data>
+  <data name="cmbDaysOfWeek.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;cmbDaysOfWeek.Name" xml:space="preserve">
+    <value>cmbDaysOfWeek</value>
+  </data>
+  <data name="&gt;&gt;cmbDaysOfWeek.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonComboBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;cmbDaysOfWeek.Parent" xml:space="preserve">
+    <value>flowLayoutPanel18</value>
+  </data>
+  <data name="&gt;&gt;cmbDaysOfWeek.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="flowLayoutPanel18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 254</value>
+  </data>
+  <data name="flowLayoutPanel18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>362, 36</value>
+  </data>
+  <data name="flowLayoutPanel18.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel18.Name" xml:space="preserve">
+    <value>flowLayoutPanel18</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel18.Parent" xml:space="preserve">
+    <value>flowLayoutPanel9</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel18.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
   <data name="flowLayoutPanel9.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
   <data name="flowLayoutPanel9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>378, 256</value>
+    <value>378, 293</value>
   </data>
   <data name="flowLayoutPanel9.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
