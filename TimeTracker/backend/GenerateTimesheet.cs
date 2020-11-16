@@ -172,6 +172,9 @@ namespace TimeTracker.backend
             textStartY += 30;
 
             gfx.DrawString($"Total Pay: {string.Format("{0:C}", sheet.GetTotalPay())}", headerFont, XBrushes.Black, new XRect(textStartX, textStartY, page.Width, 40), XStringFormats.Center);
+            textStartY += 30;
+
+            gfx.DrawString("Generated automatically by software.", textFont, XBrushes.Black, new XRect(textStartX, textStartY, page.Width, 40), XStringFormats.Center);
         }
     }
 }
