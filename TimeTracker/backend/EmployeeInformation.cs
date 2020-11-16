@@ -31,6 +31,9 @@ namespace TimeTracker.backend
             formatter = new BinaryFormatter();
         }
 
+        /// <summary>
+        /// Get an instance of this class.
+        /// </summary>
         public static EmployeeInformation Instance
         {
             get
@@ -70,7 +73,7 @@ namespace TimeTracker.backend
         /// <summary>
         /// Add a <see cref="Employee"/> to the dictionary to be saved.
         /// </summary>
-        /// <param name="sheet">The <see cref="Employee"/> object to be added.</param>
+        /// <param name="employee">The <see cref="Employee"/> object to be added.</param>
         public void AddEmployee(Employee employee)
         {
             if (employeeDictionary.ContainsKey(employee.UniqueID))
@@ -103,7 +106,7 @@ namespace TimeTracker.backend
         /// <summary>
         /// Remove, if it exists, the specified employee.
         /// </summary>
-        /// <param name="sheet">The <see cref="Employee"/> object to be removed.</param>
+        /// <param name="employee">The <see cref="Employee"/> object to be removed.</param>
         public void RemoveEmployee(Employee employee)
         {
             if (!employeeDictionary.ContainsKey(employee.UniqueID))

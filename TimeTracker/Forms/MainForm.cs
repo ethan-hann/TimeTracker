@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TimeTracker.backend;
+using TimeTracker.Forms;
 using TimeTracker.Properties;
 
 namespace TimeTracker
@@ -259,6 +260,11 @@ namespace TimeTracker
         private void btnGenerateTimesheet_Click(object sender, EventArgs e)
         {
             GenerateTimesheet.Generate();
+        }
+
+        private void btnListAllTimesheets_Click(object sender, EventArgs e)
+        {
+            new TimesheetList().ShowDialog();
         }
     }
 }

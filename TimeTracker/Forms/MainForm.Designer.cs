@@ -67,8 +67,9 @@
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblNormalMoney = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lblBillableMoney = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.btnEndDay = new ComponentFactory.Krypton.Toolkit.ButtonSpecAny();
             this.rtbNotes = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
+            this.btnEndDay = new ComponentFactory.Krypton.Toolkit.ButtonSpecAny();
+            this.btnListAllTimesheets = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hdgrpNormalTime)).BeginInit();
@@ -120,7 +121,7 @@
             // 
             this.btnOpenPreferences.Image = global::TimeTracker.Properties.Resources.settings_32;
             this.btnOpenPreferences.Name = "btnOpenPreferences";
-            this.btnOpenPreferences.Size = new System.Drawing.Size(180, 22);
+            this.btnOpenPreferences.Size = new System.Drawing.Size(125, 22);
             this.btnOpenPreferences.Text = "Options...";
             this.btnOpenPreferences.Click += new System.EventHandler(this.OpenOptions);
             // 
@@ -128,33 +129,34 @@
             // 
             this.helpToolStripMenuItem.Image = global::TimeTracker.Properties.Resources.info_32;
             this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            this.helpToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.helpToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Image = global::TimeTracker.Properties.Resources.about;
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(125, 22);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(122, 6);
             // 
             // btnExit
             // 
             this.btnExit.Image = global::TimeTracker.Properties.Resources.exit;
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(180, 22);
+            this.btnExit.Size = new System.Drawing.Size(125, 22);
             this.btnExit.Text = "Exit";
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // timesheetsToolStripMenuItem
             // 
             this.timesheetsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnGenerateTimesheet});
+            this.btnGenerateTimesheet,
+            this.btnListAllTimesheets});
             this.timesheetsToolStripMenuItem.Name = "timesheetsToolStripMenuItem";
             this.timesheetsToolStripMenuItem.Size = new System.Drawing.Size(78, 20);
             this.timesheetsToolStripMenuItem.Text = "Timesheets";
@@ -163,7 +165,7 @@
             // 
             this.btnGenerateTimesheet.Image = global::TimeTracker.Properties.Resources.timesheet_32;
             this.btnGenerateTimesheet.Name = "btnGenerateTimesheet";
-            this.btnGenerateTimesheet.Size = new System.Drawing.Size(187, 22);
+            this.btnGenerateTimesheet.Size = new System.Drawing.Size(192, 22);
             this.btnGenerateTimesheet.Text = "Generate Timesheet...";
             this.btnGenerateTimesheet.Click += new System.EventHandler(this.btnGenerateTimesheet_Click);
             // 
@@ -210,12 +212,9 @@
             // btnNormalClockIn
             // 
             this.btnNormalClockIn.Image = global::TimeTracker.Properties.Resources.start_32;
-            this.btnNormalClockIn.Style = ComponentFactory.Krypton.Toolkit.PaletteButtonStyle.Inherit;
             this.btnNormalClockIn.Text = "Clock In";
             this.btnNormalClockIn.ToolTipBody = "Clock in and start the day!";
-            this.btnNormalClockIn.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
             this.btnNormalClockIn.ToolTipTitle = "Normal";
-            this.btnNormalClockIn.Type = ComponentFactory.Krypton.Toolkit.PaletteButtonSpecStyle.Generic;
             this.btnNormalClockIn.UniqueName = "4956D308D3B54D7108B4D8A20BF50B1E";
             this.btnNormalClockIn.Click += new System.EventHandler(this.btnClockIn_Click);
             // 
@@ -343,24 +342,18 @@
             // btnStartBillableTime
             // 
             this.btnStartBillableTime.Image = global::TimeTracker.Properties.Resources.start_32;
-            this.btnStartBillableTime.Style = ComponentFactory.Krypton.Toolkit.PaletteButtonStyle.Inherit;
             this.btnStartBillableTime.Text = "Start";
             this.btnStartBillableTime.ToolTipBody = "Pause the normal timer and begin billable time.";
-            this.btnStartBillableTime.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
             this.btnStartBillableTime.ToolTipTitle = "Billable Time";
-            this.btnStartBillableTime.Type = ComponentFactory.Krypton.Toolkit.PaletteButtonSpecStyle.Generic;
             this.btnStartBillableTime.UniqueName = "2914497D0D774D15CCA1FE2B365EB0E4";
             this.btnStartBillableTime.Click += new System.EventHandler(this.btnBillableClockIn_Click);
             // 
             // btnStopBillableTime
             // 
             this.btnStopBillableTime.Image = global::TimeTracker.Properties.Resources.stop_32;
-            this.btnStopBillableTime.Style = ComponentFactory.Krypton.Toolkit.PaletteButtonStyle.Inherit;
             this.btnStopBillableTime.Text = "Stop";
             this.btnStopBillableTime.ToolTipBody = "Stops the timer for billable time and resumes the normal timer.";
-            this.btnStopBillableTime.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
             this.btnStopBillableTime.ToolTipTitle = "Billable Time";
-            this.btnStopBillableTime.Type = ComponentFactory.Krypton.Toolkit.PaletteButtonSpecStyle.Generic;
             this.btnStopBillableTime.UniqueName = "361F0935CCDC4710AB98BDB02B73F806";
             this.btnStopBillableTime.Click += new System.EventHandler(this.btnBillableClockOut_Click);
             // 
@@ -510,18 +503,6 @@
             this.lblBillableMoney.TabIndex = 3;
             this.lblBillableMoney.Values.Text = "Billable Pay: ";
             // 
-            // btnEndDay
-            // 
-            this.btnEndDay.ExtraText = "(end day)";
-            this.btnEndDay.Image = global::TimeTracker.Properties.Resources.stop_32;
-            this.btnEndDay.Style = ComponentFactory.Krypton.Toolkit.PaletteButtonStyle.Inherit;
-            this.btnEndDay.Text = "Clock Out";
-            this.btnEndDay.ToolTipBody = "Clock out and end the current day.";
-            this.btnEndDay.ToolTipStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.ToolTip;
-            this.btnEndDay.ToolTipTitle = "Normal";
-            this.btnEndDay.Type = ComponentFactory.Krypton.Toolkit.PaletteButtonSpecStyle.Generic;
-            this.btnEndDay.UniqueName = "ECF2339D11F44343B4A9206038643D05";
-            // 
             // rtbNotes
             // 
             this.rtbNotes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -531,6 +512,22 @@
             this.rtbNotes.Size = new System.Drawing.Size(772, 137);
             this.rtbNotes.TabIndex = 5;
             this.rtbNotes.Text = "Enter notes for today here...";
+            // 
+            // btnEndDay
+            // 
+            this.btnEndDay.ExtraText = "(end day)";
+            this.btnEndDay.Image = global::TimeTracker.Properties.Resources.stop_32;
+            this.btnEndDay.Text = "Clock Out";
+            this.btnEndDay.ToolTipBody = "Clock out and end the current day.";
+            this.btnEndDay.ToolTipTitle = "Normal";
+            this.btnEndDay.UniqueName = "ECF2339D11F44343B4A9206038643D05";
+            // 
+            // btnListAllTimesheets
+            // 
+            this.btnListAllTimesheets.Name = "btnListAllTimesheets";
+            this.btnListAllTimesheets.Size = new System.Drawing.Size(192, 22);
+            this.btnListAllTimesheets.Text = "List of all Timesheets...";
+            this.btnListAllTimesheets.Click += new System.EventHandler(this.btnListAllTimesheets_Click);
             // 
             // MainForm
             // 
@@ -617,6 +614,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblBillableMoney;
         private ComponentFactory.Krypton.Toolkit.ButtonSpecAny btnEndDay;
         private ComponentFactory.Krypton.Toolkit.KryptonRichTextBox rtbNotes;
+        private System.Windows.Forms.ToolStripMenuItem btnListAllTimesheets;
     }
 }
 

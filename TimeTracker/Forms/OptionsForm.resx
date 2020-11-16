@@ -534,7 +534,7 @@
   <data name="lblWeekStart.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="kryptonLabel1.Values.Text" xml:space="preserve">
+  <data name="lblWeekStart.Values.Text" xml:space="preserve">
     <value>Week Start: </value>
   </data>
   <data name="&gt;&gt;lblWeekStart.Name" xml:space="preserve">
@@ -574,7 +574,7 @@
     <value>82, 3</value>
   </data>
   <data name="cmbDaysOfWeek.Size" type="System.Drawing.Size, System.Drawing">
-    <value>153, 21</value>
+    <value>98, 21</value>
   </data>
   <data name="cmbDaysOfWeek.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -590,6 +590,51 @@
   </data>
   <data name="&gt;&gt;cmbDaysOfWeek.ZOrder" xml:space="preserve">
     <value>1</value>
+  </data>
+  <data name="kryptonLabel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>186, 3</value>
+  </data>
+  <data name="kryptonLabel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 20</value>
+  </data>
+  <data name="kryptonLabel1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="kryptonLabel1.Values.Text" xml:space="preserve">
+    <value>Work Week Length: </value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel1.Name" xml:space="preserve">
+    <value>kryptonLabel1</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel1.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel1.Parent" xml:space="preserve">
+    <value>flowLayoutPanel18</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="txtWorkWeekLength.Location" type="System.Drawing.Point, System.Drawing">
+    <value>310, 3</value>
+  </data>
+  <data name="txtWorkWeekLength.Size" type="System.Drawing.Size, System.Drawing">
+    <value>39, 23</value>
+  </data>
+  <data name="txtWorkWeekLength.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;txtWorkWeekLength.Name" xml:space="preserve">
+    <value>txtWorkWeekLength</value>
+  </data>
+  <data name="&gt;&gt;txtWorkWeekLength.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;txtWorkWeekLength.Parent" xml:space="preserve">
+    <value>flowLayoutPanel18</value>
+  </data>
+  <data name="&gt;&gt;txtWorkWeekLength.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="flowLayoutPanel18.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 254</value>
@@ -621,10 +666,10 @@
   <data name="lblLunchLength.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
-  <data name="kryptonLabel1.Values.ExtraText" xml:space="preserve">
+  <data name="lblLunchLength.Values.ExtraText" xml:space="preserve">
     <value>(hours)</value>
   </data>
-  <data name="kryptonLabel1.Values.Text1" xml:space="preserve">
+  <data name="lblLunchLength.Values.Text" xml:space="preserve">
     <value>Lunch Length: </value>
   </data>
   <data name="&gt;&gt;lblLunchLength.Name" xml:space="preserve">

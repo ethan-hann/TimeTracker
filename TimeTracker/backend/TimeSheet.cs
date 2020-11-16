@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TimeTracker.Properties;
 
 namespace TimeTracker.backend
 {
     /// <summary>
     /// Represents a week of time (normal, overtime, and billable). Days are added to this timesheet using the helper methods.
     /// <para>To add time to a specific day, use the <see cref="DayTime"/> class.</para>
+    /// <para>The size of the <see cref="Days"/> dictionary is dependent on the value saved in <see cref="Settings.Default"/>.
+    /// If there is an attempt to add a day to this dictionary that would make the Count go past the WorkWeekLength,
+    /// a new <see cref="TimeSheet"/> instance is created.
+    /// </para>
     /// <para>This class cannot be instantiated. Instead, new timesheets must be created with the <see cref="New()"/> method. This should only be done at the start of a new week.</para>
     /// </summary>
     [Serializable]
@@ -20,11 +25,10 @@ namespace TimeTracker.backend
         public string UniqueID { get; private set; }
         public Employee Employee { get; set; }
         public Dictionary<DateTime, DayTime> Days { get; private set; }
-        
 
         private TimeSheet()
         {
-            Days = new Dictionary<DateTime, DayTime>();
+            Days = new Dictionary<DateTime, DayTime>(Settings.Default.WorkWeekLength);
             GenerateUniqueID();
         }
 
@@ -70,8 +74,10 @@ namespace TimeTracker.backend
             {
                 Console.WriteLine($"The day specified by the date, {day.Date.Date}, already exists in the dictionary.");
             }
-            else
+            else if ((Days.Count) == Settings.Default.WorkWeekLength)
             {
+                Console.WriteLine("The work week has ended. Creating a new Timesheet...");
+                Instance.New();
                 Days.Add(day.Date.Date, day);
             }
         }

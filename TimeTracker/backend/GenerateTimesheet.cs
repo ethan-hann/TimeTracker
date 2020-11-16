@@ -117,7 +117,7 @@ namespace TimeTracker.backend
                 textStartY += 20;
 
                 gfx.DrawString($"Notes: {day.Notes}", textFont, XBrushes.Black, new XRect(textStartX, textStartY, 0, 0));
-                textStartX -= 20;
+                textStartX = 10;
                 textStartY += 30;
             }
 

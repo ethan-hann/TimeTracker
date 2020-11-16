@@ -48,6 +48,7 @@ namespace TimeTracker
                 txtBillableRate.Text = employee.BillableRate.ToString();
                 txtLunchLength.Text = employee.LunchLength.ToString();
                 cmbDaysOfWeek.SelectedItem = Settings.Default.WeekStart;
+                txtWorkWeekLength.Text = Settings.Default.WorkWeekLength.ToString();
 
                 if (employee.OvertimeRate == (employee.HourlyRate + (employee.HourlyRate / 2.0M)))
                 {
@@ -116,6 +117,7 @@ namespace TimeTracker
             Settings.Default.LastGUID = employee.UniqueID;
             Settings.Default.SavePath = savePath;
             Settings.Default.WeekStart = (string)cmbDaysOfWeek.Items[cmbDaysOfWeek.SelectedIndex];
+            Settings.Default.WorkWeekLength = short.Parse(txtWorkWeekLength.Text);
             Settings.Default.Save();
         }
 
@@ -141,6 +143,7 @@ namespace TimeTracker
                 lblLocation.Values.ExtraText = "";
                 cmbDaysOfWeek.SelectedIndex = 0;
                 txtLunchLength.Text = "";
+                txtWorkWeekLength.Text = "";
 
                 txtEmail.Text = "";
                 txtPhoneNumber.Text = "";
@@ -218,6 +221,26 @@ namespace TimeTracker
             else
             {
                 CMessageBox.Show("Selected start of the week was invalid.", "Invalid day", MessageBoxButtons.OK, Resources.warning_32);
+                valid = false;
+                return valid;
+            }
+
+            if (short.TryParse(txtWorkWeekLength.Text, out short wwl))
+            {
+                if (wwl <= 7)
+                {
+                    valid = true;
+                }
+                else
+                {
+                    CMessageBox.Show("The work week cannot be longer than 7 days!", "Invalid week length", MessageBoxButtons.OK, Resources.warning_32);
+                    valid = false;
+                    return valid;
+                }
+            }
+            else
+            {
+                CMessageBox.Show("The work week entered was not valid.", "Invalid week length", MessageBoxButtons.OK, Resources.warning_32);
                 valid = false;
                 return valid;
             }

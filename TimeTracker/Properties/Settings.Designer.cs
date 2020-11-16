@@ -70,5 +70,17 @@ namespace TimeTracker.Properties {
                 this["WeekStart"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public short WorkWeekLength {
+            get {
+                return ((short)(this["WorkWeekLength"]));
+            }
+            set {
+                this["WorkWeekLength"] = value;
+            }
+        }
     }
 }

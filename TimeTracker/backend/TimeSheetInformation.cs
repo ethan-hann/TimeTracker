@@ -125,6 +125,11 @@ namespace TimeTracker.backend
             }
         }
 
+        public TimeSheet[] GetTimeSheets()
+        {
+            return timesheetDictionary.Values.ToArray();
+        }
+
         /// <summary>
         /// Save the contents of this <see cref="TimeSheetInformation"/> class to disk.
         /// </summary>
