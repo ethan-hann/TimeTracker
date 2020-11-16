@@ -19,12 +19,12 @@ namespace TimeTracker.backend
 
         public string UniqueID { get; private set; }
         public Employee Employee { get; set; }
-        public Dictionary<string, DayTime> Days { get; private set; }
+        public Dictionary<DateTime, DayTime> Days { get; private set; }
         
 
         private TimeSheet()
         {
-            Days = new Dictionary<string, DayTime>();
+            Days = new Dictionary<DateTime, DayTime>();
             GenerateUniqueID();
         }
 
@@ -66,30 +66,95 @@ namespace TimeTracker.backend
         /// <param name="day"></param>
         public void AddDay(DayTime day)
         {
-            if (Days.ContainsKey(day.UniqueID))
+            if (Days.ContainsKey(day.Date.Date))
             {
-                Console.WriteLine($"The day specified by the key, {day.UniqueID}, already exists in the dictionary.");
+                Console.WriteLine($"The day specified by the date, {day.Date.Date}, already exists in the dictionary.");
             }
             else
             {
-                Days.Add(day.UniqueID, day);
+                Days.Add(day.Date.Date, day);
             }
         }
 
         /// <summary>
-        /// Remove the specified <see cref="DayTime"/> object from the dictionary.
+        /// Update, if it exists, the specified <see cref="DayTime"/> object in the dictionary.
+        /// <para>If the day does not exist yet, this method will call <see cref="AddDay(DayTime)"/> to automatically add the <see cref="DayTime"/> to the dictionary.</para>
+        /// </summary>
+        /// <param name="day"></param>
+        public void UpdateDay(DayTime day)
+        {
+            if (Days.ContainsKey(day.Date.Date))
+            {
+                Days[day.Date.Date] = day;
+            }
+            else
+            {
+                Console.WriteLine($"The day specified by the date, {day.Date.Date}, does not exist in the dictionary. Adding it now...");
+                AddDay(day);
+            }
+        }
+
+        /// <summary>
+        /// Removes, if it exists, the specified <see cref="DayTime"/> object from the dictionary.
         /// </summary>
         /// <param name="day"></param>
         public void RemoveDay(DayTime day)
         {
-            if (!Days.ContainsKey(day.UniqueID))
+            if (!Days.ContainsKey(day.Date.Date))
             {
-                Console.WriteLine($"The day specified by the key, {day.UniqueID}, does not exist in the dictionary.");
+                Console.WriteLine($"The day specified by the date, {day.Date.Date}, does not exist in the dictionary.");
             }
             else
             {
-                Days.Remove(day.UniqueID);
+                Days.Remove(day.Date.Date);
             }
+        }
+
+        public decimal GetHourlyPay()
+        {
+            decimal pay = 0.0M;
+            foreach (DayTime day in Days.Values)
+            {
+                pay += day.GetNormalAmount();
+            }
+            return pay;
+        }
+
+        public decimal GetBillablePay()
+        {
+            decimal pay = 0.0M;
+            foreach (DayTime day in Days.Values)
+            {
+                pay += day.GetBillableAmount();
+            }
+            return pay;
+        }
+
+        public decimal GetOvertimePay()
+        {
+            double hours = 0;
+            decimal pay = 0.0M;
+
+            foreach (DayTime day in Days.Values)
+            {
+                hours += day.NormalTime.TotalHours;
+                hours += day.BillableTime.TotalHours;
+            }
+            
+            if (hours > 40)
+            {
+                double overHours = hours - 40.0;
+                for (double i = hours; i <= overHours; i++)
+                {
+                    pay += (decimal)i * Employee.OvertimeRate;
+                }
+            }
+            return pay;
+        }
+
+        public decimal GetTotalPay()
+        {
+            return GetHourlyPay() + GetBillablePay() + GetOvertimePay();
         }
 
         /// <summary>

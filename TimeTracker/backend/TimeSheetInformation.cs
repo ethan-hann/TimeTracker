@@ -73,6 +73,7 @@ namespace TimeTracker.backend
 
         /// <summary>
         /// Updates, if it exists, the supplied <see cref="TimeSheet"/>.
+        /// <para>If it does not exist, this method calls <see cref="AddTimeSheet(TimeSheet)"/> to add it to the dictionary.</para>
         /// </summary>
         /// <param name="sheet">The <see cref="TimeSheet"/> to update.</param>
         public void UpdateTimeSheet(TimeSheet sheet)
@@ -83,7 +84,8 @@ namespace TimeTracker.backend
             }
             else
             {
-                Console.WriteLine($"The dictionary does not contain a timesheet with this unique id: {sheet.UniqueID}");
+                Console.WriteLine($"The dictionary does not contain a timesheet with this unique id: {sheet.UniqueID}. Adding it now...");
+                timesheetDictionary.Add(sheet.UniqueID, sheet);
             }
         }
 

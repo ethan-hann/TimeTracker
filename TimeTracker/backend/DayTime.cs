@@ -16,6 +16,7 @@ namespace TimeTracker.backend
     class DayTime
     {
         public string UniqueID { get; private set; }
+        public string Notes { get; private set; }
         public TimeSpan NormalTime { get; private set; }
         public TimeSpan Overtime { get; private set; }
         public TimeSpan BillableTime { get; private set; }
@@ -77,6 +78,11 @@ namespace TimeTracker.backend
             BillableTime = time;
         }
 
+        public void AddNote(string note)
+        {
+            Notes = note;
+        }
+
         /// <summary>
         /// Generate a unique GUID for this day; used when adding this day to a <see cref="TimeSheet"/>.
         /// </summary>
@@ -87,7 +93,16 @@ namespace TimeTracker.backend
 
         public decimal GetNormalAmount()
         {
-            return NormalTime * EmployeeInformation.Instance.GetEmployee(Settings.Default.LastGUID);
+            double normalTimeHours = NormalTime.TotalHours;
+            
+            return (decimal) normalTimeHours * EmployeeInformation.Instance.GetEmployee(Settings.Default.LastGUID).HourlyRate;
+        }
+
+        public decimal GetBillableAmount()
+        {
+            double billableTimeHours = BillableTime.TotalHours;
+
+            return (decimal)billableTimeHours * EmployeeInformation.Instance.GetEmployee(Settings.Default.LastGUID).BillableRate;
         }
     }
 }

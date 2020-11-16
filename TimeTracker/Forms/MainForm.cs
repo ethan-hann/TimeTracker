@@ -24,14 +24,9 @@ namespace TimeTracker
         private int normalSeconds = 0;
         private int billableSeconds = 0;
 
-        private bool normalPaused = false;
-        private bool billablePaused = false;
-
         private TimeSheet sheet;
         private DayTime today;
-
-        private TimeSpan normalTime = new TimeSpan();
-        private TimeSpan billableTime = new TimeSpan();
+        private Employee employee;
 
         public MainForm()
         {
@@ -51,19 +46,37 @@ namespace TimeTracker
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            btnEndDay.Click += btnClockOut_Click;
             date = DateTime.Now;
-            Text = $"Time Tracker - {date:MM/dd/yyyy}";
+            Text = $"Time Tracker - {date:MM/dd/yyyy} - {date.DayOfWeek}";
 
             sheet = TimeSheetInformation.Instance.GetTimeSheet(Settings.Default.CurrentTimesheetGUID);
+            employee = EmployeeInformation.Instance.GetEmployee(Settings.Default.LastGUID);
 
-            if (sheet == null)
+            if (employee == null)
             {
-                TimeSheet.Instance.New();
-                TimeSheetInformation.Instance.AddTimeSheet(TimeSheet.Instance);
+                DialogResult result = CMessageBox.Show("There are no employees defined! Please create one now...", "No Employees", MessageBoxButtons.OK, Resources.info_32);
+                if (result == DialogResult.OK)
+                {
+                    new OptionsForm().ShowDialog();
+                }
             }
             else
             {
-                TimeSheet.Instance.SetTimeSheet(sheet);
+                if (sheet == null)
+                {
+                    TimeSheet.Instance.New();
+                    TimeSheet.Instance.Employee = employee;
+                }
+                else
+                {
+                    TimeSheet.Instance.SetTimeSheet(sheet);
+                }
+
+                TimeSheet.Instance.Employee = employee;
+                TimeSheetInformation.Instance.AddTimeSheet(TimeSheet.Instance);
+                Settings.Default.CurrentTimesheetGUID = TimeSheet.Instance.UniqueID;
+                Settings.Default.Save();
             }
 
             today = new DayTime(date);
@@ -77,6 +90,10 @@ namespace TimeTracker
             UpdateNormalMinutes();
             lblMinutesCount.Text = normalMinutes.ToString();
             lblHoursCount.Text = normalHours.ToString();
+
+            today.AddNormalTime(new TimeSpan(normalHours, normalMinutes, normalSeconds));
+
+            UpdateNormalLabel();
         }
 
         private void UpdateNormalSeconds()
@@ -101,12 +118,20 @@ namespace TimeTracker
             }
         }
 
-        private void btnClockIn_Click(object sender, EventArgs e)
+        private void UpdateNormalLabel()
+        {
+            lblNormalMoney.Values.ExtraText = string.Format("{0:C}", Convert.ToDecimal(today.GetNormalAmount()));
+        }
+
+        /// <summary>
+        /// Begin the current day's normal timer.
+        /// </summary>
+        private void NormalClockIn()
         {
             normalTimeTracker.Start();
             normalTimeTracker.Enabled = true;
             btnNormalClockIn.Visible = false;
-            btnBillableClockOut.Visible = false;
+            btnStopBillableTime.Visible = false;
 
             if (billableTimeTracker.Enabled)
             {
@@ -115,18 +140,39 @@ namespace TimeTracker
             }
         }
 
-        private void btnClockOut_Click(object sender, EventArgs e)
+        private void btnClockIn_Click(object sender, EventArgs e)
+        {
+            NormalClockIn();
+        }
+
+        /// <summary>
+        /// End the day and add the day to the current timesheet.
+        /// </summary>
+        private void EndDay()
         {
             normalTimeTracker.Stop();
             normalTimeTracker.Enabled = false;
-            btnNormalClockIn.Visible = true;
-            btnBillableClockIn.Visible = true;
-            btnBillableClockOut.Visible = true;
+            billableTimeTracker.Stop();
+            billableTimeTracker.Enabled = false;
 
-            today.AddNormalTime(new TimeSpan(normalHours, normalMinutes, normalSeconds));
-            today.AddBillableTime(new TimeSpan(billableHours, billableMinutes, billableSeconds));
-            Console.WriteLine(today.NormalTime.ToString());
-            Console.WriteLine(today.BillableTime.ToString());
+            btnNormalClockIn.Visible = true;
+            btnStartBillableTime.Visible = true;
+            btnStopBillableTime.Visible = true;
+
+            today.AddNote(rtbNotes.Text);
+
+            TimeSheet.Instance.UpdateDay(today);
+            TimeSheetInformation.Instance.UpdateTimeSheet(TimeSheet.Instance);
+        }
+
+        /// <summary>
+        /// Ends the current day!
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnClockOut_Click(object sender, EventArgs e)
+        {
+            EndDay();
 
             //TODO: clock out functionality
         }
@@ -141,13 +187,17 @@ namespace TimeTracker
             UpdateBillableMinutes();
             lblBillableMinutesCount.Text = billableMinutes.ToString();
             lblBillableHoursCount.Text = billableHours.ToString();
+
+            today.AddBillableTime(new TimeSpan(billableHours, billableMinutes, billableSeconds));
+
+            UpdateBillableLabel();
         }
 
         private void UpdateBillableSeconds()
         {
             if (billableSeconds >= 59)
             {
-                normalMinutes += 1;
+                billableMinutes += 1;
                 billableSeconds = 0;
             }
             else
@@ -165,12 +215,16 @@ namespace TimeTracker
             }
         }
 
+        private void UpdateBillableLabel()
+        {
+            lblBillableMoney.Values.ExtraText = string.Format("{0:C}", Convert.ToDecimal(today.GetBillableAmount()));
+        }
+
         private void btnBillableClockIn_Click(object sender, EventArgs e)
         {
-            btnBillableClockIn.Visible = false;
+            btnStartBillableTime.Visible = false;
             btnNormalClockIn.Visible = false;
-            btnNormalClockOut.Visible = false;
-            btnBillableClockOut.Visible = true;
+            btnStopBillableTime.Visible = true;
 
             if (normalTimeTracker.Enabled)
             {
@@ -187,14 +241,24 @@ namespace TimeTracker
             billableTimeTracker.Stop();
             billableTimeTracker.Enabled = false;
 
-            btnNormalClockOut.Visible = true;
-            btnBillableClockIn.Visible = true;
-            btnBillableClockOut.Visible = false;
+            btnEndDay.Visible = true;
+            btnStartBillableTime.Visible = true;
+            btnStopBillableTime.Visible = false;
 
             normalTimeTracker.Enabled = true;
             normalTimeTracker.Start();
         }
 
         #endregion
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            TimeSheetInformation.Instance.Save();
+        }
+
+        private void btnGenerateTimesheet_Click(object sender, EventArgs e)
+        {
+            GenerateTimesheet.Generate();
+        }
     }
 }

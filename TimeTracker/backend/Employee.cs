@@ -8,7 +8,7 @@ namespace TimeTracker.backend
 {
     /// <summary>
     /// Represents an employee.
-    /// <para>An employee has a name, address, email, phone number, manager, an hourly rate, an overtime rate, and a billable rate.</para>
+    /// <para>An employee has a name, address, email, phone number, manager, lunch length, an hourly rate, an overtime rate, and a billable rate.</para>
     /// </summary>
     [Serializable]
     public class Employee
@@ -20,6 +20,7 @@ namespace TimeTracker.backend
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
         public Employee Manager { get; set; }
+        public double LunchLength { get; set; }
 
         //Rates
         public decimal HourlyRate { get; set; }
@@ -42,13 +43,15 @@ namespace TimeTracker.backend
         /// <param name="hourlyRate">The hourly rate this employee is paid.</param>
         /// <param name="overtimeRate">The overtime rate this employee is paid.</param>
         /// <param name="billableRate">The billable rate this employee is paid.</param>
-        public Employee(string name, Address empAddress, decimal hourlyRate, decimal overtimeRate, decimal billableRate)
+        /// <param name="lunchLength">The length (in hours) of this employee's lunch break.</param>
+        public Employee(string name, Address empAddress, decimal hourlyRate, decimal overtimeRate, decimal billableRate, double lunchLength)
         {
             Name = name;
             EmpAddress = empAddress;
             HourlyRate = hourlyRate;
             OvertimeRate = overtimeRate;
             BillableRate = billableRate;
+            LunchLength = lunchLength;
             GenerateUniqueID();
         }
 

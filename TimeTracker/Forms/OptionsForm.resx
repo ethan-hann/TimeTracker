@@ -612,11 +612,80 @@
   <data name="&gt;&gt;flowLayoutPanel18.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
+  <data name="lblLunchLength.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="lblLunchLength.Size" type="System.Drawing.Size, System.Drawing">
+    <value>131, 20</value>
+  </data>
+  <data name="lblLunchLength.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="kryptonLabel1.Values.ExtraText" xml:space="preserve">
+    <value>(hours)</value>
+  </data>
+  <data name="kryptonLabel1.Values.Text1" xml:space="preserve">
+    <value>Lunch Length: </value>
+  </data>
+  <data name="&gt;&gt;lblLunchLength.Name" xml:space="preserve">
+    <value>lblLunchLength</value>
+  </data>
+  <data name="&gt;&gt;lblLunchLength.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;lblLunchLength.Parent" xml:space="preserve">
+    <value>flowLayoutPanel19</value>
+  </data>
+  <data name="&gt;&gt;lblLunchLength.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtLunchLength.Location" type="System.Drawing.Point, System.Drawing">
+    <value>140, 3</value>
+  </data>
+  <data name="txtLunchLength.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 23</value>
+  </data>
+  <data name="txtLunchLength.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;txtLunchLength.Name" xml:space="preserve">
+    <value>txtLunchLength</value>
+  </data>
+  <data name="&gt;&gt;txtLunchLength.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;txtLunchLength.Parent" xml:space="preserve">
+    <value>flowLayoutPanel19</value>
+  </data>
+  <data name="&gt;&gt;txtLunchLength.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="flowLayoutPanel19.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 296</value>
+  </data>
+  <data name="flowLayoutPanel19.Size" type="System.Drawing.Size, System.Drawing">
+    <value>362, 36</value>
+  </data>
+  <data name="flowLayoutPanel19.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel19.Name" xml:space="preserve">
+    <value>flowLayoutPanel19</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel19.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel19.Parent" xml:space="preserve">
+    <value>flowLayoutPanel9</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel19.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
   <data name="flowLayoutPanel9.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
   <data name="flowLayoutPanel9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>378, 293</value>
+    <value>378, 343</value>
   </data>
   <data name="flowLayoutPanel9.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -1168,7 +1237,7 @@
     <value>RightToLeft</value>
   </data>
   <data name="flowLayoutPanel6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 302</value>
+    <value>3, 352</value>
   </data>
   <data name="flowLayoutPanel6.Size" type="System.Drawing.Size, System.Drawing">
     <value>755, 36</value>
@@ -1195,7 +1264,7 @@
     <value>0, 0</value>
   </data>
   <data name="flowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>769, 347</value>
+    <value>769, 399</value>
   </data>
   <data name="flowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1222,7 +1291,7 @@
     <value>7, 15</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>769, 347</value>
+    <value>769, 399</value>
   </data>
   <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>

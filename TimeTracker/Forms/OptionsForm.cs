@@ -46,6 +46,8 @@ namespace TimeTracker
                 txtHourlyRate.Text = employee.HourlyRate.ToString();
                 txtOvertimeRate.Text = employee.OvertimeRate.ToString();
                 txtBillableRate.Text = employee.BillableRate.ToString();
+                txtLunchLength.Text = employee.LunchLength.ToString();
+                cmbDaysOfWeek.SelectedItem = Settings.Default.WeekStart;
 
                 if (employee.OvertimeRate == (employee.HourlyRate + (employee.HourlyRate / 2.0M)))
                 {
@@ -58,6 +60,7 @@ namespace TimeTracker
                 txtCity.Text = employee.EmpAddress.City;
                 txtState.Text = employee.EmpAddress.State;
                 txtZipCode.Text = employee.EmpAddress.ZipCode;
+                
             }
 
             lblLocation.Values.ExtraText = savePath;
@@ -103,7 +106,8 @@ namespace TimeTracker
                 BillableRate = decimal.Parse(txtBillableRate.Text),
                 Email = txtEmail.Text,
                 PhoneNumber = txtPhoneNumber.Text,
-                EmpAddress = new Address(txtStreet.Text, txtCity.Text, txtState.Text, txtZipCode.Text)
+                EmpAddress = new Address(txtStreet.Text, txtCity.Text, txtState.Text, txtZipCode.Text),
+                LunchLength = double.Parse(txtLunchLength.Text)
             };
 
             EmployeeInformation.Instance.AddEmployee(employee);
@@ -111,7 +115,7 @@ namespace TimeTracker
 
             Settings.Default.LastGUID = employee.UniqueID;
             Settings.Default.SavePath = savePath;
-            Settings.Default.WeekStart = cmbDaysOfWeek.SelectedText;
+            Settings.Default.WeekStart = (string)cmbDaysOfWeek.Items[cmbDaysOfWeek.SelectedIndex];
             Settings.Default.Save();
         }
 
@@ -135,6 +139,8 @@ namespace TimeTracker
                 txtBillableRate.Text = "";
                 chkDefaultOvertime.Checked = false;
                 lblLocation.Values.ExtraText = "";
+                cmbDaysOfWeek.SelectedIndex = 0;
+                txtLunchLength.Text = "";
 
                 txtEmail.Text = "";
                 txtPhoneNumber.Text = "";
@@ -201,6 +207,28 @@ namespace TimeTracker
             else
             {
                 CMessageBox.Show("No path specified for timesheet file.", "Invalid path", MessageBoxButtons.OK, Resources.warning_32);
+                valid = false;
+                return valid;
+            }
+
+            if (cmbDaysOfWeek.SelectedIndex >= 0)
+            {
+                valid = true;
+            }
+            else
+            {
+                CMessageBox.Show("Selected start of the week was invalid.", "Invalid day", MessageBoxButtons.OK, Resources.warning_32);
+                valid = false;
+                return valid;
+            }
+
+            if (double.TryParse(txtLunchLength.Text, out double l))
+            {
+                valid = true;
+            }
+            else
+            {
+                CMessageBox.Show("The length of your lunch break was invalid.", "Invalid lunch length", MessageBoxButtons.OK, Resources.warning_32);
                 valid = false;
                 return valid;
             }

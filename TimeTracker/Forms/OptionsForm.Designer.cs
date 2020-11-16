@@ -77,6 +77,9 @@
             this.flowLayoutPanel18 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblWeekStart = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.cmbDaysOfWeek = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
+            this.flowLayoutPanel19 = new System.Windows.Forms.FlowLayoutPanel();
+            this.lblLunchLength = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.txtLunchLength = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.flowLayoutPanel1.SuspendLayout();
             this.flowLayoutPanel9.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
@@ -100,6 +103,7 @@
             this.flowLayoutPanel6.SuspendLayout();
             this.flowLayoutPanel18.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbDaysOfWeek)).BeginInit();
+            this.flowLayoutPanel19.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -119,6 +123,7 @@
             this.flowLayoutPanel9.Controls.Add(this.flowLayoutPanel7);
             this.flowLayoutPanel9.Controls.Add(this.flowLayoutPanel8);
             this.flowLayoutPanel9.Controls.Add(this.flowLayoutPanel18);
+            this.flowLayoutPanel9.Controls.Add(this.flowLayoutPanel19);
             resources.ApplyResources(this.flowLayoutPanel9, "flowLayoutPanel9");
             this.flowLayoutPanel9.Name = "flowLayoutPanel9";
             // 
@@ -422,6 +427,25 @@
             resources.ApplyResources(this.cmbDaysOfWeek, "cmbDaysOfWeek");
             this.cmbDaysOfWeek.Name = "cmbDaysOfWeek";
             // 
+            // flowLayoutPanel19
+            // 
+            this.flowLayoutPanel19.Controls.Add(this.lblLunchLength);
+            this.flowLayoutPanel19.Controls.Add(this.txtLunchLength);
+            resources.ApplyResources(this.flowLayoutPanel19, "flowLayoutPanel19");
+            this.flowLayoutPanel19.Name = "flowLayoutPanel19";
+            // 
+            // lblLunchLength
+            // 
+            resources.ApplyResources(this.lblLunchLength, "lblLunchLength");
+            this.lblLunchLength.Name = "lblLunchLength";
+            this.lblLunchLength.Values.ExtraText = resources.GetString("kryptonLabel1.Values.ExtraText");
+            this.lblLunchLength.Values.Text = resources.GetString("kryptonLabel1.Values.Text1");
+            // 
+            // txtLunchLength
+            // 
+            resources.ApplyResources(this.txtLunchLength, "txtLunchLength");
+            this.txtLunchLength.Name = "txtLunchLength";
+            // 
             // OptionsForm
             // 
             resources.ApplyResources(this, "$this");
@@ -471,6 +495,8 @@
             this.flowLayoutPanel18.ResumeLayout(false);
             this.flowLayoutPanel18.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbDaysOfWeek)).EndInit();
+            this.flowLayoutPanel19.ResumeLayout(false);
+            this.flowLayoutPanel19.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -525,5 +551,8 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel18;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblWeekStart;
         private ComponentFactory.Krypton.Toolkit.KryptonComboBox cmbDaysOfWeek;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel19;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblLunchLength;
+        private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtLunchLength;
     }
 }
