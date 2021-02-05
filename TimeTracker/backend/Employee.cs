@@ -16,7 +16,7 @@ namespace TimeTracker.backend
         /// <summary>
         /// A unique GUID representing this employee.
         /// </summary>
-        public string UniqueID { get; private set; }
+        public string UniqueID { get; set; }
 
         /// <summary>
         /// The employee's name.

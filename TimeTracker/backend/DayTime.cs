@@ -21,9 +21,9 @@ namespace TimeTracker.backend
         public string UniqueID { get; private set; }
 
         /// <summary>
-        /// A string representing notes that are associated with this day.
+        /// A list of strings representing notes for this day.
         /// </summary>
-        public string Notes { get; private set; }
+        public List<string> Notes { get; private set; } = new List<string>();
 
         /// <summary>
         /// The amount of normal, non-overtime, non-billable time for this day.
@@ -106,7 +106,7 @@ namespace TimeTracker.backend
         /// <param name="note">The note to add.</param>
         public void AddNote(string note)
         {
-            Notes = note;
+            Notes.Add(note);
         }
 
         /// <summary>
@@ -125,7 +125,7 @@ namespace TimeTracker.backend
         {
             double normalTimeHours = NormalTime.TotalHours;
             
-            return (decimal) normalTimeHours * EmployeeInformation.Instance.GetEmployee(Settings.Default.LastGUID).HourlyRate;
+            return (decimal) normalTimeHours * EmployeeInformation.Instance.GetEmployee().HourlyRate;
         }
 
         /// <summary>
@@ -136,7 +136,7 @@ namespace TimeTracker.backend
         {
             double billableTimeHours = BillableTime.TotalHours;
 
-            return (decimal)billableTimeHours * EmployeeInformation.Instance.GetEmployee(Settings.Default.LastGUID).BillableRate;
+            return (decimal)billableTimeHours * EmployeeInformation.Instance.GetEmployee().BillableRate;
         }
 
         /// <summary>
@@ -147,7 +147,7 @@ namespace TimeTracker.backend
         {
             double overtimeHours = Overtime.TotalHours;
 
-            return (decimal)overtimeHours * EmployeeInformation.Instance.GetEmployee(Settings.Default.LastGUID).OvertimeRate;
+            return (decimal)overtimeHours * EmployeeInformation.Instance.GetEmployee().OvertimeRate;
         }
 
         /// <summary>

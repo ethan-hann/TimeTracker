@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employee>
+    <unique_id></unique_id>
+    <name></name>
+    <address>
+        <street></street>
+        <city></city>
+        <state></state>
+        <zip_code></zip_code>
+    </address>
+    <email></email>
+    <phone_number></phone_number>
+    <lunch_length></lunch_length>
+    <hourly_rate></hourly_rate>
+    <overtime_rate></overtime_rate>
+    <billable_rate></billable_rate>
+    <manager>
+        <name></name>
+        <email></email>
+        <phone_number></phone_number>
+    </manager>
+</employee>

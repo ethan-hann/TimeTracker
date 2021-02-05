@@ -40,6 +40,11 @@
             this.timesheetsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnGenerateTimesheet = new System.Windows.Forms.ToolStripMenuItem();
             this.btnListAllTimesheets = new System.Windows.Forms.ToolStripMenuItem();
+            this.mileageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addMilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewMilesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thisWeekToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.todayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.normalTimeTracker = new System.Windows.Forms.Timer(this.components);
             this.billableTimeTracker = new System.Windows.Forms.Timer(this.components);
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -65,12 +70,14 @@
             this.lblBillableHoursCount = new System.Windows.Forms.Label();
             this.lblBillableMinutesCount = new System.Windows.Forms.Label();
             this.lblBillableSecondsCount = new System.Windows.Forms.Label();
+            this.rtbNotes = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
             this.hdgrpTotalTime = new ComponentFactory.Krypton.Toolkit.KryptonHeaderGroup();
             this.flowLayoutPanel2 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblNormalMoney = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.lblBillableMoney = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.rtbNotes = new ComponentFactory.Krypton.Toolkit.KryptonRichTextBox();
             this.btnEndDay = new ComponentFactory.Krypton.Toolkit.ButtonSpecAny();
+            this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnAddNote = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.menuStrip1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hdgrpNormalTime)).BeginInit();
@@ -92,6 +99,7 @@
             this.hdgrpTotalTime.Panel.SuspendLayout();
             this.hdgrpTotalTime.SuspendLayout();
             this.flowLayoutPanel2.SuspendLayout();
+            this.flowLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -99,10 +107,11 @@
             this.menuStrip1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fileToolStripMenuItem,
-            this.timesheetsToolStripMenuItem});
+            this.timesheetsToolStripMenuItem,
+            this.mileageToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(783, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(784, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -166,16 +175,53 @@
             // 
             this.btnGenerateTimesheet.Image = global::TimeTracker.Properties.Resources.timesheet_32;
             this.btnGenerateTimesheet.Name = "btnGenerateTimesheet";
-            this.btnGenerateTimesheet.Size = new System.Drawing.Size(192, 22);
+            this.btnGenerateTimesheet.Size = new System.Drawing.Size(187, 22);
             this.btnGenerateTimesheet.Text = "Generate Timesheet...";
             this.btnGenerateTimesheet.Click += new System.EventHandler(this.btnGenerateTimesheet_Click);
             // 
             // btnListAllTimesheets
             // 
+            this.btnListAllTimesheets.Image = global::TimeTracker.Properties.Resources._044_money;
             this.btnListAllTimesheets.Name = "btnListAllTimesheets";
-            this.btnListAllTimesheets.Size = new System.Drawing.Size(192, 22);
-            this.btnListAllTimesheets.Text = "List of all Timesheets...";
+            this.btnListAllTimesheets.Size = new System.Drawing.Size(187, 22);
+            this.btnListAllTimesheets.Text = "View Timesheets...";
             this.btnListAllTimesheets.Click += new System.EventHandler(this.btnListAllTimesheets_Click);
+            // 
+            // mileageToolStripMenuItem
+            // 
+            this.mileageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addMilesToolStripMenuItem,
+            this.viewMilesToolStripMenuItem});
+            this.mileageToolStripMenuItem.Name = "mileageToolStripMenuItem";
+            this.mileageToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
+            this.mileageToolStripMenuItem.Text = "Mileage";
+            // 
+            // addMilesToolStripMenuItem
+            // 
+            this.addMilesToolStripMenuItem.Name = "addMilesToolStripMenuItem";
+            this.addMilesToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.addMilesToolStripMenuItem.Text = "Add Miles...";
+            // 
+            // viewMilesToolStripMenuItem
+            // 
+            this.viewMilesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.thisWeekToolStripMenuItem,
+            this.todayToolStripMenuItem});
+            this.viewMilesToolStripMenuItem.Name = "viewMilesToolStripMenuItem";
+            this.viewMilesToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.viewMilesToolStripMenuItem.Text = "View Miles";
+            // 
+            // thisWeekToolStripMenuItem
+            // 
+            this.thisWeekToolStripMenuItem.Name = "thisWeekToolStripMenuItem";
+            this.thisWeekToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.thisWeekToolStripMenuItem.Text = "This Week...";
+            // 
+            // todayToolStripMenuItem
+            // 
+            this.todayToolStripMenuItem.Name = "todayToolStripMenuItem";
+            this.todayToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.todayToolStripMenuItem.Text = "Today...";
             // 
             // normalTimeTracker
             // 
@@ -191,12 +237,13 @@
             // 
             this.flowLayoutPanel1.Controls.Add(this.hdgrpNormalTime);
             this.flowLayoutPanel1.Controls.Add(this.hdgrpBillableTime);
+            this.flowLayoutPanel1.Controls.Add(this.flowLayoutPanel3);
             this.flowLayoutPanel1.Controls.Add(this.hdgrpTotalTime);
-            this.flowLayoutPanel1.Controls.Add(this.rtbNotes);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 24);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(783, 536);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(784, 570);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
             // hdgrpNormalTime
@@ -475,11 +522,22 @@
             this.lblBillableSecondsCount.Text = "0";
             this.lblBillableSecondsCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // rtbNotes
+            // 
+            this.rtbNotes.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.rtbNotes.Location = new System.Drawing.Point(3, 3);
+            this.rtbNotes.Name = "rtbNotes";
+            this.rtbNotes.Palette = this.customPallete;
+            this.rtbNotes.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.rtbNotes.Size = new System.Drawing.Size(769, 130);
+            this.rtbNotes.TabIndex = 5;
+            this.rtbNotes.Text = "Enter notes for today here...";
+            // 
             // hdgrpTotalTime
             // 
             this.hdgrpTotalTime.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.hdgrpTotalTime.Location = new System.Drawing.Point(3, 263);
+            this.hdgrpTotalTime.Location = new System.Drawing.Point(3, 443);
             this.hdgrpTotalTime.Name = "hdgrpTotalTime";
             this.hdgrpTotalTime.Palette = this.customPallete;
             this.hdgrpTotalTime.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
@@ -487,7 +545,7 @@
             // hdgrpTotalTime.Panel
             // 
             this.hdgrpTotalTime.Panel.Controls.Add(this.flowLayoutPanel2);
-            this.hdgrpTotalTime.Size = new System.Drawing.Size(775, 118);
+            this.hdgrpTotalTime.Size = new System.Drawing.Size(776, 118);
             this.hdgrpTotalTime.TabIndex = 4;
             this.hdgrpTotalTime.ValuesPrimary.Heading = "Today\'s Stats";
             this.hdgrpTotalTime.ValuesPrimary.Image = null;
@@ -502,7 +560,7 @@
             this.flowLayoutPanel2.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.flowLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel2.Name = "flowLayoutPanel2";
-            this.flowLayoutPanel2.Size = new System.Drawing.Size(773, 65);
+            this.flowLayoutPanel2.Size = new System.Drawing.Size(774, 65);
             this.flowLayoutPanel2.TabIndex = 0;
             // 
             // lblNormalMoney
@@ -521,18 +579,6 @@
             this.lblBillableMoney.TabIndex = 3;
             this.lblBillableMoney.Values.Text = "Billable Pay: ";
             // 
-            // rtbNotes
-            // 
-            this.rtbNotes.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.rtbNotes.Location = new System.Drawing.Point(3, 387);
-            this.rtbNotes.Name = "rtbNotes";
-            this.rtbNotes.Palette = this.customPallete;
-            this.rtbNotes.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.rtbNotes.Size = new System.Drawing.Size(772, 137);
-            this.rtbNotes.TabIndex = 5;
-            this.rtbNotes.Text = "Enter notes for today here...";
-            // 
             // btnEndDay
             // 
             this.btnEndDay.ExtraText = "(end day)";
@@ -542,17 +588,39 @@
             this.btnEndDay.ToolTipTitle = "Normal";
             this.btnEndDay.UniqueName = "ECF2339D11F44343B4A9206038643D05";
             // 
+            // flowLayoutPanel3
+            // 
+            this.flowLayoutPanel3.Controls.Add(this.rtbNotes);
+            this.flowLayoutPanel3.Controls.Add(this.btnAddNote);
+            this.flowLayoutPanel3.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel3.Location = new System.Drawing.Point(3, 263);
+            this.flowLayoutPanel3.Name = "flowLayoutPanel3";
+            this.flowLayoutPanel3.Size = new System.Drawing.Size(776, 174);
+            this.flowLayoutPanel3.TabIndex = 6;
+            // 
+            // btnAddNote
+            // 
+            this.btnAddNote.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.btnAddNote.Location = new System.Drawing.Point(3, 139);
+            this.btnAddNote.Name = "btnAddNote";
+            this.btnAddNote.Size = new System.Drawing.Size(123, 29);
+            this.btnAddNote.TabIndex = 14;
+            this.btnAddNote.Values.Text = "Add New Note";
+            this.btnAddNote.Click += new System.EventHandler(this.btnAddNote_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ButtonSpecs.AddRange(new ComponentFactory.Krypton.Toolkit.ButtonSpecAny[] {
             this.btnEndDay});
-            this.ClientSize = new System.Drawing.Size(783, 560);
+            this.ClientSize = new System.Drawing.Size(784, 594);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.menuStrip1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "MainForm";
             this.Palette = this.customPallete;
             this.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
@@ -584,6 +652,7 @@
             this.hdgrpTotalTime.ResumeLayout(false);
             this.flowLayoutPanel2.ResumeLayout(false);
             this.flowLayoutPanel2.PerformLayout();
+            this.flowLayoutPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -631,6 +700,13 @@
         private ComponentFactory.Krypton.Toolkit.KryptonRichTextBox rtbNotes;
         private System.Windows.Forms.ToolStripMenuItem btnListAllTimesheets;
         public ComponentFactory.Krypton.Toolkit.KryptonPalette customPallete;
+        private System.Windows.Forms.ToolStripMenuItem mileageToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addMilesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem viewMilesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem thisWeekToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem todayToolStripMenuItem;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnAddNote;
     }
 }
 

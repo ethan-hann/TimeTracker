@@ -117,17 +117,510 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;flowLayoutPanel2.Name" xml:space="preserve">
+    <value>flowLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel2.Parent" xml:space="preserve">
+    <value>flowLayoutPanel9</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel3.Name" xml:space="preserve">
+    <value>flowLayoutPanel3</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel3.Parent" xml:space="preserve">
+    <value>flowLayoutPanel9</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel4.Name" xml:space="preserve">
+    <value>flowLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel4.Parent" xml:space="preserve">
+    <value>flowLayoutPanel9</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel4.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel5.Name" xml:space="preserve">
+    <value>flowLayoutPanel5</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel5.Parent" xml:space="preserve">
+    <value>flowLayoutPanel9</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel5.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel8.Name" xml:space="preserve">
+    <value>flowLayoutPanel8</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel8.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel8.Parent" xml:space="preserve">
+    <value>flowLayoutPanel9</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel8.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel18.Name" xml:space="preserve">
+    <value>flowLayoutPanel18</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel18.Parent" xml:space="preserve">
+    <value>flowLayoutPanel9</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel18.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel19.Name" xml:space="preserve">
+    <value>flowLayoutPanel19</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel19.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel19.Parent" xml:space="preserve">
+    <value>flowLayoutPanel9</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel19.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="lblName.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="flowLayoutPanel9.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
+  </data>
+  <data name="flowLayoutPanel9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>378, 343</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="flowLayoutPanel9.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel9.Name" xml:space="preserve">
+    <value>flowLayoutPanel9</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel9.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel9.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel9.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblEmail.Name" xml:space="preserve">
+    <value>lblEmail</value>
+  </data>
+  <data name="&gt;&gt;lblEmail.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;lblEmail.Parent" xml:space="preserve">
+    <value>flowLayoutPanel11</value>
+  </data>
+  <data name="&gt;&gt;lblEmail.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtEmail.Name" xml:space="preserve">
+    <value>txtEmail</value>
+  </data>
+  <data name="&gt;&gt;txtEmail.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;txtEmail.Parent" xml:space="preserve">
+    <value>flowLayoutPanel11</value>
+  </data>
+  <data name="&gt;&gt;txtEmail.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="flowLayoutPanel11.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="flowLayoutPanel11.Size" type="System.Drawing.Size, System.Drawing">
+    <value>362, 36</value>
+  </data>
+  <data name="flowLayoutPanel11.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel11.Name" xml:space="preserve">
+    <value>flowLayoutPanel11</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel11.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel11.Parent" xml:space="preserve">
+    <value>flowLayoutPanel10</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel11.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblPhone.Name" xml:space="preserve">
+    <value>lblPhone</value>
+  </data>
+  <data name="&gt;&gt;lblPhone.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;lblPhone.Parent" xml:space="preserve">
+    <value>flowLayoutPanel12</value>
+  </data>
+  <data name="&gt;&gt;lblPhone.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtPhoneNumber.Name" xml:space="preserve">
+    <value>txtPhoneNumber</value>
+  </data>
+  <data name="&gt;&gt;txtPhoneNumber.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;txtPhoneNumber.Parent" xml:space="preserve">
+    <value>flowLayoutPanel12</value>
+  </data>
+  <data name="&gt;&gt;txtPhoneNumber.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="flowLayoutPanel12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 45</value>
+  </data>
+  <data name="flowLayoutPanel12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>362, 36</value>
+  </data>
+  <data name="flowLayoutPanel12.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel12.Name" xml:space="preserve">
+    <value>flowLayoutPanel12</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel12.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel12.Parent" xml:space="preserve">
+    <value>flowLayoutPanel10</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel12.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="kryptonGroupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 87</value>
   </data>
   <metadata name="optionsPallete.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>170, 17</value>
   </metadata>
+  <data name="&gt;&gt;flowLayoutPanel13.Name" xml:space="preserve">
+    <value>flowLayoutPanel13</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel13.Parent" xml:space="preserve">
+    <value>flowLayoutPanel14</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel13.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel15.Name" xml:space="preserve">
+    <value>flowLayoutPanel15</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel15.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel15.Parent" xml:space="preserve">
+    <value>flowLayoutPanel14</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel15.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel16.Name" xml:space="preserve">
+    <value>flowLayoutPanel16</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel16.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel16.Parent" xml:space="preserve">
+    <value>flowLayoutPanel14</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel16.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel17.Name" xml:space="preserve">
+    <value>flowLayoutPanel17</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel17.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel17.Parent" xml:space="preserve">
+    <value>flowLayoutPanel14</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel17.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="flowLayoutPanel14.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="flowLayoutPanel14.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="flowLayoutPanel14.Size" type="System.Drawing.Size, System.Drawing">
+    <value>358, 174</value>
+  </data>
+  <data name="flowLayoutPanel14.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel14.Name" xml:space="preserve">
+    <value>flowLayoutPanel14</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel14.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel14.Parent" xml:space="preserve">
+    <value>kryptonGroupBox1.Panel</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel14.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;kryptonGroupBox1.Panel.Name" xml:space="preserve">
+    <value>kryptonGroupBox1.Panel</value>
+  </data>
+  <data name="&gt;&gt;kryptonGroupBox1.Panel.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonGroupPanel, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;kryptonGroupBox1.Panel.Parent" xml:space="preserve">
+    <value>kryptonGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;kryptonGroupBox1.Panel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="kryptonGroupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>362, 198</value>
+  </data>
+  <data name="kryptonGroupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="kryptonGroupBox1.Values.Heading" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="&gt;&gt;kryptonGroupBox1.Name" xml:space="preserve">
+    <value>kryptonGroupBox1</value>
+  </data>
+  <data name="&gt;&gt;kryptonGroupBox1.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonGroupBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;kryptonGroupBox1.Parent" xml:space="preserve">
+    <value>flowLayoutPanel10</value>
+  </data>
+  <data name="&gt;&gt;kryptonGroupBox1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="btnAddManager.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnAddManager.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 291</value>
+  </data>
+  <data name="btnAddManager.Size" type="System.Drawing.Size, System.Drawing">
+    <value>174, 29</value>
+  </data>
+  <data name="btnAddManager.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="btnAddManager.Values.Text" xml:space="preserve">
+    <value>Create Manager...</value>
+  </data>
+  <data name="&gt;&gt;btnAddManager.Name" xml:space="preserve">
+    <value>btnAddManager</value>
+  </data>
+  <data name="&gt;&gt;btnAddManager.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonButton, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;btnAddManager.Parent" xml:space="preserve">
+    <value>flowLayoutPanel10</value>
+  </data>
+  <data name="&gt;&gt;btnAddManager.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="lblManagerName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>183, 291</value>
+  </data>
+  <data name="lblManagerName.Size" type="System.Drawing.Size, System.Drawing">
+    <value>62, 20</value>
+  </data>
+  <data name="lblManagerName.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="lblManagerName.Values.Text" xml:space="preserve">
+    <value>Manager: </value>
+  </data>
+  <data name="&gt;&gt;lblManagerName.Name" xml:space="preserve">
+    <value>lblManagerName</value>
+  </data>
+  <data name="&gt;&gt;lblManagerName.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;lblManagerName.Parent" xml:space="preserve">
+    <value>flowLayoutPanel10</value>
+  </data>
+  <data name="&gt;&gt;lblManagerName.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="flowLayoutPanel10.Location" type="System.Drawing.Point, System.Drawing">
+    <value>387, 3</value>
+  </data>
+  <data name="flowLayoutPanel10.Size" type="System.Drawing.Size, System.Drawing">
+    <value>371, 343</value>
+  </data>
+  <data name="flowLayoutPanel10.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel10.Name" xml:space="preserve">
+    <value>flowLayoutPanel10</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel10.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel10.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;btnClear.Name" xml:space="preserve">
+    <value>btnClear</value>
+  </data>
+  <data name="&gt;&gt;btnClear.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonButton, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;btnClear.Parent" xml:space="preserve">
+    <value>flowLayoutPanel6</value>
+  </data>
+  <data name="&gt;&gt;btnClear.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Name" xml:space="preserve">
+    <value>btnSave</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonButton, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;btnSave.Parent" xml:space="preserve">
+    <value>flowLayoutPanel6</value>
+  </data>
+  <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="flowLayoutPanel6.FlowDirection" type="System.Windows.Forms.FlowDirection, System.Windows.Forms">
+    <value>RightToLeft</value>
+  </data>
+  <data name="flowLayoutPanel6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 352</value>
+  </data>
+  <data name="flowLayoutPanel6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>755, 36</value>
+  </data>
+  <data name="flowLayoutPanel6.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel6.Name" xml:space="preserve">
+    <value>flowLayoutPanel6</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel6.Parent" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel6.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="flowLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="flowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="flowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>769, 399</value>
+  </data>
+  <data name="flowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Name" xml:space="preserve">
+    <value>flowLayoutPanel1</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;lblName.Name" xml:space="preserve">
+    <value>lblName</value>
+  </data>
+  <data name="&gt;&gt;lblName.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;lblName.Parent" xml:space="preserve">
+    <value>flowLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;lblName.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtFullName.Name" xml:space="preserve">
+    <value>txtFullName</value>
+  </data>
+  <data name="&gt;&gt;txtFullName.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;txtFullName.Parent" xml:space="preserve">
+    <value>flowLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;txtFullName.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="flowLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="flowLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>362, 36</value>
+  </data>
+  <data name="flowLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel2.Name" xml:space="preserve">
+    <value>flowLayoutPanel2</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel2.Parent" xml:space="preserve">
+    <value>flowLayoutPanel9</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="lblName.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
   <data name="lblName.Size" type="System.Drawing.Size, System.Drawing">
     <value>68, 20</value>
   </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lblName.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -167,26 +660,50 @@
   <data name="&gt;&gt;txtFullName.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="flowLayoutPanel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+  <data name="&gt;&gt;lblHourlyRate.Name" xml:space="preserve">
+    <value>lblHourlyRate</value>
   </data>
-  <data name="flowLayoutPanel2.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="&gt;&gt;lblHourlyRate.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;lblHourlyRate.Parent" xml:space="preserve">
+    <value>flowLayoutPanel3</value>
+  </data>
+  <data name="&gt;&gt;lblHourlyRate.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtHourlyRate.Name" xml:space="preserve">
+    <value>txtHourlyRate</value>
+  </data>
+  <data name="&gt;&gt;txtHourlyRate.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;txtHourlyRate.Parent" xml:space="preserve">
+    <value>flowLayoutPanel3</value>
+  </data>
+  <data name="&gt;&gt;txtHourlyRate.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="flowLayoutPanel3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 45</value>
+  </data>
+  <data name="flowLayoutPanel3.Size" type="System.Drawing.Size, System.Drawing">
     <value>362, 36</value>
   </data>
-  <data name="flowLayoutPanel2.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="flowLayoutPanel3.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
   </data>
-  <data name="&gt;&gt;flowLayoutPanel2.Name" xml:space="preserve">
-    <value>flowLayoutPanel2</value>
+  <data name="&gt;&gt;flowLayoutPanel3.Name" xml:space="preserve">
+    <value>flowLayoutPanel3</value>
   </data>
-  <data name="&gt;&gt;flowLayoutPanel2.Type" xml:space="preserve">
+  <data name="&gt;&gt;flowLayoutPanel3.Type" xml:space="preserve">
     <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;flowLayoutPanel2.Parent" xml:space="preserve">
+  <data name="&gt;&gt;flowLayoutPanel3.Parent" xml:space="preserve">
     <value>flowLayoutPanel9</value>
   </data>
-  <data name="&gt;&gt;flowLayoutPanel2.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;flowLayoutPanel3.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="lblHourlyRate.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -233,26 +750,62 @@
   <data name="&gt;&gt;txtHourlyRate.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="flowLayoutPanel3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 45</value>
+  <data name="&gt;&gt;lblOvertime.Name" xml:space="preserve">
+    <value>lblOvertime</value>
   </data>
-  <data name="flowLayoutPanel3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>362, 36</value>
+  <data name="&gt;&gt;lblOvertime.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
   </data>
-  <data name="flowLayoutPanel3.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+  <data name="&gt;&gt;lblOvertime.Parent" xml:space="preserve">
+    <value>flowLayoutPanel4</value>
   </data>
-  <data name="&gt;&gt;flowLayoutPanel3.Name" xml:space="preserve">
-    <value>flowLayoutPanel3</value>
+  <data name="&gt;&gt;lblOvertime.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;flowLayoutPanel3.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtOvertimeRate.Name" xml:space="preserve">
+    <value>txtOvertimeRate</value>
+  </data>
+  <data name="&gt;&gt;txtOvertimeRate.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;txtOvertimeRate.Parent" xml:space="preserve">
+    <value>flowLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;txtOvertimeRate.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;chkDefaultOvertime.Name" xml:space="preserve">
+    <value>chkDefaultOvertime</value>
+  </data>
+  <data name="&gt;&gt;chkDefaultOvertime.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonCheckBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;chkDefaultOvertime.Parent" xml:space="preserve">
+    <value>flowLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;chkDefaultOvertime.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="flowLayoutPanel4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 87</value>
+  </data>
+  <data name="flowLayoutPanel4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>362, 35</value>
+  </data>
+  <data name="flowLayoutPanel4.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel4.Name" xml:space="preserve">
+    <value>flowLayoutPanel4</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel4.Type" xml:space="preserve">
     <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;flowLayoutPanel3.Parent" xml:space="preserve">
+  <data name="&gt;&gt;flowLayoutPanel4.Parent" xml:space="preserve">
     <value>flowLayoutPanel9</value>
   </data>
-  <data name="&gt;&gt;flowLayoutPanel3.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;flowLayoutPanel4.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="lblOvertime.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -323,26 +876,50 @@
   <data name="&gt;&gt;chkDefaultOvertime.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="flowLayoutPanel4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 87</value>
+  <data name="&gt;&gt;lblBillable.Name" xml:space="preserve">
+    <value>lblBillable</value>
   </data>
-  <data name="flowLayoutPanel4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>362, 35</value>
+  <data name="&gt;&gt;lblBillable.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
   </data>
-  <data name="flowLayoutPanel4.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+  <data name="&gt;&gt;lblBillable.Parent" xml:space="preserve">
+    <value>flowLayoutPanel5</value>
   </data>
-  <data name="&gt;&gt;flowLayoutPanel4.Name" xml:space="preserve">
-    <value>flowLayoutPanel4</value>
+  <data name="&gt;&gt;lblBillable.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;flowLayoutPanel4.Type" xml:space="preserve">
+  <data name="&gt;&gt;txtBillableRate.Name" xml:space="preserve">
+    <value>txtBillableRate</value>
+  </data>
+  <data name="&gt;&gt;txtBillableRate.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;txtBillableRate.Parent" xml:space="preserve">
+    <value>flowLayoutPanel5</value>
+  </data>
+  <data name="&gt;&gt;txtBillableRate.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="flowLayoutPanel5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 128</value>
+  </data>
+  <data name="flowLayoutPanel5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>362, 36</value>
+  </data>
+  <data name="flowLayoutPanel5.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel5.Name" xml:space="preserve">
+    <value>flowLayoutPanel5</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel5.Type" xml:space="preserve">
     <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;flowLayoutPanel4.Parent" xml:space="preserve">
+  <data name="&gt;&gt;flowLayoutPanel5.Parent" xml:space="preserve">
     <value>flowLayoutPanel9</value>
   </data>
-  <data name="&gt;&gt;flowLayoutPanel4.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;flowLayoutPanel5.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="lblBillable.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -389,112 +966,6 @@
   <data name="&gt;&gt;txtBillableRate.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="flowLayoutPanel5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 128</value>
-  </data>
-  <data name="flowLayoutPanel5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>362, 36</value>
-  </data>
-  <data name="flowLayoutPanel5.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel5.Name" xml:space="preserve">
-    <value>flowLayoutPanel5</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel5.Parent" xml:space="preserve">
-    <value>flowLayoutPanel9</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel5.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="lblDataLocation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="lblDataLocation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>148, 20</value>
-  </data>
-  <data name="lblDataLocation.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblDataLocation.Values.Text" xml:space="preserve">
-    <value>Timesheet Data Location: </value>
-  </data>
-  <data name="&gt;&gt;lblDataLocation.Name" xml:space="preserve">
-    <value>lblDataLocation</value>
-  </data>
-  <data name="&gt;&gt;lblDataLocation.Type" xml:space="preserve">
-    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
-  </data>
-  <data name="&gt;&gt;lblDataLocation.Parent" xml:space="preserve">
-    <value>flowLayoutPanel7</value>
-  </data>
-  <data name="&gt;&gt;lblDataLocation.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="btnSetSaveLocation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="btnSetSaveLocation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>157, 3</value>
-  </data>
-  <data name="btnSetSaveLocation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>174, 29</value>
-  </data>
-  <data name="btnSetSaveLocation.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
-  </data>
-  <data name="btnSetSaveLocation.Values.Text" xml:space="preserve">
-    <value>Set...</value>
-  </data>
-  <data name="&gt;&gt;btnSetSaveLocation.Name" xml:space="preserve">
-    <value>btnSetSaveLocation</value>
-  </data>
-  <data name="&gt;&gt;btnSetSaveLocation.Type" xml:space="preserve">
-    <value>ComponentFactory.Krypton.Toolkit.KryptonButton, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
-  </data>
-  <data name="&gt;&gt;btnSetSaveLocation.Parent" xml:space="preserve">
-    <value>flowLayoutPanel7</value>
-  </data>
-  <data name="&gt;&gt;btnSetSaveLocation.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="flowLayoutPanel7.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 170</value>
-  </data>
-  <data name="flowLayoutPanel7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>362, 36</value>
-  </data>
-  <data name="flowLayoutPanel7.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel7.Name" xml:space="preserve">
-    <value>flowLayoutPanel7</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel7.Parent" xml:space="preserve">
-    <value>flowLayoutPanel9</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel7.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="lblLocation.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="lblLocation.Size" type="System.Drawing.Size, System.Drawing">
-    <value>60, 20</value>
-  </data>
-  <data name="lblLocation.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="lblLocation.Values.Text" xml:space="preserve">
-    <value>Location: </value>
-  </data>
   <data name="&gt;&gt;lblLocation.Name" xml:space="preserve">
     <value>lblLocation</value>
   </data>
@@ -507,8 +978,20 @@
   <data name="&gt;&gt;lblLocation.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="&gt;&gt;btnSetSaveLocation.Name" xml:space="preserve">
+    <value>btnSetSaveLocation</value>
+  </data>
+  <data name="&gt;&gt;btnSetSaveLocation.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonButton, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;btnSetSaveLocation.Parent" xml:space="preserve">
+    <value>flowLayoutPanel8</value>
+  </data>
+  <data name="&gt;&gt;btnSetSaveLocation.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="flowLayoutPanel8.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 212</value>
+    <value>3, 170</value>
   </data>
   <data name="flowLayoutPanel8.Size" type="System.Drawing.Size, System.Drawing">
     <value>362, 36</value>
@@ -526,6 +1009,126 @@
     <value>flowLayoutPanel9</value>
   </data>
   <data name="&gt;&gt;flowLayoutPanel8.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="lblLocation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="lblLocation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>88, 20</value>
+  </data>
+  <data name="lblLocation.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="lblLocation.Values.Text" xml:space="preserve">
+    <value>Data Location: </value>
+  </data>
+  <data name="&gt;&gt;lblLocation.Name" xml:space="preserve">
+    <value>lblLocation</value>
+  </data>
+  <data name="&gt;&gt;lblLocation.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;lblLocation.Parent" xml:space="preserve">
+    <value>flowLayoutPanel8</value>
+  </data>
+  <data name="&gt;&gt;lblLocation.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="btnSetSaveLocation.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnSetSaveLocation.Location" type="System.Drawing.Point, System.Drawing">
+    <value>97, 3</value>
+  </data>
+  <data name="btnSetSaveLocation.Size" type="System.Drawing.Size, System.Drawing">
+    <value>174, 29</value>
+  </data>
+  <data name="btnSetSaveLocation.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="btnSetSaveLocation.Values.Text" xml:space="preserve">
+    <value>Set...</value>
+  </data>
+  <data name="&gt;&gt;btnSetSaveLocation.Name" xml:space="preserve">
+    <value>btnSetSaveLocation</value>
+  </data>
+  <data name="&gt;&gt;btnSetSaveLocation.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonButton, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;btnSetSaveLocation.Parent" xml:space="preserve">
+    <value>flowLayoutPanel8</value>
+  </data>
+  <data name="&gt;&gt;btnSetSaveLocation.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;lblWeekStart.Name" xml:space="preserve">
+    <value>lblWeekStart</value>
+  </data>
+  <data name="&gt;&gt;lblWeekStart.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;lblWeekStart.Parent" xml:space="preserve">
+    <value>flowLayoutPanel18</value>
+  </data>
+  <data name="&gt;&gt;lblWeekStart.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;cmbDaysOfWeek.Name" xml:space="preserve">
+    <value>cmbDaysOfWeek</value>
+  </data>
+  <data name="&gt;&gt;cmbDaysOfWeek.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonComboBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;cmbDaysOfWeek.Parent" xml:space="preserve">
+    <value>flowLayoutPanel18</value>
+  </data>
+  <data name="&gt;&gt;cmbDaysOfWeek.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel1.Name" xml:space="preserve">
+    <value>kryptonLabel1</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel1.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel1.Parent" xml:space="preserve">
+    <value>flowLayoutPanel18</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;txtWorkWeekLength.Name" xml:space="preserve">
+    <value>txtWorkWeekLength</value>
+  </data>
+  <data name="&gt;&gt;txtWorkWeekLength.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;txtWorkWeekLength.Parent" xml:space="preserve">
+    <value>flowLayoutPanel18</value>
+  </data>
+  <data name="&gt;&gt;txtWorkWeekLength.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="flowLayoutPanel18.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 212</value>
+  </data>
+  <data name="flowLayoutPanel18.Size" type="System.Drawing.Size, System.Drawing">
+    <value>362, 36</value>
+  </data>
+  <data name="flowLayoutPanel18.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel18.Name" xml:space="preserve">
+    <value>flowLayoutPanel18</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel18.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel18.Parent" xml:space="preserve">
+    <value>flowLayoutPanel9</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel18.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
   <data name="lblWeekStart.Location" type="System.Drawing.Point, System.Drawing">
@@ -639,25 +1242,49 @@
   <data name="&gt;&gt;txtWorkWeekLength.ZOrder" xml:space="preserve">
     <value>3</value>
   </data>
-  <data name="flowLayoutPanel18.Location" type="System.Drawing.Point, System.Drawing">
+  <data name="&gt;&gt;lblLunchLength.Name" xml:space="preserve">
+    <value>lblLunchLength</value>
+  </data>
+  <data name="&gt;&gt;lblLunchLength.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;lblLunchLength.Parent" xml:space="preserve">
+    <value>flowLayoutPanel19</value>
+  </data>
+  <data name="&gt;&gt;lblLunchLength.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtLunchLength.Name" xml:space="preserve">
+    <value>txtLunchLength</value>
+  </data>
+  <data name="&gt;&gt;txtLunchLength.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;txtLunchLength.Parent" xml:space="preserve">
+    <value>flowLayoutPanel19</value>
+  </data>
+  <data name="&gt;&gt;txtLunchLength.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="flowLayoutPanel19.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 254</value>
   </data>
-  <data name="flowLayoutPanel18.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="flowLayoutPanel19.Size" type="System.Drawing.Size, System.Drawing">
     <value>362, 36</value>
   </data>
-  <data name="flowLayoutPanel18.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
+  <data name="flowLayoutPanel19.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
   </data>
-  <data name="&gt;&gt;flowLayoutPanel18.Name" xml:space="preserve">
-    <value>flowLayoutPanel18</value>
+  <data name="&gt;&gt;flowLayoutPanel19.Name" xml:space="preserve">
+    <value>flowLayoutPanel19</value>
   </data>
-  <data name="&gt;&gt;flowLayoutPanel18.Type" xml:space="preserve">
+  <data name="&gt;&gt;flowLayoutPanel19.Type" xml:space="preserve">
     <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;flowLayoutPanel18.Parent" xml:space="preserve">
+  <data name="&gt;&gt;flowLayoutPanel19.Parent" xml:space="preserve">
     <value>flowLayoutPanel9</value>
   </data>
-  <data name="&gt;&gt;flowLayoutPanel18.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;flowLayoutPanel19.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
   <data name="lblLunchLength.Location" type="System.Drawing.Point, System.Drawing">
@@ -708,48 +1335,6 @@
   <data name="&gt;&gt;txtLunchLength.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="flowLayoutPanel19.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 296</value>
-  </data>
-  <data name="flowLayoutPanel19.Size" type="System.Drawing.Size, System.Drawing">
-    <value>362, 36</value>
-  </data>
-  <data name="flowLayoutPanel19.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel19.Name" xml:space="preserve">
-    <value>flowLayoutPanel19</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel19.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel19.Parent" xml:space="preserve">
-    <value>flowLayoutPanel9</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel19.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="flowLayoutPanel9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="flowLayoutPanel9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>378, 343</value>
-  </data>
-  <data name="flowLayoutPanel9.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel9.Name" xml:space="preserve">
-    <value>flowLayoutPanel9</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel9.Parent" xml:space="preserve">
-    <value>flowLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel9.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="lblEmail.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
   </data>
@@ -794,27 +1379,6 @@
   </data>
   <data name="&gt;&gt;txtEmail.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="flowLayoutPanel11.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="flowLayoutPanel11.Size" type="System.Drawing.Size, System.Drawing">
-    <value>362, 36</value>
-  </data>
-  <data name="flowLayoutPanel11.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel11.Name" xml:space="preserve">
-    <value>flowLayoutPanel11</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel11.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel11.Parent" xml:space="preserve">
-    <value>flowLayoutPanel10</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel11.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <data name="lblPhone.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -861,29 +1425,50 @@
   <data name="&gt;&gt;txtPhoneNumber.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="flowLayoutPanel12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 45</value>
+  <data name="&gt;&gt;kryptonLabel2.Name" xml:space="preserve">
+    <value>kryptonLabel2</value>
   </data>
-  <data name="flowLayoutPanel12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>362, 36</value>
+  <data name="&gt;&gt;kryptonLabel2.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
   </data>
-  <data name="flowLayoutPanel12.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+  <data name="&gt;&gt;kryptonLabel2.Parent" xml:space="preserve">
+    <value>flowLayoutPanel13</value>
   </data>
-  <data name="&gt;&gt;flowLayoutPanel12.Name" xml:space="preserve">
-    <value>flowLayoutPanel12</value>
+  <data name="&gt;&gt;kryptonLabel2.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;flowLayoutPanel12.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;txtStreet.Name" xml:space="preserve">
+    <value>txtStreet</value>
   </data>
-  <data name="&gt;&gt;flowLayoutPanel12.Parent" xml:space="preserve">
-    <value>flowLayoutPanel10</value>
+  <data name="&gt;&gt;txtStreet.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
   </data>
-  <data name="&gt;&gt;flowLayoutPanel12.ZOrder" xml:space="preserve">
+  <data name="&gt;&gt;txtStreet.Parent" xml:space="preserve">
+    <value>flowLayoutPanel13</value>
+  </data>
+  <data name="&gt;&gt;txtStreet.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="kryptonGroupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 87</value>
+  <data name="flowLayoutPanel13.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="flowLayoutPanel13.Size" type="System.Drawing.Size, System.Drawing">
+    <value>349, 36</value>
+  </data>
+  <data name="flowLayoutPanel13.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel13.Name" xml:space="preserve">
+    <value>flowLayoutPanel13</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel13.Type" xml:space="preserve">
+    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel13.Parent" xml:space="preserve">
+    <value>flowLayoutPanel14</value>
+  </data>
+  <data name="&gt;&gt;flowLayoutPanel13.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
   <data name="kryptonLabel2.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -930,26 +1515,50 @@
   <data name="&gt;&gt;txtStreet.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="flowLayoutPanel13.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+  <data name="&gt;&gt;lblCity.Name" xml:space="preserve">
+    <value>lblCity</value>
   </data>
-  <data name="flowLayoutPanel13.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="&gt;&gt;lblCity.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;lblCity.Parent" xml:space="preserve">
+    <value>flowLayoutPanel15</value>
+  </data>
+  <data name="&gt;&gt;lblCity.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtCity.Name" xml:space="preserve">
+    <value>txtCity</value>
+  </data>
+  <data name="&gt;&gt;txtCity.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;txtCity.Parent" xml:space="preserve">
+    <value>flowLayoutPanel15</value>
+  </data>
+  <data name="&gt;&gt;txtCity.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="flowLayoutPanel15.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 45</value>
+  </data>
+  <data name="flowLayoutPanel15.Size" type="System.Drawing.Size, System.Drawing">
     <value>349, 36</value>
   </data>
-  <data name="flowLayoutPanel13.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+  <data name="flowLayoutPanel15.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
   </data>
-  <data name="&gt;&gt;flowLayoutPanel13.Name" xml:space="preserve">
-    <value>flowLayoutPanel13</value>
+  <data name="&gt;&gt;flowLayoutPanel15.Name" xml:space="preserve">
+    <value>flowLayoutPanel15</value>
   </data>
-  <data name="&gt;&gt;flowLayoutPanel13.Type" xml:space="preserve">
+  <data name="&gt;&gt;flowLayoutPanel15.Type" xml:space="preserve">
     <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;flowLayoutPanel13.Parent" xml:space="preserve">
+  <data name="&gt;&gt;flowLayoutPanel15.Parent" xml:space="preserve">
     <value>flowLayoutPanel14</value>
   </data>
-  <data name="&gt;&gt;flowLayoutPanel13.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="&gt;&gt;flowLayoutPanel15.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="lblCity.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -996,26 +1605,50 @@
   <data name="&gt;&gt;txtCity.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="flowLayoutPanel15.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 45</value>
+  <data name="&gt;&gt;lblState.Name" xml:space="preserve">
+    <value>lblState</value>
   </data>
-  <data name="flowLayoutPanel15.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="&gt;&gt;lblState.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;lblState.Parent" xml:space="preserve">
+    <value>flowLayoutPanel16</value>
+  </data>
+  <data name="&gt;&gt;lblState.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtState.Name" xml:space="preserve">
+    <value>txtState</value>
+  </data>
+  <data name="&gt;&gt;txtState.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;txtState.Parent" xml:space="preserve">
+    <value>flowLayoutPanel16</value>
+  </data>
+  <data name="&gt;&gt;txtState.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="flowLayoutPanel16.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 87</value>
+  </data>
+  <data name="flowLayoutPanel16.Size" type="System.Drawing.Size, System.Drawing">
     <value>349, 36</value>
   </data>
-  <data name="flowLayoutPanel15.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+  <data name="flowLayoutPanel16.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
   </data>
-  <data name="&gt;&gt;flowLayoutPanel15.Name" xml:space="preserve">
-    <value>flowLayoutPanel15</value>
+  <data name="&gt;&gt;flowLayoutPanel16.Name" xml:space="preserve">
+    <value>flowLayoutPanel16</value>
   </data>
-  <data name="&gt;&gt;flowLayoutPanel15.Type" xml:space="preserve">
+  <data name="&gt;&gt;flowLayoutPanel16.Type" xml:space="preserve">
     <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;flowLayoutPanel15.Parent" xml:space="preserve">
+  <data name="&gt;&gt;flowLayoutPanel16.Parent" xml:space="preserve">
     <value>flowLayoutPanel14</value>
   </data>
-  <data name="&gt;&gt;flowLayoutPanel15.ZOrder" xml:space="preserve">
-    <value>1</value>
+  <data name="&gt;&gt;flowLayoutPanel16.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
   <data name="lblState.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -1062,26 +1695,50 @@
   <data name="&gt;&gt;txtState.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="flowLayoutPanel16.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 87</value>
+  <data name="&gt;&gt;kryptonLabel4.Name" xml:space="preserve">
+    <value>kryptonLabel4</value>
   </data>
-  <data name="flowLayoutPanel16.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="&gt;&gt;kryptonLabel4.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonLabel, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel4.Parent" xml:space="preserve">
+    <value>flowLayoutPanel17</value>
+  </data>
+  <data name="&gt;&gt;kryptonLabel4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;txtZipCode.Name" xml:space="preserve">
+    <value>txtZipCode</value>
+  </data>
+  <data name="&gt;&gt;txtZipCode.Type" xml:space="preserve">
+    <value>ComponentFactory.Krypton.Toolkit.KryptonTextBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
+  </data>
+  <data name="&gt;&gt;txtZipCode.Parent" xml:space="preserve">
+    <value>flowLayoutPanel17</value>
+  </data>
+  <data name="&gt;&gt;txtZipCode.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="flowLayoutPanel17.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 129</value>
+  </data>
+  <data name="flowLayoutPanel17.Size" type="System.Drawing.Size, System.Drawing">
     <value>349, 36</value>
   </data>
-  <data name="flowLayoutPanel16.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+  <data name="flowLayoutPanel17.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
   </data>
-  <data name="&gt;&gt;flowLayoutPanel16.Name" xml:space="preserve">
-    <value>flowLayoutPanel16</value>
+  <data name="&gt;&gt;flowLayoutPanel17.Name" xml:space="preserve">
+    <value>flowLayoutPanel17</value>
   </data>
-  <data name="&gt;&gt;flowLayoutPanel16.Type" xml:space="preserve">
+  <data name="&gt;&gt;flowLayoutPanel17.Type" xml:space="preserve">
     <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;flowLayoutPanel16.Parent" xml:space="preserve">
+  <data name="&gt;&gt;flowLayoutPanel17.Parent" xml:space="preserve">
     <value>flowLayoutPanel14</value>
   </data>
-  <data name="&gt;&gt;flowLayoutPanel16.ZOrder" xml:space="preserve">
-    <value>2</value>
+  <data name="&gt;&gt;flowLayoutPanel17.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="kryptonLabel4.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 3</value>
@@ -1126,105 +1783,6 @@
     <value>flowLayoutPanel17</value>
   </data>
   <data name="&gt;&gt;txtZipCode.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="flowLayoutPanel17.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 129</value>
-  </data>
-  <data name="flowLayoutPanel17.Size" type="System.Drawing.Size, System.Drawing">
-    <value>349, 36</value>
-  </data>
-  <data name="flowLayoutPanel17.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel17.Name" xml:space="preserve">
-    <value>flowLayoutPanel17</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel17.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel17.Parent" xml:space="preserve">
-    <value>flowLayoutPanel14</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel17.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="flowLayoutPanel14.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="flowLayoutPanel14.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="flowLayoutPanel14.Size" type="System.Drawing.Size, System.Drawing">
-    <value>358, 174</value>
-  </data>
-  <data name="flowLayoutPanel14.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel14.Name" xml:space="preserve">
-    <value>flowLayoutPanel14</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel14.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel14.Parent" xml:space="preserve">
-    <value>kryptonGroupBox1.Panel</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel14.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;kryptonGroupBox1.Panel.Name" xml:space="preserve">
-    <value>kryptonGroupBox1.Panel</value>
-  </data>
-  <data name="&gt;&gt;kryptonGroupBox1.Panel.Type" xml:space="preserve">
-    <value>ComponentFactory.Krypton.Toolkit.KryptonGroupPanel, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
-  </data>
-  <data name="&gt;&gt;kryptonGroupBox1.Panel.Parent" xml:space="preserve">
-    <value>kryptonGroupBox1</value>
-  </data>
-  <data name="&gt;&gt;kryptonGroupBox1.Panel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="kryptonGroupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>362, 198</value>
-  </data>
-  <data name="kryptonGroupBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
-  </data>
-  <data name="kryptonGroupBox1.Values.Heading" xml:space="preserve">
-    <value>Address</value>
-  </data>
-  <data name="&gt;&gt;kryptonGroupBox1.Name" xml:space="preserve">
-    <value>kryptonGroupBox1</value>
-  </data>
-  <data name="&gt;&gt;kryptonGroupBox1.Type" xml:space="preserve">
-    <value>ComponentFactory.Krypton.Toolkit.KryptonGroupBox, ComponentFactory.Krypton.Toolkit, Version=4.6.0.0, Culture=neutral, PublicKeyToken=a87e673e9ecb6e8e</value>
-  </data>
-  <data name="&gt;&gt;kryptonGroupBox1.Parent" xml:space="preserve">
-    <value>flowLayoutPanel10</value>
-  </data>
-  <data name="&gt;&gt;kryptonGroupBox1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="flowLayoutPanel10.Location" type="System.Drawing.Point, System.Drawing">
-    <value>387, 3</value>
-  </data>
-  <data name="flowLayoutPanel10.Size" type="System.Drawing.Size, System.Drawing">
-    <value>371, 293</value>
-  </data>
-  <data name="flowLayoutPanel10.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel10.Name" xml:space="preserve">
-    <value>flowLayoutPanel10</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel10.Parent" xml:space="preserve">
-    <value>flowLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel10.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="btnClear.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
@@ -1280,54 +1838,6 @@
   </data>
   <data name="&gt;&gt;btnSave.ZOrder" xml:space="preserve">
     <value>1</value>
-  </data>
-  <data name="flowLayoutPanel6.FlowDirection" type="System.Windows.Forms.FlowDirection, System.Windows.Forms">
-    <value>RightToLeft</value>
-  </data>
-  <data name="flowLayoutPanel6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 352</value>
-  </data>
-  <data name="flowLayoutPanel6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>755, 36</value>
-  </data>
-  <data name="flowLayoutPanel6.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel6.Name" xml:space="preserve">
-    <value>flowLayoutPanel6</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel6.Parent" xml:space="preserve">
-    <value>flowLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel6.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="flowLayoutPanel1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="flowLayoutPanel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="flowLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>769, 399</value>
-  </data>
-  <data name="flowLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel1.Name" xml:space="preserve">
-    <value>flowLayoutPanel1</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.FlowLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;flowLayoutPanel1.ZOrder" xml:space="preserve">
-    <value>0</value>
   </data>
   <metadata name="saveFolderBrowser.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

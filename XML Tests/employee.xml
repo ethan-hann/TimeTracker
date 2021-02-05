@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Employee xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <UniqueID>{2E8AB9C2-CA8B-4C57-90F0-36F14D0765A2}</UniqueID>
+  <Name>Ethan Hann</Name>
+  <EmpAddress>
+    <Street>17938 CR 401</Street>
+    <City>Dayton</City>
+    <State>Texas</State>
+    <ZipCode>77535</ZipCode>
+  </EmpAddress>
+  <Email>ehann@teamlogicit.com</Email>
+  <PhoneNumber>832-599-4248</PhoneNumber>
+  <LunchLength>1</LunchLength>
+  <HourlyRate>16</HourlyRate>
+  <OvertimeRate>24</OvertimeRate>
+  <BillableRate>25</BillableRate>
+</Employee>

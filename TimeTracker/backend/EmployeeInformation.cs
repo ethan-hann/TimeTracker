@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
-using System.Text;
-using System.Threading.Tasks;
+using System.Xml;
+using System.Xml.Serialization;
 
 namespace TimeTracker.backend
 {
     /// <summary>
-    /// Holds information about employees. <see cref="Employee"/> objects are added to this class's dictionary.
-    /// <para>These objects are serialized (saved) to disk using the <see cref="Save()"/> method here.</para>
-    /// <para>This class cannot be instantiated.</para>
+    /// Allows easy saving and retrieving of an employee object from a saved XML file. The file path is determined by the user's options.
+    /// <para>The employee object is serialized (saved) to an XML file using the <see cref="Save()"/> method here.
+    /// It is retrieved (deserialized into an <see cref="Employee"/> object) using the <see cref="Load()"/> method.</para>
+    /// <para>This class cannot be instantiated. Instead, it must be referenced through its <see cref="Instance"/> property.</para>
     /// </summary>
     [Serializable]
     public class EmployeeInformation
@@ -19,17 +20,11 @@ namespace TimeTracker.backend
         private static EmployeeInformation instance = null;
         private static readonly object padlock = new object();
 
-        private Dictionary<string, Employee> employeeDictionary;
-        private BinaryFormatter formatter;
-
-        private const string EMPLOYEE_DATA_FILENAME = "employees.dat";
+        private const string EMPLOYEE_DATA_FILENAME = "employee.xml";
         private string saveLocation = "";
+        private static Employee e;
 
-        EmployeeInformation()
-        {
-            employeeDictionary = new Dictionary<string, Employee>();
-            formatter = new BinaryFormatter();
-        }
+        private EmployeeInformation() { }
 
         /// <summary>
         /// Get an instance of this class.
@@ -50,19 +45,47 @@ namespace TimeTracker.backend
         }
 
         /// <summary>
-        /// Print to the console all <see cref="Employee"/> objects contained in this class's dictionary.
+        /// Set this information's employee object.
+        /// <para>Calling <see cref="Save()"/> without setting the employee results in no data being saved.</para>
+        /// </summary>
+        /// <param name="employee"></param>
+        public void SetEmployee(Employee employee)
+        {
+            e = employee;
+        }
+
+        /// <summary>
+        /// Gets the current employee object loaded (deserialized) from disk.
+        /// </summary>
+        /// <returns>An <see cref="Employee"/> object or <c>null</c> if no <see cref="Employee"/> exists.</returns>
+        public Employee GetEmployee()
+        {
+            Load();
+            return e;
+        }
+
+        /// <summary>
+        /// Prints to the console the employee (and their manager)'s information to the console.
         /// <para>See <see cref="Employee.ToString()"/> for information on how the output is formatted.</para>
         /// </summary>
-        internal void PrintAllEmployees()
+        public void PrintEmployee()
         {
-            foreach (Employee e in employeeDictionary.Values)
+            if (e != null)
             {
-                Console.WriteLine(e.ToString());
+                if (e.Manager != null)
+                {
+                    Console.WriteLine("Employee: " + e.ToString());
+                    Console.WriteLine("Manager: " + e.Manager.ToString());
+                }
+                else
+                {
+                    Console.WriteLine("Employee: " + e.ToString());
+                }
             }
         }
 
         /// <summary>
-        /// Set the data location for the <c>employees.dat</c> file.
+        /// Set the data location for the <c>employee.xml</c> file.
         /// </summary>
         /// <param name="path">The folder path in which the file should be saved.</param>
         public void SetDataLocation(string path)
@@ -71,96 +94,36 @@ namespace TimeTracker.backend
         }
 
         /// <summary>
-        /// Add a <see cref="Employee"/> to the dictionary to be saved.
-        /// </summary>
-        /// <param name="employee">The <see cref="Employee"/> object to be added.</param>
-        public void AddEmployee(Employee employee)
-        {
-            if (employeeDictionary.ContainsKey(employee.UniqueID))
-            {
-                Console.WriteLine($"The dictionary already contains an employee with this unique id: {employee.UniqueID}");
-            }
-            else
-            {
-                employeeDictionary.Add(employee.UniqueID, employee);
-            }
-        }
-
-        /// <summary>
-        /// Get an <see cref="Employee"/> object associated with the uniqueID.
-        /// </summary>
-        /// <param name="uniqueID">The uniqueID to search for.</param>
-        /// <returns></returns>
-        public Employee GetEmployee(string uniqueID)
-        {
-            if (employeeDictionary.ContainsKey(uniqueID))
-            {
-                return employeeDictionary[uniqueID];
-            }
-            else
-            {
-                return null;
-            }
-        }
-
-        /// <summary>
-        /// Remove, if it exists, the specified employee.
-        /// </summary>
-        /// <param name="employee">The <see cref="Employee"/> object to be removed.</param>
-        public void RemoveEmployee(Employee employee)
-        {
-            if (!employeeDictionary.ContainsKey(employee.UniqueID))
-            {
-                Console.WriteLine($"The key {employee.UniqueID} does not exist in the dictionary.");
-            }
-            else
-            {
-                if (!employeeDictionary.Remove(employee.UniqueID))
-                {
-                    Console.WriteLine($"Unable to remove the entry specified by {employee.UniqueID}.");
-                }
-            }
-        }
-
-        /// <summary>
         /// Save the contents of this <see cref="EmployeeInformation"/> class to disk.
         /// </summary>
         public void Save()
         {
+            XmlSerializer serializer = new XmlSerializer(typeof(Employee));
             try
             {
-                FileStream writer = new FileStream(saveLocation, FileMode.Create, FileAccess.Write);
-                formatter.Serialize(writer, employeeDictionary);
-                writer.Close();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine($"Could not save the employee information: {e.Message}");
-                Console.WriteLine();
-                Console.WriteLine(e.StackTrace);
-            }
+                using (StreamWriter writer = new StreamWriter(saveLocation))
+                {
+                    serializer.Serialize(writer, e);
+                }
+            } catch (DirectoryNotFoundException) { return; }
+              catch (PathTooLongException) { return; }
         }
 
         /// <summary>
-        /// Load the contents from disk into this <see cref="EmployeeInformation"/> class.
+        /// Load the employee's information from disk. Uses the last saved path to try and locate the <c>employee.xml</c> file. If the file
+        ///  could not be found, this method simply returns and the current <see cref="Employee"/> object remains <c>null</c>.
         /// </summary>
         public void Load()
         {
-            if (File.Exists(saveLocation))
+            XmlSerializer serializer = new XmlSerializer(typeof(Employee));
+            try
             {
-                try
+                using (StreamReader reader = new StreamReader(saveLocation))
                 {
-                    FileStream reader = new FileStream(saveLocation, FileMode.Open, FileAccess.Read);
-                    employeeDictionary = (Dictionary<string, Employee>)formatter.Deserialize(reader);
-                    reader.Close();
+                    e = (Employee)serializer.Deserialize(reader);
                 }
-                catch (Exception e)
-                {
-                    Console.WriteLine($"There is a file containing employee information but there was a problem reading it: {e.Message}");
-                    Console.WriteLine();
-                    Console.WriteLine(e.StackTrace);
-                }
-            }
+            } catch (DirectoryNotFoundException) { return; }
+            catch (FileNotFoundException) { return; }
         }
     }
 }

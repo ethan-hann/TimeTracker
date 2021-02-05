@@ -11,6 +11,8 @@ using System.Windows.Forms;
 using TimeTracker.backend;
 using TimeTracker.Forms;
 using TimeTracker.Properties;
+using TimeTracker.utility;
+using static TimeTracker.utility.CEventArgs;
 
 namespace TimeTracker
 {
@@ -28,6 +30,8 @@ namespace TimeTracker
         private int normalSeconds = 0;
         private int billableSeconds = 0;
 
+        private bool dayEnded = false;
+
         private TimeSheet sheet;
         private DayTime today;
         private Employee employee;
@@ -39,12 +43,13 @@ namespace TimeTracker
 
         private void OpenOptions(object sender, EventArgs e)
         {
-            new OptionsForm().ShowDialog();
+            OptionsForm form = new OptionsForm();
+            form.OnOptionsSaved += SetEmployee;
+            form.ShowDialog();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            
             Application.Exit();
         }
 
@@ -54,36 +59,39 @@ namespace TimeTracker
             date = DateTime.Now;
             Text = $"Time Tracker - {date:MM/dd/yyyy} - {date.DayOfWeek}";
 
-            sheet = TimeSheetInformation.Instance.GetTimeSheet(Settings.Default.CurrentTimesheetGUID);
-            employee = EmployeeInformation.Instance.GetEmployee(Settings.Default.LastGUID);
+            sheet = TimeSheetInformation.Instance.GetCurrentTimeSheet();
+            employee = EmployeeInformation.Instance.GetEmployee();
+
+            if (sheet == null)
+            {
+                sheet = new TimeSheet();
+            }
 
             if (employee == null)
             {
-                DialogResult result = CMessageBox.Show("There are no employees defined!\nPlease create one now...", "No Employees", MessageBoxButtons.OK, Resources.info_32);
+                DialogResult result = CMessageBox.Show("There is not an employee defined!\nPlease create one now...", "No Employee", MessageBoxButtons.OK, Resources.info_32);
                 if (result == DialogResult.OK)
                 {
-                    new OptionsForm().ShowDialog();
+                    OptionsForm form = new OptionsForm();
+                    form.OnOptionsSaved += SetEmployee;
+                    form.ShowDialog();
                 }
             }
             else
             {
-                if (sheet == null)
-                {
-                    TimeSheet.Instance.New();
-                }
-                else
-                {
-                    TimeSheet.Instance.SetTimeSheet(sheet);
-                }
-
-                TimeSheet.Instance.Employee = employee;
-                TimeSheetInformation.Instance.AddTimeSheet(TimeSheet.Instance);
-
-                Settings.Default.CurrentTimesheetGUID = TimeSheet.Instance.UniqueID;
+                sheet.Employee = employee;
                 Settings.Default.Save();
             }
 
             today = new DayTime(date);
+        }
+
+        private void SetEmployee(object sender, EventArgs e)
+        {
+            if (e is OptionsSavedEventArgs args)
+            {
+                sheet.Employee = args.Employee;
+            }
         }
 
         #region Normal Time
@@ -146,27 +154,14 @@ namespace TimeTracker
 
         private void btnClockIn_Click(object sender, EventArgs e)
         {
-            NormalClockIn();
-        }
-
-        /// <summary>
-        /// End the day and add the day to the current timesheet.
-        /// </summary>
-        private void EndDay()
-        {
-            normalTimeTracker.Stop();
-            normalTimeTracker.Enabled = false;
-            billableTimeTracker.Stop();
-            billableTimeTracker.Enabled = false;
-
-            btnNormalClockIn.Visible = true;
-            btnStartBillableTime.Visible = true;
-            btnStopBillableTime.Visible = true;
-
-            today.AddNote(rtbNotes.Text);
-
-            TimeSheet.Instance.UpdateDay(today);
-            TimeSheetInformation.Instance.UpdateTimeSheet(TimeSheet.Instance);
+            if (dayEnded)
+            {
+                CMessageBox.Show("The day has already been ended!", "Oops", MessageBoxButtons.OK, Resources.warning_32);
+            }
+            else
+            {
+                NormalClockIn();
+            }
         }
 
         /// <summary>
@@ -176,11 +171,15 @@ namespace TimeTracker
         /// <param name="e"></param>
         private void btnClockOut_Click(object sender, EventArgs e)
         {
-            EndDay();
-
-            //TODO: clock out functionality
+            if (dayEnded)
+            {
+                CMessageBox.Show("The day has already been ended!", "Oops", MessageBoxButtons.OK, Resources.warning_32);
+            }
+            else
+            {
+                EndDay();
+            }
         }
-
         #endregion
 
         #region Billable Time
@@ -255,6 +254,27 @@ namespace TimeTracker
 
         #endregion
 
+        /// <summary>
+        /// End the day and add the day to the current timesheet.
+        /// </summary>
+        private void EndDay()
+        {
+            dayEnded = true;
+            normalTimeTracker.Stop();
+            normalTimeTracker.Enabled = false;
+            billableTimeTracker.Stop();
+            billableTimeTracker.Enabled = false;
+
+            btnNormalClockIn.Visible = true;
+            btnStartBillableTime.Visible = true;
+            btnStopBillableTime.Visible = true;
+
+            sheet.UpdateDay(today);
+
+            TimeSheetInformation.Instance.AddTimeSheet(sheet);
+            TimeSheetInformation.Instance.Save();
+        }
+
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             TimeSheetInformation.Instance.Save();
@@ -262,12 +282,19 @@ namespace TimeTracker
 
         private void btnGenerateTimesheet_Click(object sender, EventArgs e)
         {
-            GenerateTimesheet.Generate();
+            //GenerateTimesheet.Generate();
         }
 
         private void btnListAllTimesheets_Click(object sender, EventArgs e)
         {
             new TimesheetList().ShowDialog();
+        }
+
+        private void btnAddNote_Click(object sender, EventArgs e)
+        {
+            today.AddNote(rtbNotes.Text);
+            rtbNotes.Clear();
+            rtbNotes.Text = "Enter notes for today here...";
         }
     }
 }

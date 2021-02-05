@@ -15,18 +15,66 @@ namespace TimeTracker.backend
     [Serializable]
     public class TimeSheet
     {
-        private static TimeSheet instance = null;
-        private static readonly object padlock = new object();
-
         /// <summary>
         /// The unique GUID associated with this timesheet.
         /// </summary>
-        public string UniqueID { get; private set; }
+        public string UniqueID { get; set; }
 
         /// <summary>
         /// The <see cref="backend.Employee"/> object associated with this timesheet.
         /// </summary>
         public Employee Employee { get; set; }
+
+
+        private DateTime weekStart;
+        private DateTime weekEnd;
+
+        /// <summary>
+        /// Set the work week start date.
+        /// </summary>
+        /// <param name="start">The starting date of this work week.</param>
+        public void SetWeekStart(DateTime start)
+        {
+            weekStart = start;
+        }
+
+        /// <summary>
+        /// Set the work week end date.
+        /// </summary>
+        /// <param name="end">The ending date of this work week.</param>
+        public void SetWeekEnd(DateTime end)
+        {
+            if (weekStart.AddDays(Settings.Default.WorkWeekLength) <= end)
+            {
+                weekEnd = end;
+            }
+        }
+
+        /// <summary>
+        /// Get the starting date of this work week.
+        /// </summary>
+        public DateTime GetWeekStart()
+        {
+            return weekStart;
+        }
+
+        /// <summary>
+        /// Get the ending date of this work week.
+        /// </summary>
+        /// <returns></returns>
+        public DateTime GetWeekEnd()
+        {
+            if (weekEnd == null)
+            {
+                if (Days != null)
+                {
+                    return Days.Keys.ElementAt(0).AddDays(Settings.Default.WorkWeekLength);
+                }
+                weekEnd = DateTime.Now.AddDays(Settings.Default.WorkWeekLength);
+            }
+
+            return weekEnd;
+        }
 
         /// <summary>
         /// Represents the days that make up this timesheet.
@@ -41,52 +89,31 @@ namespace TimeTracker.backend
         /// </summary>
         public Dictionary<DateTime, DayTime> Days { get; private set; }
 
-        private TimeSheet()
+        public TimeSheet() 
         {
             Days = new Dictionary<DateTime, DayTime>(Settings.Default.WorkWeekLength);
             GenerateUniqueID();
+
+            SetWeekStart(DateTime.Now);
+            weekEnd = DateTime.Now.AddDays(Settings.Default.WorkWeekLength);
         }
 
-        /// <summary>
-        /// Get an instance representing the current timesheet.
-        /// </summary>
-        public static TimeSheet Instance
+        private void CreateNewTimeSheet()
         {
-            get
-            {
-                lock (padlock)
-                {
-                    if (instance == null)
-                    {
-                        instance = new TimeSheet();
-                    }
-                }
-                return instance;
-            }
+            Days = new Dictionary<DateTime, DayTime>(Settings.Default.WorkWeekLength);
+            GenerateUniqueID();
+
+            SetWeekStart(DateTime.Now);
+            weekEnd = DateTime.Now.AddDays(Settings.Default.WorkWeekLength);
         }
 
         /// <summary>
-        /// Creates a new <see cref="TimeSheet"/>.
+        /// Add the specified <see cref="DayTime"/> day to the dictionary. If the work week has ended when calling this method, this method
+        /// will create a new Timesheet instance.
         /// </summary>
-        public void New()
-        {
-            instance = new TimeSheet();
-        }
-
-        /// <summary>
-        /// Set this instance to the specified <see cref="TimeSheet"/>.
-        /// </summary>
-        /// <param name="sheet"></param>
-        public void SetTimeSheet(TimeSheet sheet)
-        {
-            instance = sheet;
-        }
-
-        /// <summary>
-        /// Add the specified <see cref="DayTime"/> day to the dictionary.
-        /// </summary>
-        /// <param name="day"></param>
-        public void AddDay(DayTime day)
+        /// <param name="day">The <see cref="DayTime"/> to add.</param>
+        /// <returns>The current <see cref="TimeSheet"/> instance.</returns>
+        public TimeSheet AddDay(DayTime day)
         {
             if (Days.ContainsKey(day.Date.Date))
             {
@@ -95,13 +122,14 @@ namespace TimeTracker.backend
             else if ((Days.Count) == Settings.Default.WorkWeekLength)
             {
                 Console.WriteLine("The work week has ended. Creating a new Timesheet...");
-                Instance.New();
+                CreateNewTimeSheet();
                 Days.Add(day.Date.Date, day);
             }
             else
             {
                 Days.Add(day.Date.Date, day);
             }
+            return this;
         }
 
         /// <summary>

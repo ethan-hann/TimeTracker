@@ -46,11 +46,9 @@
             this.flowLayoutPanel5 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblBillable = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.txtBillableRate = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.flowLayoutPanel7 = new System.Windows.Forms.FlowLayoutPanel();
-            this.lblDataLocation = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.btnSetSaveLocation = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.flowLayoutPanel8 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblLocation = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.btnSetSaveLocation = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.flowLayoutPanel18 = new System.Windows.Forms.FlowLayoutPanel();
             this.lblWeekStart = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.cmbDaysOfWeek = new ComponentFactory.Krypton.Toolkit.KryptonComboBox();
@@ -80,6 +78,8 @@
             this.flowLayoutPanel17 = new System.Windows.Forms.FlowLayoutPanel();
             this.kryptonLabel4 = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.txtZipCode = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.btnAddManager = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.lblManagerName = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             this.flowLayoutPanel6 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnClear = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.btnSave = new ComponentFactory.Krypton.Toolkit.KryptonButton();
@@ -90,7 +90,6 @@
             this.flowLayoutPanel3.SuspendLayout();
             this.flowLayoutPanel4.SuspendLayout();
             this.flowLayoutPanel5.SuspendLayout();
-            this.flowLayoutPanel7.SuspendLayout();
             this.flowLayoutPanel8.SuspendLayout();
             this.flowLayoutPanel18.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cmbDaysOfWeek)).BeginInit();
@@ -124,7 +123,6 @@
             this.flowLayoutPanel9.Controls.Add(this.flowLayoutPanel3);
             this.flowLayoutPanel9.Controls.Add(this.flowLayoutPanel4);
             this.flowLayoutPanel9.Controls.Add(this.flowLayoutPanel5);
-            this.flowLayoutPanel9.Controls.Add(this.flowLayoutPanel7);
             this.flowLayoutPanel9.Controls.Add(this.flowLayoutPanel8);
             this.flowLayoutPanel9.Controls.Add(this.flowLayoutPanel18);
             this.flowLayoutPanel9.Controls.Add(this.flowLayoutPanel19);
@@ -234,33 +232,10 @@
             this.txtBillableRate.Palette = this.optionsPallete;
             this.txtBillableRate.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             // 
-            // flowLayoutPanel7
-            // 
-            this.flowLayoutPanel7.Controls.Add(this.lblDataLocation);
-            this.flowLayoutPanel7.Controls.Add(this.btnSetSaveLocation);
-            resources.ApplyResources(this.flowLayoutPanel7, "flowLayoutPanel7");
-            this.flowLayoutPanel7.Name = "flowLayoutPanel7";
-            // 
-            // lblDataLocation
-            // 
-            resources.ApplyResources(this.lblDataLocation, "lblDataLocation");
-            this.lblDataLocation.Name = "lblDataLocation";
-            this.lblDataLocation.Palette = this.optionsPallete;
-            this.lblDataLocation.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.lblDataLocation.Values.Text = resources.GetString("lblDataLocation.Values.Text");
-            // 
-            // btnSetSaveLocation
-            // 
-            resources.ApplyResources(this.btnSetSaveLocation, "btnSetSaveLocation");
-            this.btnSetSaveLocation.Name = "btnSetSaveLocation";
-            this.btnSetSaveLocation.Palette = this.optionsPallete;
-            this.btnSetSaveLocation.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
-            this.btnSetSaveLocation.Values.Text = resources.GetString("btnSetSaveLocation.Values.Text");
-            this.btnSetSaveLocation.Click += new System.EventHandler(this.btnSetSaveLocation_Click);
-            // 
             // flowLayoutPanel8
             // 
             this.flowLayoutPanel8.Controls.Add(this.lblLocation);
+            this.flowLayoutPanel8.Controls.Add(this.btnSetSaveLocation);
             resources.ApplyResources(this.flowLayoutPanel8, "flowLayoutPanel8");
             this.flowLayoutPanel8.Name = "flowLayoutPanel8";
             // 
@@ -271,6 +246,15 @@
             this.lblLocation.Palette = this.optionsPallete;
             this.lblLocation.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             this.lblLocation.Values.Text = resources.GetString("lblLocation.Values.Text");
+            // 
+            // btnSetSaveLocation
+            // 
+            resources.ApplyResources(this.btnSetSaveLocation, "btnSetSaveLocation");
+            this.btnSetSaveLocation.Name = "btnSetSaveLocation";
+            this.btnSetSaveLocation.Palette = this.optionsPallete;
+            this.btnSetSaveLocation.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.btnSetSaveLocation.Values.Text = resources.GetString("btnSetSaveLocation.Values.Text");
+            this.btnSetSaveLocation.Click += new System.EventHandler(this.btnSetSaveLocation_Click);
             // 
             // flowLayoutPanel18
             // 
@@ -349,6 +333,8 @@
             this.flowLayoutPanel10.Controls.Add(this.flowLayoutPanel11);
             this.flowLayoutPanel10.Controls.Add(this.flowLayoutPanel12);
             this.flowLayoutPanel10.Controls.Add(this.kryptonGroupBox1);
+            this.flowLayoutPanel10.Controls.Add(this.btnAddManager);
+            this.flowLayoutPanel10.Controls.Add(this.lblManagerName);
             resources.ApplyResources(this.flowLayoutPanel10, "flowLayoutPanel10");
             this.flowLayoutPanel10.Name = "flowLayoutPanel10";
             // 
@@ -506,6 +492,24 @@
             this.txtZipCode.Palette = this.optionsPallete;
             this.txtZipCode.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
             // 
+            // btnAddManager
+            // 
+            resources.ApplyResources(this.btnAddManager, "btnAddManager");
+            this.btnAddManager.Name = "btnAddManager";
+            this.btnAddManager.Palette = this.optionsPallete;
+            this.btnAddManager.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.btnAddManager.Values.Text = resources.GetString("btnAddManager.Values.Text");
+            this.btnAddManager.Click += new System.EventHandler(this.btnAddManager_Click);
+            // 
+            // lblManagerName
+            // 
+            resources.ApplyResources(this.lblManagerName, "lblManagerName");
+            this.lblManagerName.Name = "lblManagerName";
+            this.lblManagerName.Palette = this.optionsPallete;
+            this.lblManagerName.PaletteMode = ComponentFactory.Krypton.Toolkit.PaletteMode.Custom;
+            this.lblManagerName.StateCommon.LongText.Color1 = System.Drawing.Color.Green;
+            this.lblManagerName.Values.Text = resources.GetString("lblManagerName.Values.Text");
+            // 
             // flowLayoutPanel6
             // 
             this.flowLayoutPanel6.Controls.Add(this.btnClear);
@@ -556,8 +560,6 @@
             this.flowLayoutPanel4.PerformLayout();
             this.flowLayoutPanel5.ResumeLayout(false);
             this.flowLayoutPanel5.PerformLayout();
-            this.flowLayoutPanel7.ResumeLayout(false);
-            this.flowLayoutPanel7.PerformLayout();
             this.flowLayoutPanel8.ResumeLayout(false);
             this.flowLayoutPanel8.PerformLayout();
             this.flowLayoutPanel18.ResumeLayout(false);
@@ -566,6 +568,7 @@
             this.flowLayoutPanel19.ResumeLayout(false);
             this.flowLayoutPanel19.PerformLayout();
             this.flowLayoutPanel10.ResumeLayout(false);
+            this.flowLayoutPanel10.PerformLayout();
             this.flowLayoutPanel11.ResumeLayout(false);
             this.flowLayoutPanel11.PerformLayout();
             this.flowLayoutPanel12.ResumeLayout(false);
@@ -606,8 +609,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel5;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblBillable;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtBillableRate;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel7;
-        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblDataLocation;
         private ComponentFactory.Krypton.Toolkit.KryptonButton btnSetSaveLocation;
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel8;
         private ComponentFactory.Krypton.Toolkit.KryptonLabel lblLocation;
@@ -644,5 +645,7 @@
         private ComponentFactory.Krypton.Toolkit.KryptonLabel kryptonLabel1;
         private ComponentFactory.Krypton.Toolkit.KryptonTextBox txtWorkWeekLength;
         public ComponentFactory.Krypton.Toolkit.KryptonPalette optionsPallete;
+        private ComponentFactory.Krypton.Toolkit.KryptonButton btnAddManager;
+        private ComponentFactory.Krypton.Toolkit.KryptonLabel lblManagerName;
     }
 }

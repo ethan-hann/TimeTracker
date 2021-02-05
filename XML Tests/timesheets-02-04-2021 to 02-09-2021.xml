@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<timesheets id="{109F119D-B2D0-421C-A40E-1CE2EDA45B17}">
+  <week_start>02/04/2021</week_start>
+  <week_end>02/09/2021</week_end>
+  <day>
+    <normal_time>00:00:30</normal_time>
+    <overtime>00:00:00</overtime>
+    <billable_time>00:00:12</billable_time>
+    <date>02/04/2021</date>
+    <notes>
+      <note_0>Enter notes for today here...</note_0>
+    </notes>
+  </day>
+</timesheets>

@@ -10,12 +10,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using TimeTracker.backend;
+using TimeTracker.Forms;
 using TimeTracker.Properties;
+using static TimeTracker.utility.CEventArgs;
 
 namespace TimeTracker
 {
     public partial class OptionsForm : KryptonForm
     {
+        public EventHandler OnOptionsSaved;
+
         private Employee employee;
         private string savePath;
 
@@ -32,13 +36,14 @@ namespace TimeTracker
                 savePath = saveFolderBrowser.SelectedPath;
                 lblLocation.Values.ExtraText = savePath;
                 EmployeeInformation.Instance.SetDataLocation(savePath);
-                TimeSheetInformation.Instance.SetDataLocation(savePath);
+                Settings.Default.SavePath = savePath;
+                Settings.Default.Save();
             }
         }
 
         private void OptionsForm_Load(object sender, EventArgs e)
         {
-            employee = EmployeeInformation.Instance.GetEmployee(Settings.Default.LastGUID);
+            employee = EmployeeInformation.Instance.GetEmployee();
             savePath = Settings.Default.SavePath;
 
             if (employee != null)
@@ -112,7 +117,7 @@ namespace TimeTracker
                 LunchLength = double.Parse(txtLunchLength.Text)
             };
 
-            EmployeeInformation.Instance.AddEmployee(employee);
+            EmployeeInformation.Instance.SetEmployee(employee);
             EmployeeInformation.Instance.Save();
 
             Settings.Default.LastGUID = employee.UniqueID;
@@ -120,6 +125,8 @@ namespace TimeTracker
             Settings.Default.WeekStart = (string)cmbDaysOfWeek.Items[cmbDaysOfWeek.SelectedIndex];
             Settings.Default.WorkWeekLength = short.Parse(txtWorkWeekLength.Text);
             Settings.Default.Save();
+
+            OnOptionsSaved?.Invoke(this, new OptionsSavedEventArgs(employee));
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -133,7 +140,7 @@ namespace TimeTracker
 
         private void btnClear_Click(object sender, EventArgs e)
         {
-            DialogResult result = CMessageBox.Show("This will clear all values (including save path)!\nAre you sure?", "Confirm", MessageBoxButtons.YesNo, Resources.info_32);
+            DialogResult result = CMessageBox.Show("This will clear all values (including save path and Manager)!\nAre you sure?", "Confirm", MessageBoxButtons.YesNo, Resources.info_32);
             if (result == DialogResult.Yes)
             {
                 txtFullName.Text = "";
@@ -154,6 +161,9 @@ namespace TimeTracker
                 txtZipCode.Text = "";
 
                 savePath = "";
+
+                btnAddManager.Visible = true;
+                lblManagerName.Visible = false;
             }
         }
 
@@ -324,6 +334,23 @@ namespace TimeTracker
             }
 
             return valid;
+        }
+
+        private void btnAddManager_Click(object sender, EventArgs e)
+        {
+            ManagerInput managerInput = new ManagerInput();
+            managerInput.OnInputDone += ProcessManager;
+            managerInput.ShowDialog();
+        }
+
+        private void ProcessManager(object sender, EventArgs e)
+        {
+            if (e is ManagerEventArgs args)
+            {
+                btnAddManager.Visible = false;
+                lblManagerName.Visible = true;
+                lblManagerName.Values.ExtraText = args.Manager.Name;
+            }
         }
     }
 }

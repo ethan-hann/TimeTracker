@@ -22,7 +22,7 @@ namespace TimeTracker.Forms
 
         private void TimesheetList_Load(object sender, EventArgs e)
         {
-            TimeSheet[] timeSheets = TimeSheetInformation.Instance.GetTimeSheets();
+            List<TimeSheet> timeSheets = TimeSheetInformation.Instance.GetTimeSheets();
             foreach (TimeSheet sheet in timeSheets)
             {
                 TreeNode sheetNode = new TreeNode(sheet.UniqueID);
@@ -51,7 +51,7 @@ namespace TimeTracker.Forms
                 TimeSheet selectedSheet = (TimeSheet)tvTimesheets.SelectedNode.Tag;
                 if (selectedSheet != null)
                 {
-                    GenerateTimesheet.Generate(selectedSheet);
+                    //GenerateTimesheet.Generate(selectedSheet);
                 }
                 else
                 {
