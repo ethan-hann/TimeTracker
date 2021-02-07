@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 using TimeTracker.Properties;
+using TimeTracker.utility;
 
 namespace TimeTracker.backend
 
@@ -18,32 +20,35 @@ namespace TimeTracker.backend
         /// <summary>
         /// A unique GUID representing this day.
         /// </summary>
-        public string UniqueID { get; private set; }
+        public string UniqueID { get; set; }
 
         /// <summary>
         /// A list of strings representing notes for this day.
         /// </summary>
-        public List<string> Notes { get; private set; } = new List<string>();
+        public List<string> Notes { get; set; } = new List<string>();
 
         /// <summary>
         /// The amount of normal, non-overtime, non-billable time for this day.
         /// </summary>
-        public TimeSpan NormalTime { get; private set; }
+        [XmlElement(typeof(XmlTimeSpan))]
+        public TimeSpan NormalTime { get; set; }
 
         /// <summary>
         /// The amount of overtime, if any, this day produced.
         /// </summary>
-        public TimeSpan Overtime { get; private set; }
+        [XmlElement(typeof(XmlTimeSpan))]
+        public TimeSpan Overtime { get; set; }
 
         /// <summary>
         /// The amount of billable time for this day.
         /// </summary>
-        public TimeSpan BillableTime { get; private set; }
+        [XmlElement(typeof(XmlTimeSpan))]
+        public TimeSpan BillableTime { get; set; }
 
         /// <summary>
         /// The date associated with this day.
         /// </summary>
-        public DateTime Date { get; private set; }
+        public DateTime Date { get; set; }
 
         /// <summary>
         /// Create an empty <see cref="DayTime"/> object with no <see cref="DateTime"/> associated with it.

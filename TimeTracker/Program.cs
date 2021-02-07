@@ -21,6 +21,7 @@ namespace TimeTracker
 
             EmployeeInformation.Instance.SetDataLocation(Settings.Default.SavePath);
             EmployeeInformation.Instance.Load();
+            TimeSheetInformation.Instance.SetDataLocation(Settings.Default.SavePath);
             TimeSheetInformation.Instance.Load();
 
             EmployeeInformation.Instance.PrintEmployee();

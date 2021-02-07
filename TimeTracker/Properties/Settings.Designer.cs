@@ -12,7 +12,7 @@ namespace TimeTracker.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.7.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.8.1.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -50,12 +50,12 @@ namespace TimeTracker.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string CurrentTimesheetGUID {
+        public string CurrentTimesheetPath {
             get {
-                return ((string)(this["CurrentTimesheetGUID"]));
+                return ((string)(this["CurrentTimesheetPath"]));
             }
             set {
-                this["CurrentTimesheetGUID"] = value;
+                this["CurrentTimesheetPath"] = value;
             }
         }
         
@@ -80,6 +80,18 @@ namespace TimeTracker.Properties {
             }
             set {
                 this["WorkWeekLength"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string CurrentTimesheetGUID {
+            get {
+                return ((string)(this["CurrentTimesheetGUID"]));
+            }
+            set {
+                this["CurrentTimesheetGUID"] = value;
             }
         }
     }

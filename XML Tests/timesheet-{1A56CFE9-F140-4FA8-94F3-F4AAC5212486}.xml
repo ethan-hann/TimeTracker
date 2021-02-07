@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TimeSheet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <UniqueID>{4748B670-8119-4930-B645-BDC8D6CD1537}</UniqueID>
+  <Employee>
+    <UniqueID>{2E8AB9C2-CA8B-4C57-90F0-36F14D0765A2}</UniqueID>
+    <Name>Ethan Hann</Name>
+    <EmpAddress>
+      <Street>17938 CR 401</Street>
+      <City>Dayton</City>
+      <State>Texas</State>
+      <ZipCode>77535</ZipCode>
+    </EmpAddress>
+    <Email>ehann@teamlogicit.com</Email>
+    <PhoneNumber>832-599-4248</PhoneNumber>
+    <LunchLength>1</LunchLength>
+    <HourlyRate>16</HourlyRate>
+    <OvertimeRate>24</OvertimeRate>
+    <BillableRate>25</BillableRate>
+  </Employee>
+  <Days>
+    <item>
+      <key>
+        <dateTime>2021-02-07T00:00:00-06:00</dateTime>
+      </key>
+      <value>
+        <DayTime>
+          <UniqueID>{935A1CB0-BFA6-4124-B223-D0533D9C856B}</UniqueID>
+          <Notes />
+          <NormalTime>PT22S</NormalTime>
+          <Overtime>PT0S</Overtime>
+          <BillableTime>PT9S</BillableTime>
+          <Date>2021-02-07T16:11:12.7237368-06:00</Date>
+        </DayTime>
+      </value>
+    </item>
+  </Days>
+</TimeSheet>

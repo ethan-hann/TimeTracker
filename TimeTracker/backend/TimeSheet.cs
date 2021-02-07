@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using TimeTracker.Properties;
+using TimeTracker.utility;
 
 namespace TimeTracker.backend
 {
@@ -87,11 +88,11 @@ namespace TimeTracker.backend
         /// a new <see cref="TimeSheet"/> instance is created.
         /// </para>
         /// </summary>
-        public Dictionary<DateTime, DayTime> Days { get; private set; }
+        public SerializableDictionary<DateTime, DayTime> Days { get; set; }
 
         public TimeSheet() 
         {
-            Days = new Dictionary<DateTime, DayTime>(Settings.Default.WorkWeekLength);
+            Days = new SerializableDictionary<DateTime, DayTime>(Settings.Default.WorkWeekLength);
             GenerateUniqueID();
 
             SetWeekStart(DateTime.Now);
@@ -100,7 +101,7 @@ namespace TimeTracker.backend
 
         private void CreateNewTimeSheet()
         {
-            Days = new Dictionary<DateTime, DayTime>(Settings.Default.WorkWeekLength);
+            Days = new SerializableDictionary<DateTime, DayTime>(Settings.Default.WorkWeekLength);
             GenerateUniqueID();
 
             SetWeekStart(DateTime.Now);

@@ -65,6 +65,7 @@ namespace TimeTracker
             if (sheet == null)
             {
                 sheet = new TimeSheet();
+                TimeSheetInformation.Instance.SetTimeSheet(sheet);
             }
 
             if (employee == null)
@@ -271,7 +272,8 @@ namespace TimeTracker
 
             sheet.UpdateDay(today);
 
-            TimeSheetInformation.Instance.AddTimeSheet(sheet);
+            //TimeSheetInformation.Instance.AddTimeSheet(sheet);
+            TimeSheetInformation.Instance.SetTimeSheet(sheet);
             TimeSheetInformation.Instance.Save();
         }
 
